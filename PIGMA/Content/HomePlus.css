@@ -1,0 +1,15 @@
+﻿.Searchbar {
+    height: 44px;
+    width :400px;
+    margin: 3px 0px;
+    padding: 5px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    border-radius: 15px;
+    border : 1px solid black;
+    color: white;
+}
+
+.nanana{
+    color:aqua;
+}

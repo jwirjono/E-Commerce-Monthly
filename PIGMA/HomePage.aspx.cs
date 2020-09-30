@@ -7,13 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace PIGMA
 {
-    public partial class SiteMaster : MasterPage
+    public partial class HomePage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-        protected void SearchEvent(object sender, EventArgs e)
         {
 
         }
