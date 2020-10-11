@@ -20,6 +20,7 @@
                 <img class="card-img-top card-img-topPlus" src="Content/Images/Watermark.PNG" alt="fas">
             </div>
         </div>
+        
         <div class="row Homepage-Bottom">
             <div class="col-md-3">
                 <h3 style="color:ghostwhite">Supermarket Terdekat</h3>
