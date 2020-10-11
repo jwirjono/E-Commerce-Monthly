@@ -9,18 +9,26 @@
     <title><%: Page.Title %> - My ASP.NET Application</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
     <link href="~/Content/HomePlus.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form runat="server">
-        <div class="navbar navbar-inverse navbar-fixed-top container-fluid" style="background-color: #373f41;color:#ffffff;">
-            <div class="col-md-2">
+        <div class="navbar navbar-inverse container-fluid" style="background-color: #373f41;color:#ffffff;border-radius:0px;border: 1px solid #373f41;">
+            <div class="col-md-1">
                 <a class="navbar-brand" runat="server" href="~/">MONTHLY</a>
             </div>
-            <div class="col-md-6 form-group">
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <div class="col-md-9" id ="search">
+                <input type="text" class="Searchbar"  placeholder="Cari Produk">
+                
+                <a>
+                    <svg width="24px" height="24px" id="SearchButton" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                    <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                </svg></a>
+                
             </div>
-            <div class="col-md-4">
+            <div class="col-md-2">
                 <ul class="nav navbar-nav">
                     <li><a runat="server" href="~/">Home</a></li>
                     <li><a runat="server" href="~/About">About</a></li>
@@ -28,15 +36,34 @@
                 </ul>
             </div>
         </div>
-        <div class="container-fluid body-content" >
+        <div class="container-fluid body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </footer>
         </div>
-        
+        <footer>
+                <div class="footerPlus container-fluid">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h4>BANTUAN</h4>
+                            <div class="ulPlus">
+                                <a class="liPlus" runat="server" href="~/">Monthly Help Center</a>
+                                <a class="liPlus" runat="server" href="~/">Syarat dan Ketentuan</a>
+                                <a class="liPlus" runat="server" href="~/">Kebijakan Privasi</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>IKUTI KAMI</h4>
+                        </div>
+                        <div class="col-md-5" style="border-left:1px white solid;height:175px;">
+                            <h3>Segera daftarkan supermarket anda menjadi partner monthly</h3>
+                            <p>lorem ipsum yooooooooooooooooooooooooooooooooooooooooooooooo ooooooooooooooooooooooooooooooooooooooooooooo</p>
+                            <button type="button" class="btn btn-light" style="color:#373f41;border-radius:10px;border:#373f41 1px solid;">Daftar Supermarket</button>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
     </form>
 </body>
 </html>
