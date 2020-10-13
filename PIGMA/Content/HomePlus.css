@@ -43,13 +43,18 @@
 }
 
 .cardPlus {
-    margin : 5px 20px;
-    text-align : center;
-    padding : 15px 0px;
+    margin: 5px 20px;
+    text-align: center;
+    padding: 15px 0px;
+    border-radius: 10px;
+    background-color: #F4F5F4;
+    color: #373F41;
 }
 
 .card-img-topPlus{
-    width : 90%;
+    width : 100%;
+    padding: 5px 10px;
+
 }
 .footerPlus {
     height: 200px;
