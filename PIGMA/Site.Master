@@ -9,8 +9,8 @@
     <title><%: Page.Title %> - My ASP.NET Application</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link href="~/Content/HomePlus.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/HomePlus.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Content/FormPlus.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <form runat="server">
@@ -31,16 +31,15 @@
 
             <div class="col-md-2">
                 <ul class="nav navbar-nav" style="display:flex;flex-direction:row">
-                    <li><a runat="server" href="~/">Home</a></li>
+                    <li><a runat="server" href="~/Login">Home</a></li>
                     <li><a runat="server" href="~/About">About</a></li>
                     <li><a runat="server" href="~/Contact">Contact</a></li>
                 </ul>
             </div>
         </div>
-        <div class="container-fluid body-content">
+        <div class="container-fluid body-content MainContentPlus">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
         </div>
         <footer>
             <div class="footerPlus container-fluid">
