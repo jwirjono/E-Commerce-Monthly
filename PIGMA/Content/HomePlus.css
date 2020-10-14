@@ -1,4 +1,8 @@
-﻿
+﻿.MainContentPlus{
+    margin:20px;
+    font-family :Roboto;
+}
+
 #search {
     overflow: hidden;
     white-space: nowrap;
@@ -23,10 +27,11 @@
 }
 
 .Homepage{
-    margin:20px;
+    
 }
 
 .Homepage-Bottom {
+    margin : 10px;
     padding: 20px 10px;
     border: 1px solid #373f41;
     background-color: #373f41;
@@ -35,6 +40,7 @@
 }
 
 .Homepage-List {
+    margin : 5px 10px;
     border: 1px solid #fff;
     padding : 10px;
     background-color: #fff;
@@ -43,13 +49,18 @@
 }
 
 .cardPlus {
-    margin : 5px 20px;
-    text-align : center;
-    padding : 15px 0px;
+    margin: 5px 20px;
+    text-align: center;
+    padding: 15px 0px;
+    border-radius: 10px;
+    background-color: #F4F5F4;
+    color: #373F41;
 }
 
 .card-img-topPlus{
-    width : 90%;
+    width : 100%;
+    padding: 5px 10px;
+
 }
 .footerPlus {
     height: 200px;
