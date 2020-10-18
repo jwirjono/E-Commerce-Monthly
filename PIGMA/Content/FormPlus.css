@@ -33,3 +33,37 @@
     color: #F2F2F2;
     background-color: #373F41;
 }
+
+.colgaris {
+    flex: 0 0 38%;
+    max-width: 38%;
+}
+.colgaris-text {
+    flex: 0 0 24%;
+    max-width: 24%;
+    text-align :center;
+}
+
+
+.socialLoginPlus {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.round-link-login {
+    background-color: #fff;
+    height: 100px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.round-link-login a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: #454545;
+}
+
