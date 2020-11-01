@@ -1,6 +1,7 @@
 ﻿.MainContentPlus{
     margin:20px;
     font-family :Roboto;
+    font-size : 16px;
 }
 
 #search {
@@ -64,10 +65,34 @@
 }
 .footerPlus {
     height: 200px;
+    font-family: Roboto;
     padding: 20px 50px;
     background: #373f41;
-    color : lightcyan;
+    color: lightcyan;
 }
+.round-link {
+    height: 100px;
+    padding : 5px;
+    background-color: #373f41;
+    display :flex;
+    flex-direction :column;
+}
+.round-link-elipse {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75px;
+    height: 75px;
+    border-radius: 60px;
+    border: #373f41 1px solid;
+}
+.round-link a {
+    text-align :center;
+    text-decoration :none;
+    font-size : 16px;
+    color : white;
+}
+
 .ulPlus{
     display:flex;
     flex-direction : column;
