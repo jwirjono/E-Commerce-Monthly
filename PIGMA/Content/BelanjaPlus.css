@@ -1,17 +1,65 @@
 ﻿.BelanjaPlus{
     padding: 30px 85px;
 }
-.sidebarPlus {
+.topPanelBelanjaPlus{
+    margin-bottom:80px;
+}
+.bottomPanelBelanjaPlus{
+
+}
+.divDikirimBelanjaPlus {
+    display: flex;
+    flex-direction: column;
+}
+.btnDikirimBelanjaPlus {
+    margin-top:-35px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #373F41;
+    color:#fff;
+    border-radius:30px;
+}
+.btnUbahBelanjaPlus {
+    background-color: #97C200;
+    width:100%;
+    color:#fff;
+}
+.sidebarBelanjaPlus {
     border: 1px #97C200 solid;
     background-color: #97C200;
     border-radius: 10px;
     padding: 20px 25px;
     color: #FFFFFF;
-    display : flex;
-    flex-direction : column;
+    display: flex;
+    flex-direction: column;
 }
 
-.sidebarPlus a{
+.sidebarBelanjaPlus a{
     color : #fff;
     text-decoration : none;
+}
+
+.listBelanjaPlus{
+    margin : 10px 0px;
+}
+.listBelanjaPlus a{
+    margin-left:5px;
+}
+
+.produkListBelanjaPlus{
+    padding:20px;
+}
+.cardProdukBelanjaPlus {
+    border: 1px #373F41 solid;
+    border-radius:10px;
+    display: flex;
+    flex-direction: column;
+    width:15%;
+    padding:10px;
+    
+}
+.btnCardProdukBelanjaPlus {
+    display: flex;
+    flex-direction: row;
+    background-color: #97C200;
 }
