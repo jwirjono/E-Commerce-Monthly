@@ -5,7 +5,7 @@
         <div class="col-md-7">
             <img class="card-img-top card-img-topPlus" src="Content/Images/Watermark.PNG" alt="fas">
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 formparentPlus">
             <form>
               <div class="form-group">
                   <label style="font-size:24px;color:#373F41;"><b>Login</b></label>

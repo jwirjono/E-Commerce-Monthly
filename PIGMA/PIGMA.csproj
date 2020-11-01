@@ -109,6 +109,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Content\BelanjaPlus.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -117,6 +118,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\FormPlus.css" />
     <Content Include="Content\HomePlus.css" />
+    <Content Include="Content\Images\Meat.png" />
     <Content Include="Content\Images\Watermark.PNG" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />

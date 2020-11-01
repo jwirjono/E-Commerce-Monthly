@@ -3,11 +3,13 @@
     padding: 2px 20px;
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
 }
-
+.formparentPlus{
+    padding : 40px 80px;
+}
 .form-labelPlus {
     margin-left: 10px;
     color: #191A1A;
-    opacity : 0.6;
+    opacity: 0.6;
 }
 
 .form-controlPlus {

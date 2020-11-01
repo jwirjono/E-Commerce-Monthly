@@ -1,0 +1,17 @@
+﻿.BelanjaPlus{
+    padding: 30px 85px;
+}
+.sidebarPlus {
+    border: 1px #97C200 solid;
+    background-color: #97C200;
+    border-radius: 10px;
+    padding: 20px 25px;
+    color: #FFFFFF;
+    display : flex;
+    flex-direction : column;
+}
+
+.sidebarPlus a{
+    color : #fff;
+    text-decoration : none;
+}

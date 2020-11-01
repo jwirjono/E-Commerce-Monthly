@@ -11,6 +11,7 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet">
     <link href="~/Content/HomePlus.css" rel="stylesheet" type="text/css"/>
     <link href="~/Content/FormPlus.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Content/BelanjaPlus.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <form runat="server">
