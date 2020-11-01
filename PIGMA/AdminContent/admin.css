@@ -1,0 +1,109 @@
+﻿
+/* Float the link section to the right */
+.header-right {
+    float: right;
+}
+
+.text {
+    margin: 20px auto;
+    font-family: Roboto;
+    color: white;
+    font-size: 24px;
+}
+
+.button-text {
+    padding-left: 0.6em;
+    font-family: Roboto;
+    color: gray;
+    font-size: 24px;
+}
+.active, button-text:hover{
+    color : black;
+}
+
+
+.button-out{
+
+    margin-top : 50px;
+    margin-left : 30px;
+    width : 150px;
+    border-radius : 8px;
+    font-family : Roboto;
+    color : white;
+    background-color : gray;
+}
+.button-Verifikasi {
+    font-size: 24px;
+    font-display: auto;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    width: 150px;
+    border-radius: 8px;
+    font-family: Roboto;
+    color: white;
+    background-color: #97C200;
+}  
+
+.navbar {
+    padding: .8rem;
+}
+
+.nav-item {
+    font-family: Roboto;
+    font-size: 24px;
+    background-color: white;
+    padding-bottom: 5px;
+    padding-left : 40px;
+    border-radius : 8px;
+}
+
+.active, .nav-item:hover {
+    background-color: #EACB00;
+    color : black;
+}
+
+
+.nav-link {
+    font-size: 20px;
+}
+
+.wrapper {
+    margin-top: 67px auto;
+}
+
+.contentpertama{
+}
+.rowcontent{
+    height: 150px;
+}
+.rowsaldo {
+    height: 250px;
+}
+.produk{
+    height : 400px;
+}
+/*card*/
+.card {
+    height : 120px;
+    padding-right : 2px;
+    background-color: #97C200;
+}
+.card-text{
+
+    color : white;
+    font-family : Roboto;
+    font-size : 16px;
+}
+.card-number {
+    color: white;
+    font-family: Roboto;
+    text-align: left;
+    font-size: 34px;
+}
+.card-button {
+    color: white;
+    font-family: Roboto;
+    text-align: right end;
+    font-size: 18px;
+}
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
