@@ -121,9 +121,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\FormPlus.css" />
     <Content Include="Content\HomePlus.css" />
-    <Content Include="Content\Images\Beranda.png" />
     <Content Include="Content\Images\Box.png" />
     <Content Include="Content\Images\Chart-bar.png" />
+    <Content Include="Content\Images\Beranda.png" />
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\Penjualan.png" />
     <Content Include="Content\Images\Settings.png" />
@@ -142,7 +142,6 @@
     <Content Include="admin.aspx" />
     <Content Include="pengaturansettingadmin.aspx" />
     <Content Include="ubahproduk.aspx" />
-    <Content Include="WebForm3.aspx" />
     <None Include="Properties\PublishProfiles\FTPMonthlySkripsi.pubxml" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -370,13 +369,6 @@
     </Compile>
     <Compile Include="admin.aspx.designer.cs">
       <DependentUpon>admin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm3.aspx.cs">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm3.aspx.designer.cs">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

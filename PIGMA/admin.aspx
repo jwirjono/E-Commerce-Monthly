@@ -16,14 +16,14 @@
     
     <!---- header --->
     <nav class="navbar-dark bg-dark sticky-top">
-        <a class="navbar-brand p-ml-auto">
+        <a class="navbar-brand brand">
             <img src="content/images/logo.png"></a>
         <span class="header-right text">Transmart Carrefour Central Park</span>
 
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid row">
     <!--button-->
-    <div class="col-md-4">
+    <div class="col-md-3">
         <div class="col-8">
             <div class="flex-column">
                 <ul class="navbar-nav">
@@ -40,13 +40,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a class="nav-link" href="adminproduk.aspx">
                             <img src="content/images/Box.png">
                             <span class="button-text">Produk</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a  class="nav-link" href="adminpengaturan.aspx">
                             <img src="content/images/Settings.png">
                             <span class="button-text">Pengaturan</span>
                         </a>
@@ -58,7 +58,7 @@
     </div>
 
     <!--content-->
-    <div class="col-md-8">
+    <div class="col-md-9">
         <div class="row">
             <h2>Transmart Carrefour Central Park
                 <label class="button-Verifikasi" style="text-align : center">Terverifikasi</label></h2>

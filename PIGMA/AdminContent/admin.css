@@ -6,6 +6,7 @@
 
 .text {
     margin: 20px auto;
+    padding-right : 30px;
     font-family: Roboto;
     color: white;
     font-size: 24px;
@@ -43,7 +44,9 @@
     color: white;
     background-color: #97C200;
 }  
-
+.brand{
+    padding-left : 30px;
+}
 .navbar {
     padding: .8rem;
 }
@@ -53,13 +56,19 @@
     font-size: 24px;
     background-color: white;
     padding-bottom: 5px;
-    padding-left : 40px;
     border-radius : 8px;
 }
+.nav-item img{
+    opacity :0.5;
 
+}
 .active, .nav-item:hover {
     background-color: #EACB00;
     color : black;
+
+}
+.active img{
+    opacity : 1;
 }
 
 
