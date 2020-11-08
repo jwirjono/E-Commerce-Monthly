@@ -1,4 +1,7 @@
-﻿.form-groupPlus {
+﻿.mainFormPlus{
+    padding:100px;
+}
+.form-groupPlus {
     border: 1px solid #FFFFFF;
     padding: 2px 20px;
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);

@@ -10,7 +10,7 @@
                     <button class="btn btnDikirimBelanjaPlus">Dikirim Ke</button>
                 </div>
                 <p style="margin:20px 0px;" >address text</p>
-                <button style="margin:20px 0px;"  class="btn btnUbahBelanjaPlus">UBAH</button>
+                <a style="margin:20px 0px;" runat="server" href="~/Keranjang" class="btn grnBtn">UBAH</a>
             </div>
             <div class="col-md-1">
 
@@ -111,21 +111,85 @@
                     <p>Menampilkan 9 dari Semua Kategori</p>
                 </div>
                 <hr />
-                <div class="cardlistProdukBelanjaPlus">
-                    <div>
+                <div class="cardlistProdukBelanjaPlus row">
+                    <div class="cardFullProdukBelanjaPlus">
                         <div class="cardProdukBelanjaPlus">
                         <a>-50%</a>
-                        <img src="Content/Images/CardProduk.png" alt="">
-                        <p style="color:#373F41"><b>Nama Barang</b></p>
-                        <p style="font-size:14px;color:#7C7C7C;">7pcs</p>
-                        
+                            <img src="Content/Images/CardProduk.png" alt="">
+                            <p style="color:#373F41"><b>Nama Barang</b></p>
+                            <p style="font-size:14px;color:#7C7C7C;">7pcs</p>
+                            <p style="color:#373F41"><b>Rp.30000</b></p> 
                         </div>
                         <div class="btnCardProdukBelanjaPlus">
-                                <img src="Content/Images/Vector.png" alt="">
-                                <p>Keranjang</p>
+                            <div style ="display: flex;flex-direction: row;">
+                                <img style="width:25px;margin:0px 15px;" src="Content/Images/Vector.png" alt="">
+                                <p style="margin:0px 15px;">Keranjang</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cardFullProdukBelanjaPlus">
+                        <div class="cardProdukBelanjaPlus">
+                        <a>-50%</a>
+                            <img src="Content/Images/CardProduk.png" alt="">
+                            <p style="color:#373F41"><b>Nama Barang</b></p>
+                            <p style="font-size:14px;color:#7C7C7C;">7pcs</p>
+                            <p style="color:#373F41"><b>Rp.30000</b></p> 
+                        </div>
+                        <div class="btnCardProdukBelanjaPlus">
+                            <div style ="display: flex;flex-direction: row;">
+                                <img style="width:25px;margin:0px 15px;" src="Content/Images/Vector.png" alt="">
+                                <p style="margin:0px 15px;">Keranjang</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardFullProdukBelanjaPlus">
+                        <div class="cardProdukBelanjaPlus">
+                        <a>-50%</a>
+                            <img src="Content/Images/CardProduk.png" alt="">
+                            <p style="color:#373F41"><b>Nama Barang</b></p>
+                            <p style="font-size:14px;color:#7C7C7C;">7pcs</p>
+                            <p style="color:#373F41"><b>Rp.30000</b></p> 
+                        </div>
+                        <div class="btnCardProdukBelanjaPlus">
+                            <div style ="display: flex;flex-direction: row;">
+                                <img style="width:25px;margin:0px 15px;" src="Content/Images/Vector.png" alt="">
+                                <p style="margin:0px 15px;">Keranjang</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardFullProdukBelanjaPlus">
+                        <div class="cardProdukBelanjaPlus">
+                        <a>-50%</a>
+                            <img src="Content/Images/CardProduk.png" alt="">
+                            <p style="color:#373F41"><b>Nama Barang</b></p>
+                            <p style="font-size:14px;color:#7C7C7C;">7pcs</p>
+                            <p style="color:#373F41"><b>Rp.30000</b></p> 
+                        </div>
+                        <div class="btnCardProdukBelanjaPlus">
+                            <div style ="display: flex;flex-direction: row;">
+                                <img style="width:25px;margin:0px 15px;" src="Content/Images/Vector.png" alt="">
+                                <p style="margin:0px 15px;">Keranjang</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardFullProdukBelanjaPlus">
+                        <div class="cardProdukBelanjaPlus">
+                        <a>-50%</a>
+                            <img src="Content/Images/CardProduk.png" alt="">
+                            <p style="color:#373F41"><b>Nama Barang</b></p>
+                            <p style="font-size:14px;color:#7C7C7C;">7pcs</p>
+                            <p style="color:#373F41"><b>Rp.30000</b></p> 
+                        </div>
+                        <div class="btnCardProdukBelanjaPlus">
+                            <div style ="display: flex;flex-direction: row;">
+                                <img style="width:25px;margin:0px 15px;" src="Content/Images/Vector.png" alt="">
+                                <p style="margin:0px 15px;">Keranjang</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>

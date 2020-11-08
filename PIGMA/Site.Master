@@ -12,6 +12,8 @@
     <link href="~/Content/HomePlus.css" rel="stylesheet" type="text/css"/>
     <link href="~/Content/FormPlus.css" rel="stylesheet" type="text/css"/>
     <link href="~/Content/BelanjaPlus.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Content/KeranjangPlus.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Content/Additional.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <form runat="server">
@@ -33,7 +35,7 @@
                 <ul class="nav navbar-nav" style="display:flex;flex-direction:row">
                     <li><a runat="server" href="~/Login">Login</a></li>
                     <li><a runat="server" href="~/Belanja">Belanja</a></li>
-                    <li><a runat="server" href="~/Contact">Contact</a></li>
+                    <li><a runat="server" href="~/Account">Akun</a></li>
                 </ul>
             </div>
         </div>

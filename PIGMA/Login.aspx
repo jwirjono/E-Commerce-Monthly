@@ -2,9 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container-fluid">
         <div class="row">
-        <div class="col-md-7">
-            <img class="card-img-top card-img-topPlus" src="Content/Images/Watermark.PNG" alt="fas">
+        <div class="col-md-6">
+            <img class="mainFormPlus" src="Content/Images/Login.PNG" alt="fas">
         </div>
+         <div class="col-md-1">
+
+         </div>
         <div class="col-md-5 formparentPlus">
             <form>
               <div class="form-group">

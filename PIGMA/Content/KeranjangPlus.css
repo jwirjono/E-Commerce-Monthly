@@ -1,0 +1,18 @@
+﻿.KeranjangPlus {
+    padding: 30px 85px;
+}
+
+.labelHeader{
+    color: #97C200;
+    font-size: 24px;
+    font-weight: bold;
+}
+.keranjangKosong{
+    align-self:center;
+    display:flex;
+    flex-direction:column;
+}
+.keranjangKosong p{
+    margin-left:auto;
+    margin-right:auto;
+}

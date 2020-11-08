@@ -19,11 +19,6 @@
     color:#fff;
     border-radius:30px;
 }
-.btnUbahBelanjaPlus {
-    background-color: #97C200;
-    width:100%;
-    color:#fff;
-}
 .sidebarBelanjaPlus {
     border: 1px #97C200 solid;
     background-color: #97C200;
@@ -49,17 +44,30 @@
 .produkListBelanjaPlus{
     padding:20px;
 }
-.cardProdukBelanjaPlus {
-    border: 1px #373F41 solid;
-    border-radius:10px;
+.cardFullProdukBelanjaPlus {
+    width: 12.5%;
+    margin : 20px;
     display: flex;
     flex-direction: column;
-    width:15%;
-    padding:10px;
-    
+}
+.cardProdukBelanjaPlus {
+    border: 1px #373F41 solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius : 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
 }
 .btnCardProdukBelanjaPlus {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #97C200;
+    border: 1px #373F41 solid;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color:#fff;
+    align-items:center;
+    padding:20px;
 }

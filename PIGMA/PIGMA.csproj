@@ -109,6 +109,8 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Content\AccountPlus.css" />
+    <Content Include="Content\Additional.css" />
     <Content Include="Content\BelanjaPlus.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -121,7 +123,9 @@
     <Content Include="Content\Images\Carousel1.png" />
     <Content Include="Content\Images\CardProduk.png" />
     <Content Include="Content\Images\Keperluan Dapur.png" />
+    <Content Include="Content\Images\KeranjangKosong.png" />
     <Content Include="Content\Images\Korean Food.png" />
+    <Content Include="Content\Images\Login.png" />
     <Content Include="Content\Images\Meat.png" />
     <Content Include="Content\Images\Minuman.png" />
     <Content Include="Content\Images\Perlengkapan Bayi.png" />
@@ -133,6 +137,7 @@
     <Content Include="Content\Images\Snack.png" />
     <Content Include="Content\Images\Vector.png" />
     <Content Include="Content\Images\Watermark.PNG" />
+    <Content Include="Content\KeranjangPlus.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
@@ -145,6 +150,8 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Belanja.aspx" />
+    <Content Include="Account.aspx" />
+    <Content Include="Keranjang.aspx" />
     <None Include="Properties\PublishProfiles\FTPMonthlySkripsi.pubxml" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -337,6 +344,20 @@
     </Compile>
     <Compile Include="Belanja.aspx.designer.cs">
       <DependentUpon>Belanja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account.aspx.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account.aspx.designer.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Keranjang.aspx.cs">
+      <DependentUpon>Keranjang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Keranjang.aspx.designer.cs">
+      <DependentUpon>Keranjang.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
