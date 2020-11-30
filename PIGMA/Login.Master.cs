@@ -7,16 +7,15 @@ using System.Web.UI.WebControls;
 
 namespace PIGMA
 {
-    public partial class HomePage : System.Web.UI.Page
+    public partial class Login : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-        protected void btnMap_Click(object sender, EventArgs e)
+        protected void btnBackBeranda_Click(object sender, EventArgs e)
         {
-            panelSupermarketTerdekat.Visible = true;
+            Response.Redirect("~/HomePage.aspx");
         }
-        
     }
 }

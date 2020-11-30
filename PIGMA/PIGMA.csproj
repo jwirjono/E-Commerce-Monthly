@@ -120,21 +120,33 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\FormPlus.css" />
     <Content Include="Content\HomePlus.css" />
+    <Content Include="Content\Images\AkunPesanan.png" />
     <Content Include="Content\Images\Carousel1.png" />
     <Content Include="Content\Images\CardProduk.png" />
+    <Content Include="Content\Images\DaftarForm.png" />
+    <Content Include="Content\Images\formchecklist.png" />
+    <Content Include="Content\Images\formchecklist2.png" />
+    <Content Include="Content\Images\HistoryBelanja.png" />
+    <Content Include="Content\Images\HomePageTopImage.png" />
     <Content Include="Content\Images\Keperluan Dapur.png" />
     <Content Include="Content\Images\KeranjangKosong.png" />
     <Content Include="Content\Images\Korean Food.png" />
     <Content Include="Content\Images\Login.png" />
+    <Content Include="Content\Images\MapButton.png" />
     <Content Include="Content\Images\Meat.png" />
     <Content Include="Content\Images\Minuman.png" />
+    <Content Include="Content\Images\MyCart.png" />
     <Content Include="Content\Images\Perlengkapan Bayi.png" />
     <Content Include="Content\Images\Perlengkapan Hewan.png" />
     <Content Include="Content\Images\Produk Beku.png" />
     <Content Include="Content\Images\Produk Kecantikan.png" />
     <Content Include="Content\Images\Produk Kesehatan.png" />
+    <Content Include="Content\Images\ProfilePicture.png" />
     <Content Include="Content\Images\Roti.png" />
+    <Content Include="Content\Images\SearchIcon.png" />
     <Content Include="Content\Images\Snack.png" />
+    <Content Include="Content\Images\Transaksi Berulang.png" />
+    <Content Include="Content\Images\UserAkunSaya.png" />
     <Content Include="Content\Images\Vector.png" />
     <Content Include="Content\Images\Watermark.PNG" />
     <Content Include="Content\KeranjangPlus.css" />
@@ -152,6 +164,7 @@
     <Content Include="Belanja.aspx" />
     <Content Include="Account.aspx" />
     <Content Include="Keranjang.aspx" />
+    <Content Include="Login.Master" />
     <None Include="Properties\PublishProfiles\FTPMonthlySkripsi.pubxml" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -308,6 +321,13 @@
     </Compile>
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.Master.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.Master.designer.cs">
+      <DependentUpon>Login.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

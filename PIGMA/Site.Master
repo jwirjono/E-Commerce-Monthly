@@ -9,34 +9,43 @@
     <title><%: Page.Title %> - My ASP.NET Application</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/AccountPlus.css" rel="stylesheet" type="text/css"/>
     <link href="~/Content/HomePlus.css" rel="stylesheet" type="text/css"/>
-    <link href="~/Content/FormPlus.css" rel="stylesheet" type="text/css"/>
     <link href="~/Content/BelanjaPlus.css" rel="stylesheet" type="text/css"/>
     <link href="~/Content/KeranjangPlus.css" rel="stylesheet" type="text/css"/>
     <link href="~/Content/Additional.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <form runat="server">
-        <div class="navbar navbar-inverse container-fluid" style="background-color: #373f41;color:#ffffff;border-radius:0px;border: 1px solid #373f41;">
+        <div class="navbar navbar-inverse container-fluid" style="background-color: #373f41;color:#ffffff;border-radius:0px;border: 1px solid #373f41;font-family: Roboto;font-size: 16px;">
+            <div class="col-md-1"></div>
             <div class="col-md-1">
-                <a class="navbar-brand" runat="server" href="~/">MONTHLY</a>
+                <a class="navbar-brand" style="font-size:24px;font-weight:bold;text-decoration:none;color:#FFF;text-align:center;" runat="server" href="HomePage.aspx">MONTHLY</a>
+                <asp:label runat="server" Text="" ID="holup"/>
             </div>
-            <div class="col-md-9" id ="search">
-                <input type="text" class="Searchbar"  placeholder="Cari Produk">
-                <a>
-                    <svg width="24px" height="24px" id="SearchButton" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
-                    <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
-                </svg></a>
-                
+            <div class="col-md-7" id ="search" style="display:flex;flex-direction:row;">
+                <input runat="server" id="txtSearchBar" type="text" class="Searchbar"  placeholder="Cari Produk">
+                <asp:ImageButton runat="server" onclick="btnSearch_Click" Cssclass="SearchButton" ImageUrl="Content/Images/SearchIcon.png"/> 
             </div>
-
-            <div class="col-md-2">
-                <ul class="nav navbar-nav" style="display:flex;flex-direction:row">
-                    <li><a runat="server" href="~/Login">Login</a></li>
-                    <li><a runat="server" href="~/Belanja">Belanja</a></li>
-                    <li><a runat="server" href="~/Account">Akun</a></li>
-                </ul>
+            <div id="navLoginTruePanel" class="col-md-3" runat="server" style="display:flex;flex-direction:row;" visible="false">
+                <a runat="server" class="navItem" href="Account.aspx"><img  src="Content/Images/HistoryBelanja.PNG"></a>
+                <a runat="server" class="navItem" href="Keranjang.aspx"><img  src="Content/Images/MyCart.PNG"></a>
+                <div style="width:1px;height:40px;border:1px solid #fff;" class="navItem"></div>
+                <div class="navItem" style="display:flex;flex-direction:row;">
+                    <p class="navItem">Sophie Nuraeni</p>
+                    <img class="navItem" style="width:40px;height:40px;border-radius:20px;" src="Content/Images/ProfilePicture.png">
+                </div>
+            </div>
+            <div id="navLoginFalsePanel" class="col-md-3" runat="server" style="display:flex;flex-direction:row;">
+                <div style="width:1px;height:45px;border:1px solid #fff;" class="navItem"></div>
+                <div class="navItem row" style="height:45px;width:60%;">
+                        <div class="col-md-6">
+                            <asp:button runat="server" class="daftarNavPlus" Text="DAFTAR"/>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" class="masukNavPlus">MASUK</button>
+                        </div>
+                    </div>
             </div>
         </div>
         <div class="container-fluid body-content MainContentPlus">
@@ -44,7 +53,7 @@
             </asp:ContentPlaceHolder>
         </div>
         <footer>
-            <div class="footerPlus container-fluid">
+            <asp:Panel runat="server" ID="panelFooter" Cssclass="footerPlus container-fluid" Visible="false">
                 <div class="row">
                     <div class="col-md-3">
                         <h4>BANTUAN</h4>
@@ -77,7 +86,7 @@
                         <button type="button" class="btn btn-light" style="color:#373f41;border-radius:10px;border:#373f41 1px solid;">Daftar Supermarket</button>
                     </div>
                 </div>
-            </div>
+            </asp:Panel>
 
             </footer>
     </form>

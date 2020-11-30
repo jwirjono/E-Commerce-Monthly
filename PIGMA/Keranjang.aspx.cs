@@ -16,6 +16,8 @@ namespace PIGMA
         protected void btn_mulaibelanja(object sender, EventArgs e)
         {
             panelKeranjangKosong.Visible = false;
+            panelKeranjangBelanja.Visible = true;
+            lblMainHeader.Text = "Pembelian"; 
         }
     }
 }
