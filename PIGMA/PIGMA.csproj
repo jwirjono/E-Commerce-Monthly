@@ -121,11 +121,15 @@
     <Content Include="Content\FormPlus.css" />
     <Content Include="Content\HomePlus.css" />
     <Content Include="Content\Images\AkunPesanan.png" />
+    <Content Include="Content\Images\ButtonMinusKuning.png" />
+    <Content Include="Content\Images\ButtonTambahKuning.png" />
     <Content Include="Content\Images\Carousel1.png" />
     <Content Include="Content\Images\CardProduk.png" />
     <Content Include="Content\Images\DaftarForm.png" />
     <Content Include="Content\Images\formchecklist.png" />
     <Content Include="Content\Images\formchecklist2.png" />
+    <Content Include="Content\Images\Giant.png" />
+    <Content Include="Content\Images\GrandLucky.png" />
     <Content Include="Content\Images\HistoryBelanja.png" />
     <Content Include="Content\Images\HomePageTopImage.png" />
     <Content Include="Content\Images\Keperluan Dapur.png" />
@@ -136,16 +140,19 @@
     <Content Include="Content\Images\Meat.png" />
     <Content Include="Content\Images\Minuman.png" />
     <Content Include="Content\Images\MyCart.png" />
+    <Content Include="Content\Images\OrangBahagia.png" />
     <Content Include="Content\Images\Perlengkapan Bayi.png" />
     <Content Include="Content\Images\Perlengkapan Hewan.png" />
     <Content Include="Content\Images\Produk Beku.png" />
     <Content Include="Content\Images\Produk Kecantikan.png" />
     <Content Include="Content\Images\Produk Kesehatan.png" />
     <Content Include="Content\Images\ProfilePicture.png" />
+    <Content Include="Content\Images\RanchMarket.png" />
     <Content Include="Content\Images\Roti.png" />
     <Content Include="Content\Images\SearchIcon.png" />
     <Content Include="Content\Images\Snack.png" />
     <Content Include="Content\Images\Transaksi Berulang.png" />
+    <Content Include="Content\Images\Transmart.png" />
     <Content Include="Content\Images\UserAkunSaya.png" />
     <Content Include="Content\Images\Vector.png" />
     <Content Include="Content\Images\Watermark.PNG" />
@@ -298,6 +305,8 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Classes\DataBelanja.cs" />
+    <Compile Include="Classes\DataProduk.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

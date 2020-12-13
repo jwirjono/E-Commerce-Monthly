@@ -8,6 +8,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 style="font-size:44px;font-weight:bold;color:#97C200;">Belanja Bulanan di Market Terpercaya</h1>
+                        <a href="Login.aspx">login</a>
                     </div>
                 </div>
                 <div class="row" style="margin-top:32px;">
@@ -18,7 +19,7 @@
                 <div class="row" style="margin-top:32px;">
                     <div class="col-md-12" id ="search" style="display:flex;flex-direction:row;">
                         <input runat="server" id="txtSearchBar" type="text" class="Searchbar"  placeholder="Cari Produk">
-                        <asp:ImageButton runat="server"  Cssclass="MapButton" ImageUrl="Content/Images/MapButton.png" OnClick="btnMap_Click" /> 
+                        <asp:ImageButton runat="server"  Cssclass="MapButton" ImageUrl="Content/Images/MapButton.png" OnClick="btnMap_Click"/> 
                     </div>
                 </div>
                 
@@ -34,64 +35,17 @@
             </div>
             <div class="col-md-9">
                 <div class="Homepage-List row">
-
-                    <div class="card cardPlus col-md-2">
-                      <img class="card-img-top card-img-topPlus" src="Content/Images/Watermark.PNG" alt="fas">
-                      <div class="card-body">
-                        <h4 class="card-text"><b>Nama Supermarket</b></h4>
-                      </div>
-                    </div>
-
-                    <div class="card cardPlus col-md-2">
-                      <img class="card-img-top card-img-topPlus" src="Content/Images/Watermark.PNG" alt="fas">
-                      <div class="card-body">
-                        <h4 class="card-text"><b>Nama Supermarket</b></h4>
-                      </div>
-                    </div>
-
-                    <div class="card cardPlus col-md-2">
-                      <img class="card-img-top card-img-topPlus" src="Content/Images/Watermark.PNG" alt="fas">
-                      <div class="card-body">
-                        <h4 class="card-text"><b>Nama Supermarket</b></h4>
-                      </div>
-                    </div>
-
-                    <div class="card cardPlus col-md-2">
-                      <img class="card-img-top card-img-topPlus" src="Content/Images/Watermark.PNG" alt="fas">
-                      <div class="card-body">
-                        <h4 class="card-text"><b>Nama Supermarket</b></h4>
-                      </div>
-                    </div>
-                    <div class="card cardPlus col-md-2">
-                      <img class="card-img-top card-img-topPlus" src="Content/Images/Watermark.PNG" alt="fas">
-                      <div class="card-body">
-                        <h4 class="card-text"><b>Nama Supermarket</b></h4>
-                      </div>
-                    </div>
-                    <div class="card cardPlus col-md-2">
-                      <img class="card-img-top card-img-topPlus" src="Content/Images/Watermark.PNG" alt="fas">
-                      <div class="card-body">
-                        <h4 class="card-text"><b>Nama Supermarket</b></h4>
-                      </div>
-                    </div>
-                    <div class="card cardPlus col-md-2">
-                      <img class="card-img-top card-img-topPlus" src="Content/Images/Watermark.PNG" alt="fas">
-                      <div class="card-body">
-                        <h4 class="card-text"><b>Nama Supermarket</b></h4>
-                      </div>
-                    </div>
-                    <div class="card cardPlus col-md-2">
-                      <img class="card-img-top card-img-topPlus" src="Content/Images/Watermark.PNG" alt="fas">
-                      <div class="card-body">
-                        <h4 class="card-text"><b>Nama Supermarket</b></h4>
-                      </div>
-                    </div>
-                    <div class="card cardPlus col-md-2">
-                      <img class="card-img-top card-img-topPlus" src="Content/Images/Watermark.PNG" alt="fas">
-                      <div class="card-body">
-                        <h4 class="card-text"><b>Nama Supermarket</b></h4>
-                      </div>
-                    </div>
+                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Giant.PNG" OnClick="btnGiant_Click"/>
+                    <div class="imgDividePlus"></div>
+                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/GrandLucky.PNG" OnClick="btnGrandLucky_Click" />
+                    <div class="imgDividePlus"></div>
+                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Transmart.PNG" OnClick="btnTransmart_Click" />
+                    <!--page2-->
+                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/RanchMarket.PNG" OnClick="btnRanchMarket_Click"/>
+                    <div class="imgDividePlus"></div>
+                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Giant.PNG" />
+                    <div class="imgDividePlus"></div>
+                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Giant.PNG" />
 
                 </div>
             </div>

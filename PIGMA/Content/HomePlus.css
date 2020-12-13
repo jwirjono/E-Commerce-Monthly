@@ -8,6 +8,15 @@
     overflow: hidden;
     white-space: nowrap;
 }
+.midColumn {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.midRow {
+    margin-top: auto;
+    margin-bottom: auto;
+}
 .Searchbar {
     height: 100%;
     width: 100%;
@@ -84,10 +93,25 @@
 .Homepage-List {
     margin: 5px 10px;
     border: 1px solid #fff;
-    padding: 10px;
+    padding: 20px;
     background-color: #fff;
     border-radius: 15px;
     color: #373f41;
+}
+
+.imgHomePlus {
+    border-radius: 10px;
+    flex: 0 0 30%;
+    max-width: 30%;
+    position: relative;
+    width: 100%;
+    margin: 10px 0px;
+}
+.imgDividePlus {
+    position: relative;
+    width: 100%;
+    flex: 0 0 5%;
+    max-width: 5%;
 }
 
 .cardPlus {
