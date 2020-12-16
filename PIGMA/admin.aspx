@@ -17,58 +17,83 @@
     <!---- header --->
     <nav class="navbar-dark bg-dark sticky-top">
         <a class="navbar-brand brand">
-            <img src="content/images/logo.png"></a>
+            <img src="AdminContent/Logo.png"></a>
         <span class="header-right text">Transmart Carrefour Central Park</span>
 
     </nav>
     <div class="container-fluid row">
     <!--button-->
-    <div class="col-md-3">
-        <div class="col-8">
-            <div class="flex-column">
+    <div class="col-md-3" style="padding-top : 42px;">
+        <div class="col-12">
+            <div class="flex-column"">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
                         <a class="nav-link" href="admin.aspx">
-                            <img src="content/images/Beranda.png">
-                            <span class="button-text active">Beranda</span>
+                            <img style="padding-left : 15px; padding-bottom : 5px;" src="content/images/Beranda.png">
+                            <span class="button-text active" >Beranda</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a  class="nav-link" href="adminpesanan.aspx">
-                            <img src="content/images/Penjualan.png">
+                            <img style="padding-left : 10px; padding-bottom : 5px;" src="content/images/Penjualan.png">
                             <span class="button-text">Pesanan</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="adminproduk.aspx">
-                            <img src="content/images/Box.png">
+                            <img style="padding-left : 10px; padding-bottom : 5px;"  src="content/images/Box.png">
                             <span class="button-text">Produk</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a  class="nav-link" href="adminpengaturan.aspx">
-                            <img src="content/images/Settings.png">
+                            <img style="padding-left : 10px; padding-bottom : 5px;" src="content/images/Settings.png">
                             <span class="button-text">Pengaturan</span>
                         </a>
                     </li>
                 </ul>
-                <button class="button-out">Keluar</button>
+                
             </div>
+            
         </div>
+        <button class="button-out" style="vertical-align:bottom;">Keluar</button>
     </div>
+    
+
 
     <!--content-->
-    <div class="col-md-9">
+    <div class="col-md-9" style="background-color:#FCFCFC">
         <div class="row">
-            <h2>Transmart Carrefour Central Park
-                <label class="button-Verifikasi" style="text-align : center">Terverifikasi</label></h2>
-            <h5>Selamat Datang Kembali di Toko</h5>
-            <hr />
+            <div class="col-md-12">
+                <h2>Transmart Carrefour Central Park
+                <label class="button-Verifikasi" style="text-align : center">Terverifikasi</label>
+                <br />
+                <span style="font-size : 18px;">Selamat Datang Kembali di Toko</span>
+                </h2>
+            </div>
+            
+            
         </div>
+        <hr />
         <div class="row rowsaldo">
-            <h1>saldo</h1>
+            <div class ="col-md-12">
+            <h3>Saldo
+                <br />
+                <span style="font-size:18px;">Aktivitas saldo yang dapat anda pantau</span>
+            </h3>
+                </div>
+            <div class="col-md-4">
+                <label><img src="AdminContent/Card.png"/></label>
+            </div>
         </div>
+        <hr />
         <div class="row rowcontent">
+            <div class="col-md-12">
+                <h3>Penting hari ini
+                    <br />
+                <span style="font-size:18px;">Aktivitas yang perlu anda pantau</span>
+            </h3>
+            </div>
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-3 col-md-6 mb-1">
               <div class="card border-left-primary produk">
@@ -136,13 +161,16 @@
                 </div>
               </div>
             </div>
-            <hr />
+            
         </div>
+        <hr />
         <div class="row rowcontent">
-            <h1>Transmart Carrefour Central Park
-                <button class="button-Verifikasi">Terverifikasi</button></h1>
-            <h5>Selamat Datang Kembali di Toko</h5>
-            <hr />
+            <div class="col-md-12">
+            <h2>Produk
+            <br />
+            <span style="font-size:18px;">Produk yang sering dibeli</span>
+            </h2>
+                </div>
         </div>
         
 

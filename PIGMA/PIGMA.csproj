@@ -109,6 +109,11 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AdminContent\admin.css" />
+    <Content Include="AdminContent\admin.js" />
+    <Content Include="AdminContent\Card.png" />
+    <Content Include="AdminContent\Logo.png" />
+    <Content Include="AdminContent\magnify.png" />
+    <Content Include="AdminContent\mark.png" />
     <Content Include="adminpengaturan.aspx" />
     <Content Include="adminpesanan.aspx" />
     <Content Include="adminproduk.aspx" />
@@ -124,7 +129,6 @@
     <Content Include="Content\Images\Box.png" />
     <Content Include="Content\Images\Chart-bar.png" />
     <Content Include="Content\Images\Beranda.png" />
-    <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\Penjualan.png" />
     <Content Include="Content\Images\Settings.png" />
     <Content Include="Content\Images\Watermark.PNG" />
