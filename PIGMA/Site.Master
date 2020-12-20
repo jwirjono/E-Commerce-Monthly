@@ -24,7 +24,7 @@
                 <a class="navbar-brand" style="font-size:24px;font-weight:bold;text-decoration:none;color:#FFF;text-align:center;" runat="server" href="HomePage.aspx">MONTHLY</a>
                 <asp:label runat="server" Text="" ID="holup"/>
             </div>
-            <div class="col-md-7" id ="search" style="display:flex;flex-direction:row;">
+            <div class="col-md-7" id ="panelSearch" style="display:flex;flex-direction:row;">
                 <input runat="server" id="txtSearchBar" type="text" class="Searchbar"  placeholder="Cari Produk">
                 <asp:ImageButton runat="server" onclick="btnSearch_Click" Cssclass="SearchButton" ImageUrl="Content/Images/SearchIcon.png"/> 
             </div>

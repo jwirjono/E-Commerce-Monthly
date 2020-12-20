@@ -14,40 +14,71 @@ namespace PIGMA.Classes
             public int Kuantitas { get; set; }
             public int Harga { get; set; }
             public string HargaRP { get; set; }
+            public int Total { get; set; }
+            public string TotalRP { get; set; }
         }
+        public class DetailReceipt
+        {
+            public int IDReceipt { get; set; }
+            public string AlamatPengiriman { get; set; }
+            public string WaktuPengiriman { get; set; }
+            public string Status { get; set; }
+            public int Total { get; set; }
+            public string TotalRP { get; set; }
+        }
+        public List<DetailReceipt> ListDetailReceipt { get; set; }
         public List<DetailProduk> ListDetailProduk { get; set; }
         
-        
+
+
         public DataBelanja()
         {
-            this.ListDetailProduk= new List<DetailProduk>();
+            this.ListDetailProduk = new List<DetailProduk>();
+            this.ListDetailReceipt = new List<DetailReceipt>();
         }
-        
+        public void SetReceipt(string alamat, int harga)
+        {
+            DetailReceipt det = new DetailReceipt();
+            Random r = new Random();
+            int genRand = r.Next(100000, 999999);
+            det.IDReceipt = 100 + genRand;
+            det.AlamatPengiriman = alamat;
+            det.Total = harga;
+            det.TotalRP = "Rp. " + harga.ToString();
+            ListDetailReceipt.Add(det);
+
+        }
         public void DataBelanjaSet(int id,string nama, int kuantitas,int harga)
         {
             bool IsDuplicate = false;
-            if (ListDetailProduk != null)
+            if(kuantitas != 0)
             {
-                for (int i = 0; i < ListDetailProduk.Count(); i++)
+                if (ListDetailProduk != null)
                 {
-                    if (ListDetailProduk[i].IDProduk == id)
+                    for (int i = 0; i < ListDetailProduk.Count(); i++)
                     {
-                        IsDuplicate = true;
-                        ListDetailProduk[i].Kuantitas = kuantitas;
-                        break;
+                        if (ListDetailProduk[i].IDProduk == id)
+                        {
+                            IsDuplicate = true;
+                            ListDetailProduk[i].Kuantitas = kuantitas;
+                            break;
+                        }
                     }
                 }
+                if (!IsDuplicate)
+                {
+                    DetailProduk det = new DetailProduk();
+                    det.IDProduk = id;
+                    det.NamaProduk = nama;
+                    det.Kuantitas = kuantitas;
+                    det.Harga = harga;
+                    det.HargaRP = "Rp. " + harga.ToString();
+                    det.Total = kuantitas * harga;
+                    det.TotalRP = "Rp. " + (kuantitas * harga).ToString();
+                    ListDetailProduk.Add(det);
+                }
             }
-            if (!IsDuplicate)
-            {
-                DetailProduk det = new DetailProduk();
-                det.IDProduk = id;
-                det.NamaProduk = nama;
-                det.Kuantitas = kuantitas;
-                det.Harga = harga;
-                det.HargaRP = "Rp. " + harga.ToString();
-                ListDetailProduk.Add(det);
-            }
+            
         }
 
     }

@@ -16,36 +16,23 @@ namespace PIGMA
         {
             if (!IsPostBack)
             {
-                chkAllprop.Value = "0";
+                chkAllprop.Value = "1";
                 if (Session["Keranjang"] !=null)
                 {
-                    panelKeranjangKosong.Visible = false;
-                    panelKeranjangBelanja.Visible = true;
-
                     DataBelanja datab = new DataBelanja();
                     datab.ListDetailProduk = (List<DetailProduk>)Session["Keranjang"];
-                    datab.DataBelanjaSet(10121, "a", 1, 50000);
-                    datab.DataBelanjaSet(10122, "a", 1, 50000);
-
-                    gridObject.DataSource = datab.ListDetailProduk;
-                    gridObject.DataBind();
-
-                    int count = 0;
-                    foreach (GridViewRow gvRow in gridObject.Rows)
+                    if (datab.ListDetailProduk.Count != 0)
                     {
-                        CheckBox cb = (CheckBox)gvRow.FindControl("chkStats");
-                        Label lblharga = (Label)gvRow.FindControl("lblHarga");
-                        if (cb.Checked)
+                        panelKeranjangKosong.Visible = false;
+                        panelKeranjangBelanja.Visible = true;
+                        gridObject.DataSource = datab.ListDetailProduk;
+                        gridObject.DataBind();
+                        int count = 0;
+                        foreach (GridViewRow gvRow in gridObject.Rows)
                         {
+                            Label lblharga = (Label)gvRow.FindControl("lblTotal");
                             count = count + int.Parse(lblharga.Text);
                         }
-                    }
-                    if (count == 0)
-                    {
-                        totalharga1.Text = "-";
-                    }
-                    else
-                    {
                         totalharga1.Text = count.ToString();
                     }
                 }
@@ -100,19 +87,35 @@ namespace PIGMA
                 }
             }
 
-            if(keranjang.ListDetailProduk != null)
+            if(keranjang.ListDetailProduk.Count == 0)
             {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Harap Memilih Produk di Keranjang')", true);
+            }
+            else
+            {
+                int count = 0;
+                foreach (GridViewRow gvRow in gridObject.Rows)
+                {
+                    Label lblharga = (Label)gvRow.FindControl("lblTotal");
+                    CheckBox cb = (CheckBox)gvRow.FindControl("chkStats");
+                    if (cb.Checked)
+                    {
+                        count = count + int.Parse(lblharga.Text);
+                    }
+                }
+                txtTotal1.Text = count.ToString();
+                txtTotal1max.Text = count.ToString();
+                txtTotal2.Text = count.ToString();
+                txtTotal2max.Text = count.ToString();
+                txtTotal3.Text = count.ToString();
+                txtTotal3max.Text = count.ToString();
                 Session["Pembayaran"] = keranjang;
                 panelKeranjangBelanja.Visible = false;
                 panelPembelianBelanja.Visible = true;
                 lblMainHeader.Text = "Pembelian";
-                lblsupa.Text= Session["Supermarket"].ToString();
+                lblsupa.Text = Session["Supermarket"].ToString();
                 lblsupa.Visible = true;
-
-            }
-            else
-            {
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Harap Memilih Produk di Keranjang')", true);
+                
             }
         }
         protected void btnBack1_Click(object sender, EventArgs e)
@@ -143,6 +146,25 @@ namespace PIGMA
         }
         protected void btnNext3_Click(object sender, EventArgs e)
         {
+            DataBelanja datab = new DataBelanja();
+            DataBelanja datanew = new DataBelanja();
+            datab.ListDetailProduk = (List<DetailProduk>)Session["Keranjang"];
+            foreach (GridViewRow gvRow in gridObject.Rows)
+            {
+                CheckBox cb = (CheckBox)gvRow.FindControl("chkStats");
+                Label lblid = (Label)gvRow.FindControl("lblID");
+                Label lblnama = (Label)gvRow.FindControl("lblNamaProduk");
+                Label lblkuantitas = (Label)gvRow.FindControl("lblKuantitas");
+                Label lblharga = (Label)gvRow.FindControl("lblHarga");
+                if (cb.Checked)
+                {
+                    datanew.DataBelanjaSet(int.Parse(lblid.Text), lblnama.Text, int.Parse(lblkuantitas.Text), int.Parse(lblharga.Text));
+                }
+            }
+            datanew.SetReceipt(txtAlamat.Text, int.Parse(txtTotal3max.Text));
+            Session["ProdukFinal"] = datanew.ListDetailProduk;
+            Session["Receipt"] = datanew.ListDetailReceipt;
+            Response.Redirect("Account.aspx");
         }
 
     }

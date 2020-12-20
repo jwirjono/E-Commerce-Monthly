@@ -14,7 +14,7 @@
             </asp:Panel>
             <asp:Panel runat="server" CssClass="container-fluid row" ID="panelKeranjangBelanja" Visible="false">
                 <div class="col-md-9 tblKeranjangPlus">
-                    <asp:HiddenField Value="0" runat="server" ID="chkAllprop" />
+                    <asp:HiddenField Value="1" runat="server" ID="chkAllprop" />
                     <asp:GridView runat="server" ID="gridObject"
                         AllowPaging="false"
                         AllowSorting="false"
@@ -26,10 +26,10 @@
                             <asp:TemplateField HeaderText="No.">
                                 <ItemStyle Width="20"/>
                                 <HeaderTemplate>
-                                    <asp:CheckBox ID="chkAll" OnCheckedChanged="chkAll_CheckedChanged" AutoPostBack="true" runat="server"/>
+                                    <asp:CheckBox ID="chkAll" OnCheckedChanged="chkAll_CheckedChanged" AutoPostBack="true" runat="server" Checked="true"/>
                                 </HeaderTemplate>
                                 <ItemTemplate>
-                                    <asp:CheckBox ID="chkStats" runat="server"/>
+                                    <asp:CheckBox ID="chkStats" runat="server" Checked="true" OnCheckedChanged="chkRef_Click"/>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField >
@@ -68,6 +68,7 @@
                                     <div style="display:flex;flex-direction:column;border-left:1px solid #9B9FA0">
                                             <asp:Label Text="Total" Font-Bold="true" CssClass="midColumn" runat="server" />
                                             <asp:Label ID="Label2" CssClass="midColumn" Text='<%#Eval("HargaRP") %>' runat="server" />
+                                            <asp:Label ID="lblTotal" CssClass="midColumn" Text='<%#Eval("Total") %>' runat="server" Visible="false"/>
                                         </div>
                                 </ItemTemplate>
                             </asp:TemplateField>
@@ -140,7 +141,7 @@
                                 <div class="form-group" style="display:flex;flex-direction:row;">
                                     <div style="display:flex;flex-direction:column">
                                         <asp:label runat="server" CssClass="form-controlPlus" style="font-size:24px;color:#373F41;"><b>Alamat Penerima</b></asp:label>
-                                        <asp:TextBox runat="server" ID="TextBox3" CssClass="form-controlPlus" Text="jl.xxxx" Width="500px"/>
+                                        <asp:TextBox runat="server" ID="txtAlamat" CssClass="form-controlPlus" Text="jl.xxxx" Width="500px"/>
                                     </div>
                                 </div>
                             </div>
@@ -152,11 +153,11 @@
                             <p>Subtotal</p>
                             <div class="row">
                                 <p class="col-md-8">Subtotal</p>
-                                <p class="col-md-4">Rp.783.300</p>
+                                <asp:Label runat="server" ID="txtTotal1" />
                             </div>
                             <div class="row">
                                 <p class="col-md-8">Biaya Kemasan(kardus)</p>
-                                <p class="col-md-4">Rp.5.000</p>
+                                <p class="col-md-4">-</p>
                             </div>
                             <div class="row">
                                 <p class="col-md-8">Biaya Pengiriman</p>
@@ -164,12 +165,12 @@
                             </div>
                             <div class="row">
                                 <p class="col-md-8">Diskon</p>
-                                <p class="col-md-4">-Rp.47.000</p>
+                                <p class="col-md-4">-</p>
                             </div>
                             <hr />
                             <div class="row">
                                 <p class="col-md-8">Total Harga</p>
-                                <p class="col-md-4">Rp.850.000</p>
+                                <asp:Label runat="server" ID="txtTotal1max"/>
                             </div>
                             <div class="row" style="height:60px">
                                 <asp:button runat="server" class="masukInactivePlus col-md-12"  Text="Setuju dan Bayar"/>
@@ -243,11 +244,11 @@
                             <p>Subtotal</p>
                             <div class="row">
                                 <p class="col-md-8">Subtotal</p>
-                                <p class="col-md-4">Rp.783.300</p>
+                                <asp:Label runat="server" ID="txtTotal2" />
                             </div>
                             <div class="row">
                                 <p class="col-md-8">Biaya Kemasan(kardus)</p>
-                                <p class="col-md-4">Rp.5.000</p>
+                                <p class="col-md-4">-</p>
                             </div>
                             <div class="row">
                                 <p class="col-md-8">Biaya Pengiriman</p>
@@ -255,12 +256,12 @@
                             </div>
                             <div class="row">
                                 <p class="col-md-8">Diskon</p>
-                                <p class="col-md-4">-Rp.47.000</p>
+                                <p class="col-md-4">-</p>
                             </div>
                             <hr />
                             <div class="row">
                                 <p class="col-md-8">Total Harga</p>
-                                <p class="col-md-4">Rp.850.000</p>
+                                <asp:Label runat="server" ID="txtTotal2max" />
                             </div>
                             <div class="row" style="height:60px">
                                 <asp:button runat="server" class="masukInactivePlus col-md-12"  Text="Setuju dan Bayar"/>
@@ -327,11 +328,11 @@
                             <p>Subtotal</p>
                             <div class="row">
                                 <p class="col-md-8">Subtotal</p>
-                                <p class="col-md-4">Rp.783.300</p>
+                                <asp:Label runat="server" ID="txtTotal3" />
                             </div>
                             <div class="row">
                                 <p class="col-md-8">Biaya Kemasan(kardus)</p>
-                                <p class="col-md-4">Rp.5.000</p>
+                                <p class="col-md-4">-</p>
                             </div>
                             <div class="row">
                                 <p class="col-md-8">Biaya Pengiriman</p>
@@ -339,12 +340,12 @@
                             </div>
                             <div class="row">
                                 <p class="col-md-8">Diskon</p>
-                                <p class="col-md-4">-Rp.47.000</p>
+                                <p class="col-md-4">-</p>
                             </div>
                             <hr />
                             <div class="row">
                                 <p class="col-md-8">Total Harga</p>
-                                <p class="col-md-4">Rp.850.000</p>
+                                <asp:Label runat="server" ID="txtTotal3max" />
                             </div>
                             <div class="row" style="height:60px">
                                 <asp:button runat="server" class="masukLoginPlus col-md-12"  Text="Setuju dan Bayar"/>

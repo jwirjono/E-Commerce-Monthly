@@ -1,17 +1,28 @@
-﻿.sidebarAccount{
+﻿.fontMainAccount {
+    color: #262628;
+    font-size: 25px;
+    font-weight: bold
+}
+.fontSubAccount {
+    color: #373f41;
+    font-size: 16px;
+    font-weight: bold
+}
+.sidebarAccount{
     padding:20px;
 }
 .gambarSidebarAccount{
     display:flex;
     flex-direction:row;
-    margin:50px 0px;
+    margin-bottom:50px;
 }
-.listSidebarAccount{
-    margin:20px 0px;
-    padding:10px;
-    display:flex;
-    flex-direction:row;
-    opacity:0.5;
+.listSidebarAccount {
+    margin: 20px 0px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    opacity: 0.5;
+    color: #373f41;
 }
 .lsaActive {
     opacity: 1;
@@ -36,4 +47,9 @@
     text-align:center;
     font-size :18px;
     font-weight : 500;
+}
+.smallIconAccount {
+    width: 20px;
+    height: 24px;
+    margin: auto 10px auto 0px;
 }

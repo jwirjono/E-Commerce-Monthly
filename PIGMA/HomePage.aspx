@@ -42,10 +42,6 @@
                     <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Transmart.PNG" OnClick="btnTransmart_Click" />
                     <!--page2-->
                     <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/RanchMarket.PNG" OnClick="btnRanchMarket_Click"/>
-                    <div class="imgDividePlus"></div>
-                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Giant.PNG" />
-                    <div class="imgDividePlus"></div>
-                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Giant.PNG" />
 
                 </div>
             </div>

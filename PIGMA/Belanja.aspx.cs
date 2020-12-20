@@ -16,17 +16,24 @@ namespace PIGMA
         {
             if (!IsPostBack)
             {
+                
                 string supermarket = Session["Supermarket"].ToString();
                 supaID.Value = supermarket;
                 switch (supermarket)
                 {
                     case "Giant":
+                        lblsupa.Text = "Giant";
+                        panelCardProdukGiant.Visible = true;
                         break;
-                    case "Grand":
+                    case "Grand Lucky":
+                        lblsupa.Text = "Grand Lucky";
+                        panelCardProdukGrandLucky.Visible = true;
                         break;
-                    case "Trans":
+                    case "Transmart":
+                        lblsupa.Text = "Transmart";
                         break;
-                    case "Ranch":
+                    case "Ranch Market":
+                        lblsupa.Text = "Ranch Market";
                         break;
                 }
             }
@@ -53,9 +60,26 @@ namespace PIGMA
         }
         protected void btnComplete_Click(object sender, EventArgs e)
         {
-            string keranjang = lblItemCard1.Text.ToString() + lblItemCard2.Text.ToString() + lblItemCard3.Text.ToString() + lblItemCard4.Text.ToString();
-            Session["Keranjang"] = keranjang;
-            Response.Redirect("Keranjang.aspx");
+            if (Session["Supermarket"].ToString() == "Giant")
+            {
+                DataBelanja data = new DataBelanja();
+                data.DataBelanjaSet(10111, "Apel Merah XiongNu", int.Parse(lblItemCard1.Text), 30000);
+                data.DataBelanjaSet(10112, "Nangka Mazandran", int.Parse(lblItemCard2.Text), 25000);
+                data.DataBelanjaSet(10113, "Jeruk Mandarin", int.Parse(lblItemCard3.Text), 35000);
+                data.DataBelanjaSet(10114, "Manggis Surabaya", int.Parse(lblItemCard4.Text), 50000);
+                Session["Keranjang"] = data.ListDetailProduk;
+                Response.Redirect("Keranjang.aspx");
+            }
+            else if (Session["Supermarket"].ToString() == "Grand Lucky")
+            {
+                DataBelanja data = new DataBelanja();
+                data.DataBelanjaSet(10121, "Apel Hijau Xilin Gol", int.Parse(lblItemCardb1.Text), 70000);
+                data.DataBelanjaSet(10122, "Nangka Gazikumukh", int.Parse(lblItemCardb2.Text), 15000);
+                data.DataBelanjaSet(10123, "Jeruk Mong", int.Parse(lblItemCardb3.Text), 45000);
+                Session["Keranjang"] = data.ListDetailProduk;
+                Response.Redirect("Keranjang.aspx");
+            }
+            
         }
         protected void btnPengiriman_Click(object sender, EventArgs e)
         {
@@ -87,12 +111,8 @@ namespace PIGMA
 
         }
         #region GIANT
-
-
-
         protected void btnAwal1_Click(object sender, EventArgs e)
         {
-            ab = "12";
             panelAwalCard1.Visible = false;
             btnAwalCard1.Visible = true;
             lblItemCard1.Text = "1";
@@ -118,8 +138,6 @@ namespace PIGMA
             count = count + 1;
             lblItemCard1.Text = count.ToString();
         }
-
-
         protected void btnAwal2_Click(object sender, EventArgs e)
         {
             panelAwalCard2.Visible = false;
@@ -200,6 +218,91 @@ namespace PIGMA
             int count = int.Parse(lblItemCard4.Text);
             count = count + 1;
             lblItemCard4.Text = count.ToString();
+        }
+        #endregion
+        #region GRAND LUCKY
+        protected void btnAwalb1_Click(object sender, EventArgs e)
+        {
+            panelAwalCardb1.Visible = false;
+            btnAwalCardb1.Visible = true;
+            lblItemCardb1.Text = "1";
+        }
+        protected void btnMinusb1_Click(object sender, EventArgs e)
+        {
+            int count = int.Parse(lblItemCardb1.Text);
+            if (count == 1)
+            {
+                panelAwalCardb1.Visible = true;
+                btnAwalCardb1.Visible = false;
+                lblItemCardb1.Text = "0";
+            }
+            else
+            {
+                count = count - 1;
+                lblItemCardb1.Text = count.ToString();
+            }
+        }
+        protected void btnTambahb1_Click(object sender, EventArgs e)
+        {
+            int count = int.Parse(lblItemCardb1.Text);
+            count = count + 1;
+            lblItemCardb1.Text = count.ToString();
+        }
+
+
+        protected void btnAwalb2_Click(object sender, EventArgs e)
+        {
+            panelAwalCardb2.Visible = false;
+            btnAwalCardb2.Visible = true;
+            lblItemCardb2.Text = "1";
+        }
+        protected void btnMinusb2_Click(object sender, EventArgs e)
+        {
+            int count = int.Parse(lblItemCardb2.Text);
+            if (count == 1)
+            {
+                panelAwalCardb2.Visible = true;
+                btnAwalCardb2.Visible = false;
+                lblItemCardb2.Text = "0";
+            }
+            else
+            {
+                count = count - 1;
+                lblItemCardb2.Text = count.ToString();
+            }
+        }
+        protected void btnTambahb2_Click(object sender, EventArgs e)
+        {
+            int count = int.Parse(lblItemCardb2.Text);
+            count = count + 1;
+            lblItemCardb2.Text = count.ToString();
+        }
+        protected void btnAwalb3_Click(object sender, EventArgs e)
+        {
+            panelAwalCardb3.Visible = false;
+            btnAwalCardb3.Visible = true;
+            lblItemCardb3.Text = "1";
+        }
+        protected void btnMinusb3_Click(object sender, EventArgs e)
+        {
+            int count = int.Parse(lblItemCardb3.Text);
+            if (count == 1)
+            {
+                panelAwalCardb3.Visible = true;
+                btnAwalCardb3.Visible = false;
+                lblItemCardb3.Text = "0";
+            }
+            else
+            {
+                count = count - 1;
+                lblItemCardb3.Text = count.ToString();
+            }
+        }
+        protected void btnTambahb3_Click(object sender, EventArgs e)
+        {
+            int count = int.Parse(lblItemCardb3.Text);
+            count = count + 1;
+            lblItemCardb3.Text = count.ToString();
         }
         #endregion
     }

@@ -135,6 +135,7 @@
     <Content Include="Content\Images\Keperluan Dapur.png" />
     <Content Include="Content\Images\KeranjangKosong.png" />
     <Content Include="Content\Images\Korean Food.png" />
+    <Content Include="Content\Images\Location.png" />
     <Content Include="Content\Images\Login.png" />
     <Content Include="Content\Images\MapButton.png" />
     <Content Include="Content\Images\Meat.png" />
@@ -151,6 +152,7 @@
     <Content Include="Content\Images\Roti.png" />
     <Content Include="Content\Images\SearchIcon.png" />
     <Content Include="Content\Images\Snack.png" />
+    <Content Include="Content\Images\Time.png" />
     <Content Include="Content\Images\Transaksi Berulang.png" />
     <Content Include="Content\Images\Transmart.png" />
     <Content Include="Content\Images\UserAkunSaya.png" />
@@ -307,6 +309,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Classes\DataBelanja.cs" />
     <Compile Include="Classes\DataProduk.cs" />
+    <Compile Include="Classes\DataReceipt.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

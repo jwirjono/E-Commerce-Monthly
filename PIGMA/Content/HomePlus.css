@@ -3,7 +3,9 @@
     font-family :Roboto;
     font-size : 16px;
 }
-
+a:hover {
+    text-decoration: none;
+}
 #searchPanel {
     overflow: hidden;
     white-space: nowrap;

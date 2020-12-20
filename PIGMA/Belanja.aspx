@@ -5,7 +5,9 @@
         <div class ="row topPanelBelanjaPlus">
             <div class="col-md-4" style="color:#262628;height:400px">
                 <p style="margin:20px 0px;font-size:48px;color:#373F41;"><b>PENGIRIMAN</b></p>
-                <p style="margin:20px 0px;">Transmart Carrefour Central park</p>
+                <div style="margin:20px 0px">
+                    <asp:Label runat="server" ID="lblsupa" />
+                </div>
                 <div style="margin:20px 0px;" class="divDikirimBelanjaPlus">
                     <hr style="width:100%;border:1px solid #CCCDCE;" />
                     <asp:Button runat="server" Cssclass="btn btnDikirimBelanjaPlus" OnClick="btnPengiriman_Click" Text="Dikirim Ke"/>
@@ -105,20 +107,24 @@
                 </div>
             </div>
             <div class="col-md-10 container produkListBelanjaPlus">
-                <div>
-                    <h3>Produk Diskon</h3>
+                <div class="row">
+                    <div style="display:flex;flex-direction:column;height:60px" class="col-md-10">
+                        <h3>Produk Diskon</h3>
+                        <p>Menampilkan 9 dari Semua Kategori</p>
+                    </div>
+                    <div class="col-md-2" style="display:flex;flex-direction:row">
+                        <asp:Button runat="server" ID="btnCompletePurchase" OnClick="btnComplete_Click" CssClass="masukLoginPlus" Text="Lanjutkan"/>
+                    </div>
                 </div>
-                <div>
-                    <p>Menampilkan 9 dari Semua Kategori</p>
-                </div>
+                
                 <hr />
-                <asp:Panel runat="server" ID="panelCardProduk" class="cardlistProdukBelanjaPlus row">
+                <asp:Panel runat="server" ID="panelCardProdukGiant" class="cardlistProdukBelanjaPlus row" Visible="false">
                     <asp:Panel class="cardFullProdukBelanjaPlus" runat="server" id="panelCard1">
                         <div class="cardProdukBelanjaPlus">
                         <a>-50%</a>
                             <img src="Content/Images/CardProduk.png" alt="">
-                            <p style="color:#373F41"><b>Nama Barang</b></p>
-                            <p style="font-size:14px;color:#7C7C7C;">7pcs</p>
+                            <p style="color:#373F41"><b>Apel Merah Xiongnu</b></p>
+                            <p style="font-size:14px;color:#7C7C7C;">1Kg</p>
                             <p style="color:#373F41"><b>Rp.30000</b></p> 
                         </div>
                         <a runat="server" onserverclick="btnAwal1_Click" style="text-decoration:none;color:#FFF" id="panelAwalCard1">
@@ -141,9 +147,9 @@
                         <div class="cardProdukBelanjaPlus">
                         <a>-50%</a>
                             <img src="Content/Images/CardProduk.png" alt="">
-                            <p style="color:#373F41"><b>Nama Barang</b></p>
-                            <p style="font-size:14px;color:#7C7C7C;">7pcs</p>
-                            <p style="color:#373F41"><b>Rp.30000</b></p> 
+                            <p style="color:#373F41"><b>Nangka Mazandran</b></p>
+                            <p style="font-size:14px;color:#7C7C7C;">1Kg</p>
+                            <p style="color:#373F41"><b>Rp.25000</b></p> 
                         </div>
                         <a runat="server" onserverclick="btnAwal2_Click" style="text-decoration:none;color:#FFF" id="panelAwalCard2">
                             <div class="btnCardProdukBelanjaPlus">
@@ -165,9 +171,9 @@
                         <div class="cardProdukBelanjaPlus">
                         <a>-50%</a>
                             <img src="Content/Images/CardProduk.png" alt="">
-                            <p style="color:#373F41"><b>Nama Barang</b></p>
-                            <p style="font-size:14px;color:#7C7C7C;">7pcs</p>
-                            <p style="color:#373F41"><b>Rp.30000</b></p> 
+                            <p style="color:#373F41"><b>Jeruk Mandarin</b></p>
+                            <p style="font-size:14px;color:#7C7C7C;">1Kg</p>
+                            <p style="color:#373F41"><b>Rp.35000</b></p> 
                         </div>
                         <a runat="server" onserverclick="btnAwal3_Click" style="text-decoration:none;color:#FFF" id="panelAwalCard3">
                             <div class="btnCardProdukBelanjaPlus">
@@ -189,9 +195,9 @@
                         <div class="cardProdukBelanjaPlus">
                         <a>-50%</a>
                             <img src="Content/Images/CardProduk.png" alt="">
-                            <p style="color:#373F41"><b>Nama Barang</b></p>
-                            <p style="font-size:14px;color:#7C7C7C;">7pcs</p>
-                            <p style="color:#373F41"><b>Rp.30000</b></p> 
+                            <p style="color:#373F41"><b>Manggis Surabaya</b></p>
+                            <p style="font-size:14px;color:#7C7C7C;">1Kg</p>
+                            <p style="color:#373F41"><b>Rp.50000</b></p> 
                         </div>
                         <a runat="server" onserverclick="btnAwal4_Click" style="text-decoration:none;color:#FFF" id="panelAwalCard4">
                             <div class="btnCardProdukBelanjaPlus">
@@ -209,7 +215,83 @@
                             </div>
                         </div>
                     </asp:Panel>
-                    <asp:Button runat="server" ID="btnCompletePurchase" OnClick="btnComplete_Click" Text="Complete"/>
+                </asp:Panel>
+
+
+
+                <asp:Panel runat="server" ID="panelCardProdukGrandLucky" class="cardlistProdukBelanjaPlus row" Visible="false">
+                    <asp:Panel class="cardFullProdukBelanjaPlus" runat="server" id="panel2">
+                        <div class="cardProdukBelanjaPlus">
+                        <a>-50%</a>
+                            <img src="Content/Images/CardProduk.png" alt="">
+                            <p style="color:#373F41"><b>Apel Hijau Xilin Gol</b></p>
+                            <p style="font-size:14px;color:#7C7C7C;">1Kg</p>
+                            <p style="color:#373F41"><b>Rp.70000</b></p> 
+                        </div>
+                        <a runat="server" onserverclick="btnAwalb1_Click" style="text-decoration:none;color:#FFF" id="panelAwalCardb1">
+                            <div class="btnCardProdukBelanjaPlus">
+                                <div style ="display: flex;flex-direction: row;">
+                                    <img style="width:25px; margin:auto 15px;" src="Content/Images/Vector.png" alt="">
+                                    <p class="minorItemCardProdukBelanjaPlus">Keranjang</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div runat="server" id="btnAwalCardb1" class="btnCardProdukBelanjaPlusSuper" visible="false">
+                            <div style ="display: flex;flex-direction: row;">
+                                <asp:ImageButton runat="server" Cssclass="minorbtnCardProdukBelanjaPlus minorbtnCardProdukBelanjaPlus" ImageUrl="Content/Images/ButtonMinusKuning.png" OnClick="btnMinusb1_Click"/>
+                                <asp:Label ID="lblItemCardb1" runat="server" CssClass="minorItemCardProdukBelanjaPlus" Text="0"/>
+                                <asp:ImageButton runat="server" Cssclass="minorbtnCardProdukBelanjaPlus minorbtnCardProdukBelanjaPlus" ImageUrl="Content/Images/ButtonTambahKuning.png" OnClick="btnTambahb1_Click"/>
+                            </div>
+                        </div>
+                    </asp:Panel>
+                    <asp:Panel class="cardFullProdukBelanjaPlus" runat="server" id="panel3">
+                        <div class="cardProdukBelanjaPlus">
+                        <a>-50%</a>
+                            <img src="Content/Images/CardProduk.png" alt="">
+                            <p style="color:#373F41"><b>Nangka Gazikumukh</b></p>
+                            <p style="font-size:14px;color:#7C7C7C;">1Kg</p>
+                            <p style="color:#373F41"><b>Rp.15000</b></p> 
+                        </div>
+                        <a runat="server" onserverclick="btnAwalb2_Click" style="text-decoration:none;color:#FFF" id="panelAwalCardb2">
+                            <div class="btnCardProdukBelanjaPlus">
+                                <div style ="display: flex;flex-direction: row;">
+                                    <img style="width: 25px; margin:auto 15px;" src="Content/Images/Vector.png" alt="">
+                                    <p class="minorItemCardProdukBelanjaPlus">Keranjang</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div runat="server" id="btnAwalCardb2" class="btnCardProdukBelanjaPlusSuper" visible="false">
+                            <div style ="display: flex;flex-direction: row;">
+                                <asp:ImageButton runat="server" Cssclass="minorbtnCardProdukBelanjaPlus minorbtnCardProdukBelanjaPlus" ImageUrl="Content/Images/ButtonMinusKuning.png" OnClick="btnMinusb2_Click"/>
+                                <asp:Label ID="lblItemCardb2" runat="server" CssClass="minorItemCardProdukBelanjaPlus" Text="0"/>
+                                <asp:ImageButton runat="server" Cssclass="minorbtnCardProdukBelanjaPlus minorbtnCardProdukBelanjaPlus" ImageUrl="Content/Images/ButtonTambahKuning.png" OnClick="btnTambahb2_Click"/>
+                            </div>
+                        </div>
+                    </asp:Panel>
+                    <asp:Panel class="cardFullProdukBelanjaPlus" runat="server" id="panel4">
+                        <div class="cardProdukBelanjaPlus">
+                        <a>-50%</a>
+                            <img src="Content/Images/CardProduk.png" alt="">
+                            <p style="color:#373F41"><b>Jeruk Mong</b></p>
+                            <p style="font-size:14px;color:#7C7C7C;">1Kg</p>
+                            <p style="color:#373F41"><b>Rp.45000</b></p> 
+                        </div>
+                        <a runat="server" onserverclick="btnAwalb3_Click" style="text-decoration:none;color:#FFF" id="panelAwalCardb3">
+                            <div class="btnCardProdukBelanjaPlus">
+                                <div style ="display: flex;flex-direction: row;">
+                                    <img style="width: 25px; margin:auto 15px;" src="Content/Images/Vector.png" alt="">
+                                    <p class="minorItemCardProdukBelanjaPlus">Keranjang</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div runat="server" id="btnAwalCardb3" class="btnCardProdukBelanjaPlusSuper" visible="false">
+                            <div style ="display: flex;flex-direction: row;">
+                                <asp:ImageButton runat="server" Cssclass="minorbtnCardProdukBelanjaPlus minorbtnCardProdukBelanjaPlus" ImageUrl="Content/Images/ButtonMinusKuning.png" OnClick="btnMinusb3_Click"/>
+                                <asp:Label ID="lblItemCardb3" runat="server" CssClass="minorItemCardProdukBelanjaPlus" Text="0"/>
+                                <asp:ImageButton runat="server" Cssclass="minorbtnCardProdukBelanjaPlus minorbtnCardProdukBelanjaPlus" ImageUrl="Content/Images/ButtonTambahKuning.png" OnClick="btnTambahb3_Click"/>
+                            </div>
+                        </div>
+                    </asp:Panel>
                 </asp:Panel>
                 
             </div>

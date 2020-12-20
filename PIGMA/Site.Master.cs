@@ -16,10 +16,14 @@ namespace PIGMA
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsLogin)
+            if (IsPostBack)
             {
-                navLoginFalsePanel.Visible = false;
-                navLoginTruePanel.Visible = true;
+                if (Session["User"] != null)
+                {
+                    navLoginFalsePanel.Visible = false;
+                    navLoginTruePanel.Visible = true;
+                }
+                
             }
             panelFooter.Visible = true;
         }
