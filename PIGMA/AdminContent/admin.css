@@ -274,3 +274,29 @@ messagebox
     }
 }
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+/*multiple image*/
+label input[type="file"] {
+    display: none;
+}
+.multiple-image-preview {
+    width: 150px;
+    min-height: 150px;
+    border: 2px solid #dddddd;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left : 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #cccccc;
+}
+.multiple-image-preview-image {
+    display: none;
+    width: 100%;
+}
+input {
+    padding: 10px;
+    font: 20px Arial;
+    width: 70%;
+}

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pengaturansettingadmin.aspx.cs" Inherits="PIGMA.pengaturansettingadmin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pendaftaranpartner.aspx.cs" Inherits="PIGMA.pengaturansettingadmin" %>
 
 <!DOCTYPE html>
 
@@ -33,7 +33,7 @@
             </div>
             <div class="row" style="margin-left: 50px; margin-right: 50px; border: solid thin; border-radius: 14px;">
                 <div class="row col-md-12">
-                    <label style="padding-left: 30px; font-size: 24px; padding-top: 40px;"><b>Data Akun</b></label>
+                    <label style="margin-left: 30px; font-size: 24px; padding-top: 40px;"><b>Data Akun</b></label>
 
                     <div class="row">
                         <label style="padding-top: 120px; padding-left: 60px; font-size: 18px;">
@@ -42,19 +42,19 @@
                         <label style="padding-top: 120px; margin-left: 155px;">
                             <input style="border-radius: 10px; height: 40px;" type="email" id="email" value="Contoh : departement1@email.com" size="100"></label><br />
                         <label style="padding-top: 120px; padding-left: 30px; height: 40px;">
-                            <button style="width: 80px; height: 40px;" id="emailsubmit" name="submit">Submit</button></label>
+                            <button style="width: 80px; background-color: #97C200; color:white; border-radius : 10px; height: 40px;" id="emailsubmit" name="submit">Kirim</button></label>
                     </div>
                     <div class="row">
                         <label style="padding-top: 20px; padding-left: 210px; font-size: 18px;"><b>Nomor Telepon</b></label>
                         <label style="padding-top: 20px; margin-left: 68px; height: 40px;">
                             <input style="border-radius: 10px; height: 40px;" type="text" id="notelp" value="Contoh : departement1@email.com" size="100"></label><br />
                         <label style="padding-top: 20px; padding-left: 30px; height: 40px;">
-                            <button style="width: 80px; height: 40px;" name="submit">Submit</button></label>
+                            <button style="width: 80px; background-color: #97C200; color:white; border-radius : 10px; height: 40px;" name="submit">Kirim</button></label>
                     </div>
                 </div>
                 <hr style="width: 100%; text-align: left; margin-left: 50px; margin-right: 50px; border-width: 1.5px;">
                 <div class="row col-md-12">
-                    <label style="padding-left: 30px; font-size: 24px;"><b>Nama Toko</b></label>
+                    <label style="margin-left: 30px; font-size: 24px;"><b>Nama Toko</b></label>
 
                     <div class="row">
                         <label style="padding-top: 60px; padding-left: 50px; font-size: 18px;"><b>Nama Toko</b></label>
@@ -76,14 +76,14 @@
                 <hr style="width: 100%; text-align: left; margin-left: 50px; margin-right: 50px; border-width: 1.5px;">
                 <div class="row col-md-12">
                     <div class="col-md-12">
-                        <label style="padding-left: 30px; font-size: 24px; padding-top: 20px">
+                        <label style="margin-left: 30px; font-size: 24px; padding-top: 20px">
                             <b>Foto Toko</b><br />
                             <span style="font-size: 14px;">Format gambar .jpg .jpeg .png dan ukuran minimun 300x200 px (untuk gambar optimal pakai 700 x700px</span><br />
                         </label>
                     </div>
 
                     <div class="row col-md-12">
-                        <div class="image-preview" id="gambarlogo" style="margin-left: 60px;">
+                        <div class="image-preview" id="gambarlogo" style="margin-left: 200px;">
                             <img src="" alt="Image Preview" class="image-preview-image" />
                             <span class="image-preview-text">Masukan gambar</span>
                         </div>
@@ -94,44 +94,43 @@
                     </div>
 
                     <div class="row">
-                        <label style="padding-left: 60px;" for="img">Select image:</label>
+                        <label style="margin-left: 200px;" for="img">Select image:</label>
                         <input type="file" id="logo" name="logo">
                     </div>
                     <div class="row">
-                        <label style="padding-left: 30px;" for="img">Select image:</label>
+                        <label style="margin-left: 30px;" for="img">Select image:</label>
                         <input type="file" id="img" name="img" accept="image/*">
                     </div>
 
                 </div>
                 <hr style="width: 100%; text-align: left; margin-left: 50px; margin-right: 50px; border-width: 1.5px;">
                 <div class="row col-md-12">
-                    <label style="padding-left: 30px; font-size: 24px;"><b>Lokasi Toko</b></label>
+                    <label style="margin-left: 30px; font-size: 24px;"><b>Lokasi Toko</b></label>
 
                     <div class="row">
-                        <label style="padding-top: 40px; margin-left: 20px; font-size: 18px;">Kota atau Kecamatan</label>
-                        <label style="padding-top: 40px; margin-left: 600px; height: 20px;">Kode Pos></label><br />
+                        <label style="padding-top: 40px; margin-left: 40px; font-size: 18px;">Kota atau Kecamatan</label>
+                        <label style="padding-top: 40px; margin-left: 600px; height: 20px;">Kode Pos</label><br />
 
                     </div>
                     <div class="row">
-                        <label style="padding-top: 10px; margin-left: 150px; font-size: 18px;">
-                            <input style="border-radius: 20px;" type="text" id="kota" value="kota" size="80"></label>
-                        <label style="padding-top: 10px; margin-left: 50px; height: 20px;">
-                            <input style="border-radius: 20px;" type="text" id="kodepos" value="kodepos" size="30"></label><br />
+                        <label style="padding-top: 10px; margin-left: 200px; font-size: 18px;">
+                            <input style="border-radius: 10px;" type="text" id="kota" placeholder="kota" size="80"></label>
+                        <label style="padding-top: 10px; margin-left: 25px;  font-size: 18px;">
+                            <input style="border-radius: 10px;" type="text" id="kodepos" placeholder="kodepos" size="30"></label><br />
                     </div>
                     <div class="row">
-                        <label style="padding-top: 40px; padding-left: 60px; font-size: 18px;"><b>Email</b></label>
-                        <label style="padding-top: 40px; margin-left: 155px; height: 20px;">
-                            <input style="border-radius: 20px;" type="text" id="alamat" value="Contoh : departement1@email.com" size="100"></label><br />
-                        <label style="padding-top: 40px; padding-left: 30px; height: 20px;">
-                            <button style="width: 80px;" name="submit">Submit</button></label>
+                        <label style="padding-top: 40px; margin-left: 200px; font-size: 18px;"><b>Alamat</b></label>
+                        <label style="padding-top: 40px; margin-left: 125px; height: 150px;">
+                            <textarea rows="4" cols ="120" id="textalamat" placeholder ="Input Address here..."></textarea>
+                        </label><br />
                     </div>
                 </div>
             </div>
 
         </div>
         <div class="col-md-11" style="text-align: right">
-            <button style="margin-top: 50px; margin-bottom: 50px; margin-right: 20px; height: 50px; width: 200px">Submit</button>
-            <button style="margin-top: 50px; margin-bottom: 50px; height: 50px; width: 200px">Submit</button>
+            <button style="margin-top: 50px; margin-bottom: 50px; margin-right: 20px; height: 50px; width: 200px;background-color: #97C200; color:white; border-radius : 10px;">Batal</button>
+            <button style="margin-top: 50px; margin-bottom: 50px; height: 50px; width: 200px;background-color: #97C200; color:white; border-radius : 10px;">Kirim</button>
         </div>
     </div>
     <!--Message Box-->
