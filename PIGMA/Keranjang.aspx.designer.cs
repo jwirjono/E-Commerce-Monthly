@@ -11,17 +11,17 @@ namespace PIGMA
 {
 
 
-    public partial class WebForm2
+    public partial class WebForm4
     {
 
         /// <summary>
-        /// supaID control.
+        /// lblMainHeader control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField supaID;
+        protected global::System.Web.UI.WebControls.Label lblMainHeader;
 
         /// <summary>
         /// lblsupa control.
@@ -33,175 +33,112 @@ namespace PIGMA
         protected global::System.Web.UI.WebControls.Label lblsupa;
 
         /// <summary>
-        /// btnCompletePurchase control.
+        /// panelKeranjangKosong control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCompletePurchase;
+        protected global::System.Web.UI.WebControls.Panel panelKeranjangKosong;
 
         /// <summary>
-        /// panelCardProdukGiant control.
+        /// panelKeranjangBelanja control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelCardProdukGiant;
+        protected global::System.Web.UI.WebControls.Panel panelKeranjangBelanja;
 
         /// <summary>
-        /// panelCard1 control.
+        /// chkAllprop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelCard1;
+        protected global::System.Web.UI.WebControls.HiddenField chkAllprop;
 
         /// <summary>
-        /// panelAwalCard1 control.
+        /// gridObject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor panelAwalCard1;
+        protected global::System.Web.UI.WebControls.GridView gridObject;
 
         /// <summary>
-        /// btnAwalCard1 control.
+        /// totalharga1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btnAwalCard1;
+        protected global::System.Web.UI.WebControls.Label totalharga1;
 
         /// <summary>
-        /// lblItemCard1 control.
+        /// panelPembelianBelanja control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblItemCard1;
+        protected global::System.Web.UI.WebControls.Panel panelPembelianBelanja;
 
         /// <summary>
-        /// panelCard2 control.
+        /// panel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelCard2;
+        protected global::System.Web.UI.WebControls.Panel panel1;
 
         /// <summary>
-        /// panelAwalCard2 control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor panelAwalCard2;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
-        /// btnAwalCard2 control.
+        /// TextBox2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btnAwalCard2;
+        protected global::System.Web.UI.WebControls.TextBox TextBox2;
 
         /// <summary>
-        /// lblItemCard2 control.
+        /// txtAlamat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblItemCard2;
+        protected global::System.Web.UI.WebControls.TextBox txtAlamat;
 
         /// <summary>
-        /// panelCard3 control.
+        /// txtTotal1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelCard3;
+        protected global::System.Web.UI.WebControls.Label txtTotal1;
 
         /// <summary>
-        /// panelAwalCard3 control.
+        /// txtTotal1max control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor panelAwalCard3;
-
-        /// <summary>
-        /// btnAwalCard3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btnAwalCard3;
-
-        /// <summary>
-        /// lblItemCard3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblItemCard3;
-
-        /// <summary>
-        /// panelCard4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelCard4;
-
-        /// <summary>
-        /// panelAwalCard4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor panelAwalCard4;
-
-        /// <summary>
-        /// btnAwalCard4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btnAwalCard4;
-
-        /// <summary>
-        /// lblItemCard4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblItemCard4;
-
-        /// <summary>
-        /// panelCardProdukGrandLucky control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelCardProdukGrandLucky;
+        protected global::System.Web.UI.WebControls.Label txtTotal1max;
 
         /// <summary>
         /// panel2 control.
@@ -213,31 +150,49 @@ namespace PIGMA
         protected global::System.Web.UI.WebControls.Panel panel2;
 
         /// <summary>
-        /// panelAwalCardb1 control.
+        /// TextBox4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor panelAwalCardb1;
+        protected global::System.Web.UI.WebControls.TextBox TextBox4;
 
         /// <summary>
-        /// btnAwalCardb1 control.
+        /// rbStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btnAwalCardb1;
+        protected global::System.Web.UI.WebControls.RadioButtonList rbStatus;
 
         /// <summary>
-        /// lblItemCardb1 control.
+        /// TextBox5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblItemCardb1;
+        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+
+        /// <summary>
+        /// txtTotal2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtTotal2;
+
+        /// <summary>
+        /// txtTotal2max control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtTotal2max;
 
         /// <summary>
         /// panel3 control.
@@ -249,66 +204,30 @@ namespace PIGMA
         protected global::System.Web.UI.WebControls.Panel panel3;
 
         /// <summary>
-        /// panelAwalCardb2 control.
+        /// RadioButtonList2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor panelAwalCardb2;
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList2;
 
         /// <summary>
-        /// btnAwalCardb2 control.
+        /// txtTotal3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btnAwalCardb2;
+        protected global::System.Web.UI.WebControls.Label txtTotal3;
 
         /// <summary>
-        /// lblItemCardb2 control.
+        /// txtTotal3max control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblItemCardb2;
-
-        /// <summary>
-        /// panel4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panel4;
-
-        /// <summary>
-        /// panelAwalCardb3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor panelAwalCardb3;
-
-        /// <summary>
-        /// btnAwalCardb3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btnAwalCardb3;
-
-        /// <summary>
-        /// lblItemCardb3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblItemCardb3;
+        protected global::System.Web.UI.WebControls.Label txtTotal3max;
     }
 }

@@ -1,0 +1,55 @@
+﻿.fontMainAccount {
+    color: #262628;
+    font-size: 25px;
+    font-weight: bold
+}
+.fontSubAccount {
+    color: #373f41;
+    font-size: 16px;
+    font-weight: bold
+}
+.sidebarAccount{
+    padding:20px;
+}
+.gambarSidebarAccount{
+    display:flex;
+    flex-direction:row;
+    margin-bottom:50px;
+}
+.listSidebarAccount {
+    margin: 20px 0px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    opacity: 0.5;
+    color: #373f41;
+}
+.lsaActive {
+    opacity: 1;
+    border: 1px solid #EACB00;
+    background-color: #EACB00;
+    border-radius:10px;
+}
+.listSidebarAccount img{
+    width:10%;
+    align-self:center;
+}
+
+.listSidebarAccount p{
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left: 20px;
+}
+
+.keluarSidebarAccount {
+    margin: 150px 0px;
+    padding: 10px;
+    text-align:center;
+    font-size :18px;
+    font-weight : 500;
+}
+.smallIconAccount {
+    width: 20px;
+    height: 24px;
+    margin: auto 10px auto 0px;
+}

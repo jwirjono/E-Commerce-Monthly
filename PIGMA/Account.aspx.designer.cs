@@ -11,79 +11,106 @@ namespace PIGMA
 {
 
 
-    public partial class WebForm1
+    public partial class WebForm3
     {
 
         /// <summary>
-        /// gambarLogin control.
+        /// lblStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage gambarLogin;
+        protected global::System.Web.UI.WebControls.Label lblStatus;
 
         /// <summary>
-        /// gambarDaftar control.
+        /// lblsupa control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage gambarDaftar;
+        protected global::System.Web.UI.WebControls.Label lblsupa;
 
         /// <summary>
-        /// labelMainForm control.
+        /// lblPengiriman control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labelMainForm;
+        protected global::System.Web.UI.WebControls.Label lblPengiriman;
 
         /// <summary>
-        /// panelFormLogin control.
+        /// lblWaktu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelFormLogin;
+        protected global::System.Web.UI.WebControls.Label lblWaktu;
 
         /// <summary>
-        /// panelDaftarLogin control.
+        /// lblMetode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelDaftarLogin;
+        protected global::System.Web.UI.WebControls.Label lblMetode;
 
         /// <summary>
-        /// panelVerifikasiLogin control.
+        /// gridObject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelVerifikasiLogin;
+        protected global::System.Web.UI.WebControls.GridView gridObject;
 
         /// <summary>
-        /// inputKodeVerifikasi control.
+        /// txtHarga control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText inputKodeVerifikasi;
+        protected global::System.Web.UI.WebControls.Label txtHarga;
 
         /// <summary>
-        /// panelPasswordLogin control.
+        /// txtKemasan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelPasswordLogin;
+        protected global::System.Web.UI.WebControls.Label txtKemasan;
+
+        /// <summary>
+        /// txtPengiriman control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtPengiriman;
+
+        /// <summary>
+        /// txtDiskon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtDiskon;
+
+        /// <summary>
+        /// txtTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtTotal;
     }
 }
