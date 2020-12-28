@@ -111,6 +111,7 @@
     <Content Include="AdminContent\admin.css" />
     <Content Include="AdminContent\admin.js" />
     <Content Include="AdminContent\Card.png" />
+    <Content Include="AdminContent\MONTHLYPartner.png" />
     <Content Include="AdminContent\upload.jpg" />
     <Content Include="AdminContent\WAJIB.png" />
     <Content Include="AdminContent\Nomor4.png" />
@@ -198,6 +199,7 @@
     <Content Include="pendaftaranpartner.aspx" />
     <Content Include="tambahproduk.aspx" />
     <Content Include="ubahproduk.aspx" />
+    <Content Include="PesananReceipt.aspx" />
     <None Include="Properties\PublishProfiles\FTPMonthlySkripsi.pubxml" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -352,6 +354,7 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Classes\DataAdminReceipt.cs" />
     <Compile Include="Classes\DataBelanja.cs" />
     <Compile Include="Classes\DataProduk.cs" />
     <Compile Include="Classes\DataReceipt.cs" />
@@ -463,6 +466,13 @@
     </Compile>
     <Compile Include="admin.aspx.designer.cs">
       <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PesananReceipt.aspx.cs">
+      <DependentUpon>PesananReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PesananReceipt.aspx.designer.cs">
+      <DependentUpon>PesananReceipt.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

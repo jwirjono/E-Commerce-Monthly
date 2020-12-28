@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Admin Home page" Language="C#" AutoEventWireup="true" CodeBehind="adminproduk.aspx.cs" Inherits="PIGMA.admin" %>
+﻿<%@ Page Title="Admin Home page" Language="C#" AutoEventWireup="true" CodeBehind="tambahproduk.aspx.cs" Inherits="PIGMA.tambahproduk" %>
 
 <!DOCTYPE html>
 

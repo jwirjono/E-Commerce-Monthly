@@ -15,9 +15,9 @@
 <body>
 
     <!---- header --->
-    <nav class="navbar-dark bg-dark sticky-top">
-        <a class="navbar-brand brand">
-            <img src="AdminContent/Logo.png"></a>
+    <nav class="navbar-light sticky-top">
+        <a class="navbar-brand brand" style="margin-top:5px">
+            <img src="AdminContent/MONTHLYPartner.png"></a>
 
     </nav>
 

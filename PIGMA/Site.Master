@@ -84,7 +84,7 @@
                     <div class="col-md-5" style="border-left:1px white solid;height:175px;">
                         <h3>Segera daftarkan supermarket anda menjadi partner monthly</h3>
                         <p>lorem ipsum yooooooooooooooooooooooooooooooooooooooooooooooo ooooooooooooooooooooooooooooooooooooooooooooo</p>
-                        <button type="button" class="btn btn-light" style="color:#373f41;border-radius:10px;border:#373f41 1px solid;">Daftar Supermarket</button>
+                        <button type="button" class="btn btn-light" style="color:#373f41;border-radius:10px;border:#373f41 1px solid;"  ><a href="~/admin.aspx"></a>Daftar Supermarket</button>
                     </div>
                 </div>
             </asp:Panel>

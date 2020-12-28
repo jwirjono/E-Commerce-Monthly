@@ -40,5 +40,6 @@ namespace PIGMA
         {
             holup.Text = txtSearchBar.Value.ToString();
         }
+        
     }
 }

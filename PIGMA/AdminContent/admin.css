@@ -3,7 +3,24 @@
 .header-right {
     float: right;
 }
-
+.midRow {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.midColumn {
+    margin-left: auto;
+    margin-right: auto;
+}
+.tblKeranjangPlus {
+    border-radius: 15px;
+    padding: 20px 30px;
+    border: 1px solid #373F41;
+}
+.fontSubAccount {
+    color: #373f41;
+    font-size: 16px;
+    font-weight: bold
+}
 .text {
     margin: 20px auto;
     padding-right : 30px;
@@ -60,8 +77,11 @@
 .brand{
     padding-left : 30px;
 }
-.navbar {
+.navbar-light {
+    height: 80px;
     padding: .8rem;
+    box-shadow: 0px 0px 10px grey;
+    background: white;
 }
 
 .nav-item {
@@ -299,4 +319,46 @@ input {
     padding: 10px;
     font: 20px Arial;
     width: 70%;
+}
+
+/*Content untuk pesanan receipt*/
+.garisKeras {
+    border: 1px solid #373F41;
+    width: 75px;
+    height: 100%;
+    margin: auto 20px;
+}
+.formDaftarNumberLabel {
+    display: flex;
+    flex-direction: row;
+    opacity: 0.7;
+}
+
+.formDaftarNumberLabelactive {
+    display: flex;
+    flex-direction: row;
+    opacity: 1;
+    mar
+}
+
+.formNumberLabelactive {
+    border: 1px solid #373F41;
+    background-color: #373F41;
+    border-radius: 100px;
+    color: #FFF;
+    width: 27.5px;
+    height: 27.5px;
+    text-align: center;
+    margin: 0px 10px;
+}
+
+.masukLoginPlus {
+    width: 300px;
+    height: 100%;
+    border-radius: 6px;
+    margin-right: 5px;
+    color: #FFF;
+    font-weight: 500;
+    background-color: #97C200;
+    border: 1px solid #97C200;
 }
