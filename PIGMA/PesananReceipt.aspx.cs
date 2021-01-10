@@ -55,8 +55,19 @@ namespace PIGMA
         {
             this.data();
             panel1.Visible = false;
-            panel2.Visible = true;
             
+        }
+        protected void btnubah_Click(object sender, EventArgs e)
+
+        {
+           
+
+        }
+        protected void btnkirim_Click(object sender, EventArgs e)
+
+        {
+
+
         }
     }
 }

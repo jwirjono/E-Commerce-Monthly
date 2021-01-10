@@ -247,7 +247,7 @@
                 </asp:Panel>
                 <asp:Panel ID="panel2" runat="server" Visible ="false">
                     <div class="col-md-12" style="margin-top: 20px; margin-bottom: 20px">
-                        <img src="AdminContent/labelpemesananbaru.png" />
+                        <img src="AdminContent/labelpemesananproses.png" />
                     </div>
                     <div style="display: flex; flex-direction: column">
                         <div class="form-group" style="display: flex; flex-direction: row; margin: 30px auto">
@@ -411,8 +411,8 @@
                         </div>
                     </div>
                     <div class="col-md-12" style="text-align: right; margin-top: 50px; margin-bottom: 50px">
-
-                        <asp:Button runat="server" class="masukLoginPlus" OnClick="btnNext1_Click" Text="Terima Pesanan" />
+                        <asp:Button runat="server" class="masukLoginPlus" OnClick="btnubah_Click" Text="Ubah Pesanan" />
+                        <asp:Button runat="server" class="masukLoginPlus" OnClick="btnkirim_Click" Text="Kirim" />
                     </div>
                 </asp:Panel>
             </asp:Panel>
