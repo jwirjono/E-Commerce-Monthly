@@ -110,8 +110,23 @@
     <Content Include="About.aspx" />
     <Content Include="AdminContent\admin.css" />
     <Content Include="AdminContent\admin.js" />
-    <Content Include="AdminContent\Card.png" />
+    <Content Include="AdminContent\adminmenu.css" />
+    <Content Include="AdminContent\adminpesanan.css" />
+    <Content Include="AdminContent\adminslider.css" />
+    <Content Include="AdminContent\Beef Bulgogi.png" />
+    <Content Include="AdminContent\card2.PNG" />
+    <Content Include="AdminContent\card.png" />
+    <Content Include="AdminContent\calendar.png" />
+    <Content Include="AdminContent\labelpemesananbaru.png" />
+    <Content Include="AdminContent\labelpemesananproses.png" />
+    <Content Include="AdminContent\labelpemesanandlmpengiriman.png" />
+    <Content Include="AdminContent\labelpemesananselesai.png" />
+    <Content Include="AdminContent\print.png" />
+    <Content Include="AdminContent\logoview.png" />
+    <Content Include="AdminContent\logokeranjang.png" />
+    <Content Include="AdminContent\Mask Group.png" />
     <Content Include="AdminContent\MONTHLYPartner.png" />
+    <Content Include="AdminContent\Salmon Teriyaki.png" />
     <Content Include="AdminContent\upload.jpg" />
     <Content Include="AdminContent\WAJIB.png" />
     <Content Include="AdminContent\Nomor4.png" />
@@ -121,6 +136,7 @@
     <Content Include="AdminContent\Logo.png" />
     <Content Include="AdminContent\magnify.png" />
     <Content Include="AdminContent\mark.png" />
+    <Content Include="AdminContent\Yakiniku Shortplate.png" />
     <Content Include="adminpengaturan.aspx" />
     <Content Include="adminpesanan.aspx" />
     <Content Include="adminproduk.aspx" />
@@ -137,6 +153,7 @@
     <Content Include="Content\FormPlus.css" />
     <Content Include="Content\HomePlus.css" />
     <Content Include="Content\Images\AkunPesanan.png" />
+    <Content Include="Content\Images\Box.png" />
     <Content Include="Content\Images\ButtonMinusKuning.png" />
     <Content Include="Content\Images\ButtonTambahKuning.png" />
     <Content Include="Content\Images\Carousel1.png" />
@@ -147,7 +164,9 @@
     <Content Include="Content\Images\Giant.png" />
     <Content Include="Content\Images\GrandLucky.png" />
     <Content Include="Content\Images\HistoryBelanja.png" />
+    <Content Include="Content\Images\Beranda.png" />
     <Content Include="Content\Images\HomePageTopImage.png" />
+    <Content Include="Content\Images\Penjualan.png" />
     <Content Include="Content\Images\Keperluan Dapur.png" />
     <Content Include="Content\Images\KeranjangKosong.png" />
     <Content Include="Content\Images\Korean Food.png" />
@@ -173,10 +192,7 @@
     <Content Include="Content\Images\Transmart.png" />
     <Content Include="Content\Images\UserAkunSaya.png" />
     <Content Include="Content\Images\Vector.png" />
-    <Content Include="Content\Images\Box.png" />
     <Content Include="Content\Images\Chart-bar.png" />
-    <Content Include="Content\Images\Beranda.png" />
-    <Content Include="Content\Images\Penjualan.png" />
     <Content Include="Content\Images\Settings.png" />
     <Content Include="Content\Images\Watermark.PNG" />
     <Content Include="Content\KeranjangPlus.css" />
@@ -197,6 +213,7 @@
     <Content Include="Login.Master" />
     <Content Include="admin.aspx" />
     <Content Include="pendaftaranpartner.aspx" />
+    <Content Include="PengaturanProduk.aspx" />
     <Content Include="tambahproduk.aspx" />
     <Content Include="ubahproduk.aspx" />
     <Content Include="PesananReceipt.aspx" />
@@ -395,6 +412,13 @@
     </Compile>
     <Compile Include="pendaftaranpartner.aspx.designer.cs">
       <DependentUpon>pendaftaranpartner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PengaturanProduk.aspx.cs">
+      <DependentUpon>PengaturanProduk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PengaturanProduk.aspx.designer.cs">
+      <DependentUpon>PengaturanProduk.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

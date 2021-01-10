@@ -9,6 +9,7 @@
     <title><%: Page.Title %> - My ASP.NET Application</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet">
     <link href="~/AdminContent/admin.css" rel="stylesheet" />
+    <link href="~/AdminContent/adminmenu.css" rel="stylesheet" />
 
 </head>
 
@@ -48,7 +49,7 @@
                     <li class="nav-item active">
                         <a  class="nav-link" href="adminpengaturan.aspx">
                             <img style="padding-left : 10px; padding-bottom : 5px;" src="content/images/Settings.png">
-                            <span class="button-text active">Pengaturan</span>
+                            <span class="button-text nyala">Pengaturan</span>
                         </a>
                     </li>
                 </ul>

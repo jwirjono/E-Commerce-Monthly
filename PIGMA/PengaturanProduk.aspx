@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Admin Home page" Language="C#" AutoEventWireup="true" CodeBehind="adminproduk.aspx.cs" Inherits="PIGMA.admin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PengaturanProduk.aspx.cs" Inherits="PIGMA.PengaturanProduk" %>
 
 <!DOCTYPE html>
 
@@ -9,7 +9,7 @@
     <title><%: Page.Title %> - My ASP.NET Application</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet">
     <link href="~/AdminContent/admin.css" rel="stylesheet" />
-    <link href="~/AdminContent/adminmenu.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -42,7 +42,7 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="adminproduk.aspx">
                                 <img style="padding-left: 10px; padding-bottom: 5px;" src="content/images/Box.png">
-                                <span class="button-text nyala">Produk</span>
+                                <span class="button-text active">Produk</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -180,10 +180,71 @@
             <hr />
             <div class="row rowcontent">
                 <div class="col-md-12">
-                    <h2>Produk
-            <br />
-                        <span style="font-size: 18px;">Produk yang sering dibeli</span>
-                    </h2>
+                    <div class="col-md-9 tblKeranjangPlus">
+                    <asp:HiddenField Value="1" runat="server" ID="chkAllprop" />
+                    <asp:GridView runat="server" ID="gridObject"
+                        AllowPaging="false"
+                        AllowSorting="false"
+                        AutoGenerateColumns="false"
+                        GridLines="None"
+                        CssClass="container-fluid"
+                        RowStyle-CssClass="tblRow ">
+                        <Columns>
+                            <asp:TemplateField HeaderText="No.">
+                                <ItemStyle Width="20"/>
+                                <HeaderTemplate>
+                                    <asp:CheckBox ID="chkAll" OnCheckedChanged="chkAll_CheckedChanged" AutoPostBack="true" runat="server" Checked="true"/>
+                                </HeaderTemplate>
+                                <ItemTemplate>
+                                    <asp:CheckBox ID="chkStats" runat="server" Checked="true" OnCheckedChanged="chkRef_Click"/>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField >
+                                <HeaderTemplate>
+                                    <asp:Label runat="server" Text="GIANT"/>
+                                </HeaderTemplate>
+                                <HeaderStyle Font-Bold="true" />
+                                <ItemTemplate>
+                                    <div style="display:flex;flex-direction:column">
+                                        <img src="Content/Images/CardProduk.png" alt="" style="width:50px;height:50px;margin:0px auto;border:1px solid #FFF;">
+                                    </div>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField >
+                                <ItemTemplate>
+                                    <asp:Label ID="lblID" Text='<%#Eval("IDProduk") %>' runat="server" Visible="false" />
+                                    <asp:Label ID="lblHarga" Text='<%#Eval("Harga") %>' runat="server" Visible="false" />
+                                        <div style="display:flex;flex-direction:column">
+                                            <asp:Label ID="lblNamaProduk" Text='<%#Eval("NamaProduk") %>' runat="server" />
+                                            <div style="display:flex;flex-direction:row">
+                                                <asp:Label ID="lblHargaRP" CssClass="lblHargaListPlus" Text='<%#Eval("HargaRP") %>' runat="server" />
+                                                <asp:Label CssClass="midRow" Text=" / Kg" runat="server" />
+                                            </div>
+                                        </div>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField >
+                                <ItemTemplate>
+                                        <div style="display:flex;flex-direction:column">
+                                            <asp:Label ID="lblKuantitas" Text='<%#Eval("Kuantitas") %>' runat="server" />
+                                        </div>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <div style="display:flex;flex-direction:column;border-left:1px solid #9B9FA0">
+                                            <asp:Label Text="Total" Font-Bold="true" CssClass="midColumn" runat="server" />
+                                            <asp:Label ID="Label2" CssClass="midColumn" Text='<%#Eval("HargaRP") %>' runat="server" />
+                                            <asp:Label ID="lblTotal" CssClass="midColumn" Text='<%#Eval("Total") %>' runat="server" Visible="false"/>
+                                        </div>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                        <EmptyDataTemplate>
+                            Tidak ada data
+                        </EmptyDataTemplate>
+                    </asp:GridView>
+                </div>
                 </div>
             </div>
 

@@ -19,14 +19,23 @@
 .fontSubAccount {
     color: #373f41;
     font-size: 16px;
-    font-weight: bold
+    font-weight: bold;
+    margin-bottom : 40px;
+}
+.fontSubAccountKuantitas {
+    max-width: 20px;
+    color: #373f41;
+    font-size: 16px;
+    font-weight: bold; 
+    margin-bottom : 40px;
 }
 .text {
-    margin: 20px auto;
+    margin-top: 40px auto;
     padding-right : 30px;
     font-family: Roboto;
-    color: white;
+    color: black;
     font-size: 24px;
+    vertical-align :central;
 }
 
 .button-text {
@@ -37,20 +46,11 @@
     margin-top: 25px;
     margin-bottom: 25px;
 }
-.active, button-text:hover{
+.nyala, button-text:hover{
     color : black;
 }
 
-.buttonpesanan {
-    font-size: 16px;
-    color: white;
-    background-color: #9B9FA0;
-    border-radius: 10px;
-    padding: 8px;
-}
-.actice .buttonpesanan {
-    background-color: #97C200;
-}
+
 
 
 .button-out {
@@ -72,65 +72,36 @@
     border-radius: 8px;
     font-family: Roboto;
     color: white;
-    background-color: #97C200;
+    background-color: #74B816;
 }  
-.brand{
-    padding-left : 30px;
-}
-.navbar-light {
-    height: 80px;
-    padding: .8rem;
-    box-shadow: 0px 0px 10px grey;
-    background: white;
-}
 
-.nav-item {
-    display : block;
-    width : 100%;
-    font-family: Roboto;
-    font-size: 24px;
-    background-color: white;
-    margin-bottom: 10px;
-    border-radius : 20px;
-}
-.nav-item img{
-    opacity :0.5;
-
-}
-.active, .nav-item:hover {
-    background-color: #EACB00;
-    color : black;
-
-}
-.active img{
-    opacity : 1;
-}
-
-
-.nav-link {
-    font-size: 20px;
-}
 
 .wrapper {
     margin-top: 67px auto;
 }
 
 .contentpertama{
+    margin-right : 30px;
 }
 .rowcontent{
     height: 200px;
 }
 .rowsaldo {
-    height: 300px;
+    height: 400px;
 }
 .produk{
     height : 400px;
 }
 /*card*/
 .card {
-    height : 120px;
-    padding-right : 2px;
-    background-color: #97C200;
+    height: 120px;
+    width: 230px;
+    padding-right: 10px;
+    background-color: #74B816;
+}
+.card-body {
+    width : 100%;
+    margin-left : 5px;
 }
 .card-text{
 
@@ -338,9 +309,16 @@ input {
     display: flex;
     flex-direction: row;
     opacity: 1;
-    mar
 }
-
+.imageDaftarNumberLabel {
+    border: 1px solid #97C200;
+    background-color: #97C200;
+    border-radius: 100px;
+    width: 27.5px;
+    height: 27.5px;
+    text-align: center;
+    margin: 0px 10px;
+}
 .formNumberLabelactive {
     border: 1px solid #373F41;
     background-color: #373F41;
@@ -359,6 +337,13 @@ input {
     margin-right: 5px;
     color: #FFF;
     font-weight: 500;
-    background-color: #97C200;
-    border: 1px solid #97C200;
+    background-color: #74B816;
+    border: 1px solid #74B816;
+}
+.ringkasantop {
+    margin-top : 20px;
+    margin-left: 20px;
+}
+.ringkasan {
+    margin-left : 40px;
 }
