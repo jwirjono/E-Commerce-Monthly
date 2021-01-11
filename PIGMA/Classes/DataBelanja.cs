@@ -48,6 +48,28 @@ namespace PIGMA.Classes
             ListDetailReceipt.Add(det);
 
         }
+        public void Increase(int id)
+        {
+            foreach(DetailProduk item in ListDetailProduk)
+            {
+                if(item.IDProduk == id)
+                {
+                    item.Kuantitas += 1;
+                }
+            }
+
+        }
+        public void Decrease(int id)
+        {
+            foreach (DetailProduk item in ListDetailProduk)
+            {
+                if (item.IDProduk == id)
+                {
+                    item.Kuantitas -= 1;
+                }
+            }
+
+        }
         public void DataBelanjaSet(int id,string nama, int kuantitas,int harga)
         {
             bool IsDuplicate = false;

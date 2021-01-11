@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Account.aspx.cs" Inherits="PIGMA.WebForm3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
     <div class="container-fluid row">
         <div class="col-md-3 container sidebarAccount">
             <div class="gambarSidebarAccount">
@@ -26,7 +27,10 @@
         <div class="col-md-1">
 
         </div>
-        <div class="col-md-8 container sidebarAccount">
+        <asp:Panel runat="server" id="panelPesanan" CssClass="col-md-8 container sidebarAccount">
+
+        </asp:Panel>
+        <asp:panel runat="server" id="detailReceipt" CssClass="col-md-8 container sidebarAccount" Visible="false">
             <div class="row">
                 <div class="col-md-3" style="margin:auto 0px;">
                     <p class="fontMainAccount">Rincian Pesanan</p>
@@ -136,6 +140,6 @@
                                 <asp:Label Cssclass="col-md-3" runat="server" ID="txtTotal"/>
                             </div>
                         </div>
-        </div>
+        </asp:panel>
     </div>
 </asp:Content>

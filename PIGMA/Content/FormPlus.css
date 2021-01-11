@@ -21,6 +21,7 @@
     font-size: 24px;
     color: #97C200;
     font-weight: bold;
+   
 }
 .form-groupPlus {
     border: 1px solid #FFFFFF;
@@ -234,4 +235,10 @@
     width:75px;
     height:100%;
     margin:auto 20px;
+}
+.btnLupa {
+    color: #2880CE;
+    opacity: 0.6;
+    border: none;
+    background-color: #FFF;
 }

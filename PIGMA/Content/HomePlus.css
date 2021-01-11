@@ -20,10 +20,10 @@ a:hover {
     margin-bottom: auto;
 }
 .Searchbar {
-    height: 100%;
+    height: 90%;
     width: 100%;
     margin: 5px 0px;
-    padding: 10px 10px;
+    padding: 10px 30px;
     border-radius: 15px;
     font-size: 18px;
     line-height: 20px;
@@ -56,20 +56,28 @@ a:hover {
 .Homepage {
     padding: 30px 45px;
 }
-
 .Homepage-Bottom {
-    margin: 10px;
-    padding: 20px 10px;
-    border: 1px solid #97C200;
-    background-color: #97C200;
+    padding: 20px 0px;
+    border: 1px solid #FFF;
+    background-color: #FFF;
     border-radius: 15px;
     color: #FFF;
 }
 
-.navItem{
-    margin:auto 12.5px;
-    height:100%;
+.navItem {
+    margin: auto 12.5px;
+    height: 100%;
+    color: #9E9E9E;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:500;
+    border:none;
+    background-color:#fff;
 }
+.navItem:hover {
+    color: #9E9E9E;
+}
+
 .daftarNavPlus {
     width: 100%;
     height: 100%;
@@ -77,8 +85,8 @@ a:hover {
     margin-right: 5px;
     color: #97C200;
     font-weight: 500;
-    border: 2px solid #97C200;
-    background-color: #373F41;
+    border: 1px solid #808384;
+    background-color: #FFF;
 }
 
 .masukNavPlus {
@@ -86,16 +94,16 @@ a:hover {
     height: 100%;
     border-radius: 6px;
     margin-right: 5px;
-    color: #373F41;
+    color: #FFF;
     font-weight: 500;
     background-color: #97C200;
     border: 2px solid #97C200;
 }
 
 .Homepage-List {
-    margin: 5px 10px;
+    margin: 5px 0px;
     border: 1px solid #fff;
-    padding: 20px;
+    padding: 20px 0px;
     background-color: #fff;
     border-radius: 15px;
     color: #373f41;
@@ -103,8 +111,8 @@ a:hover {
 
 .imgHomePlus {
     border-radius: 10px;
-    flex: 0 0 30%;
-    max-width: 30%;
+    flex: 0 0 21%;
+    max-width: 21%;
     position: relative;
     width: 100%;
     margin: 10px 0px;
@@ -112,8 +120,8 @@ a:hover {
 .imgDividePlus {
     position: relative;
     width: 100%;
-    flex: 0 0 5%;
-    max-width: 5%;
+    flex: 0 0 3%;
+    max-width: 3%;
 }
 
 .cardPlus {
@@ -174,4 +182,29 @@ a:hover {
 .liPlus:hover{
     color : white;
     text-decoration : none;
+}
+.form-modal-topup {
+    position: absolute;
+    top:20%;
+    left:20%;
+    display: block;
+    background-color: white;
+    box-shadow: 10px 10px 5px #888888;
+    border: 1px solid #888;
+    width: 50%;
+    height:550px;
+    overflow:scroll;
+}
+.imgTB{
+    width:100%;
+    position:page;
+}
+.btnClose{
+    top:10px;
+    right:10px;
+    position:absolute;
+    border:none;
+    background-color:#FFF;
+    color:#9E9E9E;
+    font-weight:bold;
 }

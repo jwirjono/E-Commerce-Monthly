@@ -33,6 +33,15 @@ namespace PIGMA
         protected global::System.Web.UI.HtmlControls.HtmlImage gambarDaftar;
 
         /// <summary>
+        /// gambarLupa control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage gambarLupa;
+
+        /// <summary>
         /// labelMainForm control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace PIGMA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel panelFormLogin;
+
+        /// <summary>
+        /// panelLupaPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelLupaPassword;
 
         /// <summary>
         /// panelDaftarLogin control.

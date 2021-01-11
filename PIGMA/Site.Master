@@ -18,33 +18,37 @@
 </head>
 <body>
     <form runat="server">
-        <div class="navbar navbar-inverse container-fluid" style="background-color: #373f41;color:#ffffff;border-radius:0px;border: 1px solid #373f41;font-family: Roboto;font-size: 16px;">
+        <div class="navbar navbar-inverse container-fluid" style="background-color: #FFF;color:#9E9E9E;border-radius:0px;border: 1px solid #FFF;font-family: Roboto;font-size: 16px;box-shadow:0px 0px 10px grey">
             <div class="col-md-1"></div>
             <div class="col-md-1">
-                <a class="navbar-brand" style="font-size:24px;font-weight:bold;text-decoration:none;color:#FFF;text-align:center;" runat="server" href="HomePage.aspx">MONTHLY</a>
+                <a class="navbar-brand" style="font-size:24px;font-weight:bold;text-decoration:none;color:#74B816;text-align:center;" runat="server" href="HomePage.aspx">MONTHLY</a>
                 <asp:label runat="server" Text="" ID="holup"/>
             </div>
-            <div class="col-md-7" id ="panelSearch" style="display:flex;flex-direction:row;">
+            <div class="col-md-4" id ="panelSearch" style="display:flex;flex-direction:row;">
                 <input runat="server" id="txtSearchBar" type="text" class="Searchbar"  placeholder="Cari Produk">
                 <asp:ImageButton runat="server" onclick="btnSearch_Click" Cssclass="SearchButton" ImageUrl="Content/Images/SearchIcon.png"/> 
             </div>
-            <div id="navLoginTruePanel" class="col-md-3" runat="server" style="display:flex;flex-direction:row;" visible="false">
-                <a runat="server" class="navItem" href="Account.aspx"><img  src="Content/Images/HistoryBelanja.PNG"></a>
-                <a runat="server" class="navItem" href="Keranjang.aspx"><img  src="Content/Images/MyCart.PNG"></a>
+            <div runat="server" id="panelHilang" class="col-md-2"></div>
+            <div id="navLoginTruePanel" class="col-md-4" runat="server" style="display:flex;flex-direction:row;" visible="false">
+                <a runat="server" class="navItem" href="Account.aspx">Keranjang</a>
+                <a runat="server" class="navItem" href="Keranjang.aspx">Pesanan</a>
+                <asp:button runat="server" class="navItem" Text="Transaksi Berulang" OnClick="btnTB_Click"/>
                 <div style="width:1px;height:40px;border:1px solid #fff;" class="navItem"></div>
+            </div>
+            <div id="panelAkun" runat="server" class="col-md-2" visible="false">
                 <div class="navItem" style="display:flex;flex-direction:row;">
                     <p class="navItem">Sophie Nuraeni</p>
-                    <img class="navItem" style="width:40px;height:40px;border-radius:20px;" src="Content/Images/ProfilePicture.png">
+                    <asp:ImageButton class="navItem" style="width:40px;height:40px;border-radius:20px;" runat="server" ImageUrl="Content/Images/ProfilePicture.png" OnClick="btnAccount_Click"/>
                 </div>
             </div>
-            <div id="navLoginFalsePanel" class="col-md-3" runat="server" style="display:flex;flex-direction:row;">
+            <div id="navLoginFalsePanel" class="col-md-4" runat="server" style="display:flex;flex-direction:row;">
                 <div style="width:1px;height:45px;border:1px solid #fff;" class="navItem"></div>
                 <div class="navItem row" style="height:45px;width:60%;">
                         <div class="col-md-6">
-                            <asp:button runat="server" class="daftarNavPlus" Text="DAFTAR"/>
+                            <asp:button runat="server" class="daftarNavPlus" OnClick="btnToLogin_Click" Text="DAFTAR"/>
                         </div>
                         <div class="col-md-6">
-                            <button type="submit" class="masukNavPlus">MASUK</button>
+                            <asp:button runat="server" OnClick="btnLoginDone_Click" type="submit" class="masukNavPlus" Text="MASUK"/>
                         </div>
                     </div>
             </div>
@@ -52,39 +56,26 @@
         <div class="container-fluid body-content MainContentPlus">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
+            <asp:Panel ID="panelUMB" runat="server" Visible="false">
+                <div class="form-modal-topup">
+                    <div style="display:inline-block;width:100%;">
+                        <img src="Content/Images/TB.png" class="imgTB"/>
+                        <asp:Button runat="server" CssClass="btnClose" Text="X"/>
+                    </div>
+                </div>
+            </asp:Panel>
         </div>
         <footer>
             <asp:Panel runat="server" ID="panelFooter" Cssclass="footerPlus container-fluid" Visible="false">
                 <div class="row">
-                    <div class="col-md-3">
-                        <h4>BANTUAN</h4>
-                        <div class="ulPlus">
-                            <a class="liPlus" runat="server" href="~/">Monthly Help Center</a>
-                            <a class="liPlus" runat="server" href="~/">Syarat dan Ketentuan</a>
-                            <a class="liPlus" runat="server" href="~/">Kebijakan Privasi</a>
-                        </div>
+                    <div class="col-md-6">
+                        <p style="color:#FFF;font-size:38px;font-weight:bold">MONTHLY</p>
+                        <p style="color:#D9DBE1;font-size:14px;">© Copyright 2020 Monthly. All rights reserved</p>
                     </div>
-                    <div class="col-md-4">
-                        <h4>IKUTI KAMI</h4>
-                        <div class="row">
-                            <div class="round-link col-md-2">
-                                <img class="round-link-elipse" src="Content/Images/Watermark.PNG" alt="google">
-                                <a class="round-link-anchor">Google</a>
-                            </div>
-                            <div class="round-link col-md-2">
-                                <img class="round-link-elipse" src="Content/Images/Watermark.PNG" alt="google">
-                                <a class="round-link-anchor">Facebook</a>
-                            </div>
-                            <div class="round-link col-md-2">
-                                <img class="round-link-elipse" src="Content/Images/Watermark.PNG" alt="google">
-                                <a class="round-link-anchor">Instagram</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-5" style="border-left:1px white solid;height:175px;">
-                        <h3>Segera daftarkan supermarket anda menjadi partner monthly</h3>
-                        <p>lorem ipsum yooooooooooooooooooooooooooooooooooooooooooooooo ooooooooooooooooooooooooooooooooooooooooooooo</p>
-                        <button type="button" class="btn btn-light" style="color:#373f41;border-radius:10px;border:#373f41 1px solid;"  ><a href="~/admin.aspx"></a>Daftar Supermarket</button>
+                    <div class="col-md-5" style="margin-left:15px;border-left:1px white solid;height:175px;">
+                        <p style="color:#74B816;font-size:24px;font-weight:bold;">Segera daftarkan supermarket anda menjadi partner monthly</p>
+                        <p style="color:#fff;">Jadilah partner monthly dan mulai berjualan secara online</p>
+                        <button type="button" class="btn btn-light" style="color:#FFF;border-radius:10px;border:#74B816 1px solid;background-color:#74B816"><a href="~/admin.aspx"></a>Daftar Supermarket</button>
                     </div>
                 </div>
             </asp:Panel>
@@ -97,3 +88,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+

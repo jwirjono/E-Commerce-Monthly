@@ -1,124 +1,85 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Belanja.aspx.cs" Inherits="PIGMA.WebForm2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <asp:HiddenField ID="supaID" runat="server" />
-    <div class =" container-fluid BelanjaPlus">
+    <div class=" container-fluid BelanjaPlus">
         <div class ="row topPanelBelanjaPlus">
-            <div class="col-md-4" style="color:#262628;height:400px">
-                <p style="margin:20px 0px;font-size:48px;color:#373F41;"><b>PENGIRIMAN</b></p>
-                <div style="margin:20px 0px">
-                    <asp:Label runat="server" ID="lblsupa" />
+            <div class="row" style="background-color:#EFF0F0;border:1px solid #EFF0F0;border-radius:20px;padding:0px 20px;height:60px">
+                <div class="col-md-6" style="display:flex;flex-direction:row;border-right:#74B816 1px solid;padding:auto 0px">
+                    <img src="Content/Images/storehouse.png" alt="" style="width:30px;height:30px;margin:auto 0px;">
+                    <p style="margin:auto 15px;font-weight:500;color:#9E9E9E">Dari Supermarket</p>
+                    <asp:Label runat="server" ID="lblSupa" CssClass="mainName" />
                 </div>
-                <div style="margin:20px 0px;" class="divDikirimBelanjaPlus">
-                    <hr style="width:100%;border:1px solid #CCCDCE;" />
-                    <asp:Button runat="server" Cssclass="btn btnDikirimBelanjaPlus" OnClick="btnPengiriman_Click" Text="Dikirim Ke"/>
-                </div>
-                <p style="margin:20px 0px;" >address text</p>
-                <a style="margin:20px 0px;" runat="server" href="~/Keranjang" class="btn grnBtn">UBAH</a>
-            </div>
-            <div class="col-md-1">
-
-            </div>
-            <div class="col-md-7"> 
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:100%;">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                  </ol>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img style="height:500px" class="d-block w-100" src="Content/Images/Carousel1.png" alt="First slide">
-                        <div class="carousel-caption d-none d-md-block">
-                            <p style="font-size:18px;color:#262628;"><b>Belanja cukup pesan dirumah, kami akan mencari produk yang anda pesan</b></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                      <img style="height:500px" class="d-block w-100" src="Content/Images/Keperluan Dapur.png" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                      <img style="height:500px" class="d-block w-100" src="Content/Images/Meat.png" alt="Third slide">
-                    </div>
-                  </div>
-                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
+                <div class="col-md-6" style="display:flex;flex-direction:row;padding:auto 0px">
+                    <img src="Content/Images/locationpin.png" alt="" style="width:30px;height:30px;margin:auto 0px;">
+                    <p style="margin:auto 15px;font-weight:500;color:#9E9E9E">Dikirim ke</p>
+                    <asp:Label runat="server" ID="lblAlamat" CssClass="mainName"/>
                 </div>
             </div>
-        </div>
-        <div class ="row bottomPanelBelanjaPlus">
-            <div class="col-md-2 sidebarBelanjaPlus">
-                <p style="font-size:20px;text-align:center;color:#373F41;"><b>Kategori</b></p>
-                <a class="listBelanjaPlus">Rekomendasi untuk anda</a>
-                <a class="listBelanjaPlus">Produk Terlaris</a>
-                <a class="listBelanjaPlus">Produk Diskon</a>
-                <hr style="width:100%;border:#373F41 1px solid;"/>
-                <div class="listBelanjaPlus">
-                    <img src="Content/Images/Meat.png" alt="">
-                    <a>Produk Segar</a>
-                </div>
-                <div class="listBelanjaPlus">
-                    <img src="Content/Images/Keperluan Dapur.png" alt="">
-                    <a>Keperluan Dapur</a>
-                </div>
-                <div class="listBelanjaPlus">
-                    <img src="Content/Images/Meat.png" alt="">
-                    <a>Daging dan Seafood</a>
-                </div>
-                <div class="listBelanjaPlus">
-                    <img src="Content/Images/Minuman.png" alt="">
-                    <a>Minuman</a>
-                </div>
-                <div class="listBelanjaPlus">
-                    <img src="Content/Images/Snack.png" alt="">
-                    <a>Makanan Ringan</a>
-                </div>
-                <div class="listBelanjaPlus">
-                    <img src="Content/Images/Produk Beku.png" alt="">
-                    <a>Produk Beku</a>
-                </div>
-                <div class="listBelanjaPlus">
-                    <img src="Content/Images/Perlengkapan Bayi.png" alt="">
-                    <a>Perlengkapan Bayi</a>
-                </div>
-                <div class="listBelanjaPlus">
-                    <img src="Content/Images/Roti.png" alt="">
-                    <a>Produk Roti</a>
-                </div>
-                <div class="listBelanjaPlus">
-                    <img src="Content/Images/Korean Food.png" alt="">
-                    <a>Korean Food</a>
-                </div>
-                <div class="listBelanjaPlus">
-                    <img src="Content/Images/Perlengkapan Hewan.png" alt="">
-                    <a>Perlengkapan Hewan</a>
-                </div>
-                <div class="listBelanjaPlus">
-                    <img src="Content/Images/Produk Kesehatan.png" alt="">
-                    <a>Produk Kesehatan</a>
-                </div>
-                <div class="listBelanjaPlus">
-                    <img src="Content/Images/Produk Kecantikan.png" alt="">
-                    <a>Produk Kecantikan</a>
-                </div>
+            <asp:Label runat="server" Text="Kategori" CssClass="labelUtama" />
+            <div class="container-fluid row">
+                <a runat="server" class="miniCardBelanjaPlus" onserverclick="btnProdAll_Click">
+                    <img style="width:40%;margin-left:auto;margin-right:auto" src="Content/Images/Meat.png" alt="">
+                    <p style="margin:10px auto;color:#000">Semua Produk</p>
+                </a>
+                <div class="miniDividerBelanjaPlus"></div>
+                <a runat="server" class="miniCardBelanjaPlus" onserverclick="btnProd1_Click">
+                    <img style="width:40%;margin-left:auto;margin-right:auto" src="Content/Images/KeperluanDapur.png" alt="">
+                    <p style="margin:10px auto;color:#000">Keperluan Dapur</p>
+                </a>
+                <div class="miniDividerBelanjaPlus" ></div>
+                <a runat="server" class="miniCardBelanjaPlus" onserverclick="btnProd2_Click">
+                    <img style="width:40%;margin-left:auto;margin-right:auto" src="Content/Images/Meat.png" alt="">
+                    <p style="margin:10px auto;color:#000">Daging & Seafood</p>
+                </a>
+                <div class="miniDividerBelanjaPlus"></div>
+                <a runat="server" class="miniCardBelanjaPlus" onserverclick="btnProd3_Click">
+                    <img style="width:40%;margin-left:auto;margin-right:auto" src="Content/Images/Minuman.png" alt="">
+                    <p style="margin:10px auto;color:#000">Minuman</p>
+                </a>
+                <div class="miniDividerBelanjaPlus"></div>
+                <a runat="server" class="miniCardBelanjaPlus" onserverclick="btnProd4_Click">
+                    <img style="width:40%;margin-left:auto;margin-right:auto" src="Content/Images/Snack.png" alt="">
+                    <p style="margin:10px auto;color:#000">Makanan Ringan</p>
+                </a>
+                <div class="miniDividerBelanjaPlus"></div>
+                <a runat="server" class="miniCardBelanjaPlus" onserverclick="btnProd5_Click">
+                    <img style="width:40%;margin-left:auto;margin-right:auto" src="Content/Images/Produk Beku.png" alt="">
+                    <p style="margin:10px auto;color:#000">Produk Beku</p>
+                </a>
+                <div class="miniDividerBelanjaPlus"></div>
+                <a runat="server" class="miniCardBelanjaPlus" onserverclick="btnProd6_Click">
+                    <img style="width:40%;margin-left:auto;margin-right:auto" src="Content/Images/Perlengkapan Bayi.png" alt="">
+                    <p style="margin:10px auto;color:#000">Perlengkapan Bayi</p>
+                </a>
+                <a runat="server" class="miniCardBelanjaPlus" onserverclick="btnProd7_Click">
+                    <img style="width:40%;margin-left:auto;margin-right:auto" src="Content/Images/Roti.png" alt="">
+                    <p style="margin:10px auto;color:#000">Produk Roti</p>
+                </a>
+                <div class="miniDividerBelanjaPlus"></div>
+                <a runat="server" class="miniCardBelanjaPlus" onserverclick="btnProd8_Click">
+                    <img style="width:40%;margin-left:auto;margin-right:auto" src="Content/Images/Korean Food.png" alt="">
+                    <p style="margin:10px auto;color:#000">Korean Food</p>
+                </a>
+                <div class="miniDividerBelanjaPlus"></div>
+                <a runat="server" class="miniCardBelanjaPlus" onserverclick="btnProd9_Click">
+                    <img style="width:40%;margin-left:auto;margin-right:auto" src="Content/Images/Perlengkapan Hewan.png" alt="">
+                    <p style="margin:10px auto;color:#000">Perlengkapan Hewan</p>
+                </a>
+                <div class="miniDividerBelanjaPlus"></div>
+                <a runat="server" class="miniCardBelanjaPlus" onserverclick="btnProd10_Click">
+                    <img style="width:40%;margin-left:auto;margin-right:auto" src="Content/Images/Produk Kesehatan.png" alt="">
+                    <p style="margin:10px auto;color:#000">Produk Kesehatan</p>
+                </a>
+                <div class="miniDividerBelanjaPlus"></div>
+                <a runat="server" class="miniCardBelanjaPlus" onserverclick="btnProd11_Click">
+                    <img style="width:40%;margin-left:auto;margin-right:auto" src="Content/Images/Perlengkapan Bayi.png" alt="">
+                    <p style="margin:10px auto;color:#000">Perlengkapan Bayi</p>
+                </a>
+                <div class="miniDividerBelanjaPlus"></div>
             </div>
-            <div class="col-md-10 container produkListBelanjaPlus">
-                <div class="row">
-                    <div style="display:flex;flex-direction:column;height:60px" class="col-md-10">
-                        <h3>Produk Diskon</h3>
-                        <p>Menampilkan 9 dari Semua Kategori</p>
-                    </div>
-                    <div class="col-md-2" style="display:flex;flex-direction:row">
-                        <asp:Button runat="server" ID="btnCompletePurchase" OnClick="btnComplete_Click" CssClass="masukLoginPlus" Text="Lanjutkan"/>
-                    </div>
-                </div>
-                
-                <hr />
-                <asp:Panel runat="server" ID="panelCardProdukGiant" class="cardlistProdukBelanjaPlus row" Visible="false">
+            <asp:Label runat="server" Text="Semua Produk" CssClass="labelUtama" />
+            
+            <asp:Panel runat="server" ID="panelCardProdukGiant" class="cardlistProdukBelanjaPlus row" visible="false">
                     <asp:Panel class="cardFullProdukBelanjaPlus" runat="server" id="panelCard1">
                         <div class="cardProdukBelanjaPlus">
                         <a>-50%</a>
@@ -216,10 +177,7 @@
                         </div>
                     </asp:Panel>
                 </asp:Panel>
-
-
-
-                <asp:Panel runat="server" ID="panelCardProdukGrandLucky" class="cardlistProdukBelanjaPlus row" Visible="false">
+            <asp:Panel runat="server" ID="panelCardProdukGrandLucky" class="cardlistProdukBelanjaPlus row" Visible="false">
                     <asp:Panel class="cardFullProdukBelanjaPlus" runat="server" id="panel2">
                         <div class="cardProdukBelanjaPlus">
                         <a>-50%</a>
@@ -293,8 +251,18 @@
                         </div>
                     </asp:Panel>
                 </asp:Panel>
-                
+            <asp:Panel ID="panelProdukKosong" runat="server" Visible="false" CssClass="produkKosongBelanjaPlus">
+                <img style="width:40%;margin:auto" src="Content/Images/ProdukKosong.png" alt="">
+            </asp:Panel>
+            <div class="row">
+                <div class="col-md-11"></div>
+                <div class="col-md-1">
+                    <asp:Button runat="server" ID="btnCompletePurchase" OnClick="btnComplete_Click" CssClass="masukLoginPlusPlus" Text="Lanjutkan"/>
+                </div>
             </div>
+            
+            
         </div>
+        
     </div>
 </asp:Content>

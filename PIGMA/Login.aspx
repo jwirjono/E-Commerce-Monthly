@@ -5,14 +5,13 @@
         <div class="col-md-6" style="display:flex;flex-direction:column;">
             <img class="mainFormPlus" id="gambarLogin" runat="server" src="Content/Images/Login.PNG" alt="fas">
             <img class="mainFormPlus" id="gambarDaftar" runat="server" visible="false" src="Content/Images/DaftarForm.PNG" alt="fas">
+            <img class="mainFormPlus" id="gambarLupa" runat="server" visible="false" src="Content/Images/Lupa.PNG" alt="fas">
         </div>
         <div class="col-md-5 formparentPlus">
             <asp:label ID="labelMainForm" runat="server" CssClass="formLabel" Text="Login"/>
-            <asp:Panel runat="server" id="panelFormLogin">
+            <div style="height:30px"></div>
+            <asp:Panel runat="server" id="panelFormLogin" CssClass="panelLogin">
                 <form>
-                    <div class="form-group">
-                        <p>Mea Culpa lorem ipsum dominique bobobobo bola kampung</p>
-                    </div>
                     <div class="form-group form-groupPlus">
                     <label class="form-labelPlus" for="exampleInputEmail1">Email</label>
                     <input type="email" class="form-controlPlus " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="alamat@email.com">
@@ -27,7 +26,7 @@
                             <label style="margin-left:5px;" class="form-labelPlus" for="exampleCheck1">Ingat saya</label>
                         </div>
                         <div class="col-md-7"></div>
-                        <div class="col-md-3"><button style="color:#2880CE;opacity:0.6;border:none;background-color:#FFF">Lupa Password?</button></div>
+                        <div class="col-md-3"><asp:button runat="server" CssClass="btnLupa" OnClick="btnLupa_Click" Text="Lupa Password?"/></div>
                         
                     </div>
                     <div class="row form-group daftarmasuk">
@@ -38,30 +37,23 @@
                             <button type="submit" class="masukLoginPlus">MASUK</button>
                         </div>
                     </div>
-                    <div class="form-group garisLogin row">
-                    <div class="colgaris">
-                        <hr />
-                    </div>
-                    <div class="colgaris-text">
-                        <label class="form-check-label form-labelPlus">atau masuk dengan</label>
-                    </div>
-                    <div class="colgaris">
-                        <hr />
-                    </div>
-                    </div>
-                    <div class="row">
-                        <div class="socialLoginPlus">
-                            <div class="round-link-login col-md-6">
-                            <img class="round-link-elipse" src="Content/Images/Watermark.PNG" alt="google">
-                            <a class="round-link-anchor">Google</a>
-                        </div>
-                        <div class="round-link-login col-md-6">
-                            <img class="round-link-elipse" src="Content/Images/Watermark.PNG" alt="google">
-                            <a class="round-link-anchor">Facebook</a>
-                        </div>
-                        </div>
-                    </div>
             </form>
+            </asp:Panel>
+            <asp:Panel runat="server" id="panelLupaPassword" Visible="false">
+                <form>
+                    <div class="form-group">
+                        <p>Link untuk ubah password akan dikirim melalui email</p>
+                    </div>
+                    <div class="form-group form-groupPlus">
+                    <label class="form-labelPlus" for="exampleInputEmail1">Email</label>
+                    <input type="email" class="form-controlPlus " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="alamat@email.com">
+                    </div>
+                    <div class="row form-group daftarmasuk" style="margin-top:200px">
+                        <div class="col-md-12">
+                            <button type="submit" class="masukLoginPlus">MASUK</button>
+                        </div>
+                    </div>
+                </form>
             </asp:Panel>
             <asp:Panel runat="server" ID="panelDaftarLogin" Visible="false" CssClass="panelColumn">
                 <form>

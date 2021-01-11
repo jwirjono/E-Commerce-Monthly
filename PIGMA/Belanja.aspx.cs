@@ -16,24 +16,28 @@ namespace PIGMA
         {
             if (!IsPostBack)
             {
-                
                 string supermarket = Session["Supermarket"].ToString();
                 supaID.Value = supermarket;
+                lblAlamat.Text= Session["Alamat"].ToString();
                 switch (supermarket)
                 {
-                    case "Giant":
-                        lblsupa.Text = "Giant";
+                    case "Lotte Mart":
+                        lblSupa.Text = "Lotte Mart";
+                        panelProdukKosong.Visible = false;
                         panelCardProdukGiant.Visible = true;
                         break;
                     case "Grand Lucky":
-                        lblsupa.Text = "Grand Lucky";
+                        lblSupa.Text = "Grand Lucky";
+                        panelProdukKosong.Visible = false;
                         panelCardProdukGrandLucky.Visible = true;
                         break;
                     case "Transmart":
-                        lblsupa.Text = "Transmart";
+                        lblSupa.Text = "Transmart";
+                        panelProdukKosong.Visible = true;
                         break;
                     case "Ranch Market":
-                        lblsupa.Text = "Ranch Market";
+                        lblSupa.Text = "Ranch Market";
+                        panelProdukKosong.Visible = false;
                         break;
                 }
             }
@@ -58,9 +62,108 @@ namespace PIGMA
             divcontrol.Controls.Add(b);
             */
         }
+        #region btn prod
+        protected void btnProdAll_Click(object sender, EventArgs e)
+        {
+            if (supaID.Value == "Lotte Mart")
+            {
+                panelProdukKosong.Visible = false;
+                panelCardProdukGiant.Visible = true;
+            }
+            else if(supaID.Value == "Grand Lucky")
+            {
+                panelProdukKosong.Visible = false;
+                panelCardProdukGrandLucky.Visible = true;
+            }
+        }
+        protected void btnProd1_Click(object sender, EventArgs e)
+        {
+            panelCardProdukGiant.Visible = false;
+            panelCardProdukGrandLucky.Visible = false;
+            panelProdukKosong.Visible = true;
+        }
+        protected void btnProd2_Click(object sender, EventArgs e)
+        {
+            if (supaID.Value == "Lotte Mart")
+            {
+                panelProdukKosong.Visible = false;
+                panelCardProdukGiant.Visible = true;
+            }
+            else if (supaID.Value == "Grand Lucky")
+            {
+                panelProdukKosong.Visible = false;
+                panelCardProdukGrandLucky.Visible = true;
+            }
+        }
+        protected void btnProd3_Click(object sender, EventArgs e)
+        {
+            panelCardProdukGiant.Visible = false;
+            panelCardProdukGrandLucky.Visible = false;
+            panelProdukKosong.Visible = true;
+        }
+        protected void btnProd4_Click(object sender, EventArgs e)
+        {
+            panelCardProdukGiant.Visible = false;
+            panelCardProdukGrandLucky.Visible = false;
+            panelProdukKosong.Visible = true;
+        }
+        protected void btnProd5_Click(object sender, EventArgs e)
+        {
+            panelCardProdukGiant.Visible = false;
+            panelCardProdukGrandLucky.Visible = false;
+            panelProdukKosong.Visible = true;
+        }
+        protected void btnProd6_Click(object sender, EventArgs e)
+        {
+            panelCardProdukGiant.Visible = false;
+            panelCardProdukGrandLucky.Visible = false;
+            panelProdukKosong.Visible = true;
+        }
+        protected void btnProd7_Click(object sender, EventArgs e)
+        {
+            panelCardProdukGiant.Visible = false;
+            panelCardProdukGrandLucky.Visible = false;
+            panelProdukKosong.Visible = true;
+        }
+        protected void btnProd8_Click(object sender, EventArgs e)
+        {
+            panelCardProdukGiant.Visible = false;
+            panelCardProdukGrandLucky.Visible = false;
+            panelProdukKosong.Visible = true;
+        }
+        protected void btnProd9_Click(object sender, EventArgs e)
+        {
+            panelCardProdukGiant.Visible = false;
+            panelCardProdukGrandLucky.Visible = false;
+            panelProdukKosong.Visible = true;
+        }
+        protected void btnProd10_Click(object sender, EventArgs e)
+        {
+            panelCardProdukGiant.Visible = false;
+            panelCardProdukGrandLucky.Visible = false;
+            panelProdukKosong.Visible = true;
+        }
+        protected void btnProd11_Click(object sender, EventArgs e)
+        {
+            panelCardProdukGiant.Visible = false;
+            panelCardProdukGrandLucky.Visible = false;
+            panelProdukKosong.Visible = true;
+        }
+        #endregion
+
+
+
+
+
+
+
+
+
+
+
         protected void btnComplete_Click(object sender, EventArgs e)
         {
-            if (Session["Supermarket"].ToString() == "Giant")
+            if (Session["Supermarket"].ToString() == "Lotte Mart")
             {
                 DataBelanja data = new DataBelanja();
                 data.DataBelanjaSet(10111, "Apel Merah XiongNu", int.Parse(lblItemCard1.Text), 30000);
