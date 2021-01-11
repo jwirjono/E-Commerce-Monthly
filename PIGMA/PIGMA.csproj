@@ -117,6 +117,10 @@
     <Content Include="AdminContent\card2.PNG" />
     <Content Include="AdminContent\card.png" />
     <Content Include="AdminContent\calendar.png" />
+    <Content Include="AdminContent\Logokeranjanghijau.png" />
+    <Content Include="AdminContent\Logokeranjanghitam.png" />
+    <Content Include="AdminContent\Logoviewhitam.png" />
+    <Content Include="AdminContent\Logoviewhijau.png" />
     <Content Include="AdminContent\labelpemesananbaru.png" />
     <Content Include="AdminContent\labelpemesananproses.png" />
     <Content Include="AdminContent\labelpemesanandlmpengiriman.png" />
@@ -137,9 +141,10 @@
     <Content Include="AdminContent\magnify.png" />
     <Content Include="AdminContent\mark.png" />
     <Content Include="AdminContent\Yakiniku Shortplate.png" />
+    <Content Include="AdminContent\Upsidedown.png" />
     <Content Include="adminpengaturan.aspx" />
     <Content Include="adminpesanan.aspx" />
-    <Content Include="adminproduk.aspx" />
+    <Content Include="AdminProdukfix.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\AccountPlus.css" />
     <Content Include="Content\Additional.css" />
@@ -355,12 +360,12 @@
     <Compile Include="adminpesanan.aspx.designer.cs">
       <DependentUpon>adminpesanan.aspx</DependentUpon>
     </Compile>
-    <Compile Include="adminproduk.aspx.cs">
-      <DependentUpon>adminproduk.aspx</DependentUpon>
+    <Compile Include="AdminProdukfix.aspx.cs">
+      <DependentUpon>AdminProdukfix.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="adminproduk.aspx.designer.cs">
-      <DependentUpon>adminproduk.aspx</DependentUpon>
+    <Compile Include="AdminProdukfix.aspx.designer.cs">
+      <DependentUpon>AdminProdukfix.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
