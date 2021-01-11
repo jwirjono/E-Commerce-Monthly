@@ -144,7 +144,7 @@
     <Content Include="AdminContent\Upsidedown.png" />
     <Content Include="adminpengaturan.aspx" />
     <Content Include="adminpesanan.aspx" />
-    <Content Include="AdminProdukfix.aspx" />
+    <Content Include="adminproduk.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\AccountPlus.css" />
     <Content Include="Content\Additional.css" />
@@ -360,12 +360,12 @@
     <Compile Include="adminpesanan.aspx.designer.cs">
       <DependentUpon>adminpesanan.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdminProdukfix.aspx.cs">
-      <DependentUpon>AdminProdukfix.aspx</DependentUpon>
+    <Compile Include="adminproduk.aspx.cs">
+      <DependentUpon>adminproduk.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminProdukfix.aspx.designer.cs">
-      <DependentUpon>AdminProdukfix.aspx</DependentUpon>
+    <Compile Include="adminproduk.aspx.designer.cs">
+      <DependentUpon>adminproduk.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">

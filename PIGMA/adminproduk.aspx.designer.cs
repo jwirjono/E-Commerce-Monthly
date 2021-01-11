@@ -11,7 +11,7 @@ namespace PIGMA
 {
 
 
-    public partial class AdminProdukfix
+    public partial class adminproduk
     {
 
         /// <summary>

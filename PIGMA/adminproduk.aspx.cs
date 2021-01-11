@@ -4,10 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using PIGMA.Classes;
 
 namespace PIGMA
 {
-    public partial class AdminProdukfix : System.Web.UI.Page
+    public partial class adminproduk : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,7 +19,6 @@ namespace PIGMA
             datab.DataBelanjaSet(40721, "Beef Bulgogi", "Makanan", 53500, "AdminContent/Beef Bulgogi.png", 40, 20);
             gridObject.DataSource = datab.ListDetailProduk;
             gridObject.DataBind();
-
 
         }
         protected void chkRef_Click(object sender, EventArgs e)

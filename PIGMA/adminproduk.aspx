@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminProdukfix.aspx.cs" Inherits="PIGMA.AdminProdukfix" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="adminproduk.aspx.cs" Inherits="PIGMA.adminproduk" %>
 
 <!DOCTYPE html>
 
@@ -176,7 +176,7 @@
                                     <HeaderStyle Font-Bold="true" />
                                     <ItemTemplate>
                                         <div style="display: flex; flex-direction: column;">
-                                            <asp:TextBox ID ="lblhargainput"  runat="server"></asp:TextBox>
+                                            <asp:TextBox ID ="lblhargainput" TextMode="Number"  runat="server" Text ="0"></asp:TextBox>
                                             <asp:Label ID="lblharga" Text='<%#Eval("Harga") %>' runat="server" />
                                         </div>
                                     </ItemTemplate>
