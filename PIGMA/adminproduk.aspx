@@ -9,7 +9,7 @@
     <title><%: Page.Title %> - My ASP.NET Application</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet">
     <link href="~/AdminContent/admin.css" rel="stylesheet" />
-
+    <link href="~/AdminContent/adminmenu.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -42,7 +42,7 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="adminproduk.aspx">
                                 <img style="padding-left: 10px; padding-bottom: 5px;" src="content/images/Box.png">
-                                <span class="button-text active">Produk</span>
+                                <span class="button-text nyala">Produk</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -71,8 +71,7 @@
                     </h2>
                 </div>
                 <div class="col-md-6">
-                    <button style="height: 40px; width: 150px; margin-top: 30px; background-color: #97C200; color: white; border-radius: 8px; border: solid thin">Etalase</button>
-                    <button style="height: 40px; width: 150px; margin-top: 30px; background-color: #97C200; color: white; border-radius: 8px; border: solid thin">Tambah Produk</button>
+                    <button style="height: 60px; width: 200px;margin-left : 100px; margin-top: 30px; background-color: #74B816; color: white; border-radius: 8px; border: solid thin">Tambah Produk</button>
                 </div>
             </div>
             <hr />
@@ -91,101 +90,17 @@
 
                 </div>
                 <div class="col-md-6">
-                    <select name="kategori" id="kategori" style="height: 40px;border: solid thin; border-radius:10px; width:150px; background-color:#97C200; color:white; margin-top: 10px;">
+                    <select name="kategori" id="kategori" style="height: 40px;border: solid thin; border-radius:10px; width:150px; background-color:white; color:black; margin-top: 10px;">
                         <option value="kategori ">Kategori</option>
                         <option value="harga">Harga</option>
                     </select>
-                    <select name="status" id="status" style="height: 40px;border: solid thin; border-radius:10px; width:150px; background-color:#97C200; color:white; margin-top: 10px;">
+                    <select name="status" id="status" style="height: 40px;border: solid thin; border-radius:10px; width:150px; background-color:white; color:black; margin-top: 10px;">
                         <option value="habis">Habis</option>
                         <option value="aktif">Aktif</option>
                     </select>
                 </div>
             </div>
-            <div class="row rowcontent">
-                <div class="col-md-12">
-                    <h3>Penting hari ini
-                    <br />
-                        <span style="font-size: 18px;">Aktivitas yang perlu anda pantau</span>
-                    </h3>
-                </div>
-                <!-- Earnings (Monthly) Card Example -->
-                <div class="col-xl-3 col-md-6 mb-1">
-                    <div class="card border-left-primary produk">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col">
-                                    <div class="card-text">Pesanan Baru</div>
-                                    <div class="card-number">0</div>
-                                </div>
-                                <div class="align-self-end ml-auto">
-                                    <a class="card-button" href="#">Lihat</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Earnings (Monthly) Card Example -->
-                <div class="col-xl-3 col-md-6 mb-1">
-                    <div class="card border-left-primary produk">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col">
-                                    <div class="card-text">Siap Dikirim / Diterima</div>
-                                    <div class="card-number">0</div>
-                                </div>
-                                <div class="align-self-end ml-auto">
-                                    <a class="card-button" href="#">Lihat</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Earnings (Monthly) Card Example -->
-                <div class="col-xl-3 col-md-6 mb-1">
-                    <div class="card border-left-primary produk">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col">
-                                    <div class="card-text">Produk Tidak Aktif</div>
-                                    <div class="card-number">0</div>
-                                </div>
-                                <div class="align-self-end ml-auto">
-                                    <a class="card-button" href="#">Lihat</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pending Requests Card Example -->
-                <div class="col-xl-3 col-md-6 mb-1">
-                    <div class="card border-left-primary produk">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col">
-                                    <div class="card-text">Produk Habis</div>
-                                    <div class="card-number">0</div>
-                                </div>
-                                <div class="align-self-end ml-auto">
-                                    <a class="card-button" href="#">Lihat</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <hr />
-            <div class="row rowcontent">
-                <div class="col-md-12">
-                    <h2>Produk
-            <br />
-                        <span style="font-size: 18px;">Produk yang sering dibeli</span>
-                    </h2>
-                </div>
-            </div>
+            
 
 
         </div>

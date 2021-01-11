@@ -10,20 +10,23 @@
     <title><%: Page.Title %> - My ASP.NET Application</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet">
     <link href="~/AdminContent/admin.css" rel="stylesheet" />
+    <link href="~/AdminContent/adminmenu.css" rel="stylesheet" />
 
 </head>
 
 <body>
 
     <!---- header --->
-    <nav class="navbar-dark bg-dark sticky-top">
-        <a class="navbar-brand brand">
-            <img src="AdminContent/Logo.png"></a>
+    <nav class="navbar-light sticky-top">
+        <a class="navbar-brand brand" style="margin-top: 5px">
+            <img src="AdminContent/MONTHLYPartner.png"></a>
         <span class="header-right text">Transmart Carrefour Central Park</span>
 
     </nav>
     <div class="container-fluid row">
         <!--button-->
+
+
         <div class="col-md-4" style="padding-top: 42px;">
             <div class="col-8">
                 <div class="flex-column">
@@ -37,7 +40,7 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="adminpesanan.aspx">
                                 <img style="padding-left: 10px; padding-bottom: 5px;" src="content/images/Penjualan.png">
-                                <span class="button-text active">Pesanan</span>
+                                <span class="button-text nyala">Pesanan</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -63,48 +66,66 @@
         </div>
 
         <!--content-->
-        <form runat="server">
-            <div class="col-md-12 panelPembelianSub" style="margin-top: 30px">
-                <p><b>Ringkasan Belanja</b></p>
-                <hr />
-                <div class="row">
-                    <p class="col-md-4">Kode Pemesanan</p>
-                    <asp:Label CssClass="col-md-8" runat="server" ID="kodepemesanan" />
-                </div>
-                <div class="row">
-                    <p class="col-md-4">Penjual</p>
-                    <asp:Label CssClass="col-md-8" runat="server" ID="penjual" Text="-" />
-                </div>
-                <div class="row">
-                    <p class="col-md-4">Tanggal</p>
-                    <asp:Label CssClass="col-md-8" runat="server" ID="tanggalpengiriman" Text="-" />
-                </div>
-                <div class="row">
-                    <p class="col-md-4">Alamat Penerima</p>
-                    <asp:Label CssClass="col-md-8" runat="server" ID="alamatpenerima" Text="-" />
-                </div>
-
+        <form class="col-md-8" runat="server">
+            <div class="col-md-12" style="margin-top: 40px">
+                <a href="adminpesanan.aspx" style="color: #74B816; font-size: 18px">< Kembali</a>
+                <br />
+                <h1>MONTHLY</h1>
+                <h2>Detail Pesanan</h2>
             </div>
 
-            <asp:Panel class="col-md-12" ID="panelPembelianBelanja" runat="server" Visible="true">
+            <asp:Panel class="col-md-12" ID="panelPembelianBelanja" runat="server" Visible="true" Style="margin-top: 40px">
                 <asp:Panel ID="panel1" runat="server">
+                    <div class="col-md-12" style="margin-top: 20px; margin-bottom: 20px">
+                        <img src="AdminContent/labelpemesananbaru.png" />
+                    </div>
                     <div style="display: flex; flex-direction: column">
                         <div class="form-group" style="display: flex; flex-direction: row; margin: 30px auto">
                             <asp:Panel runat="server" CssClass="formDaftarNumberLabelactive">
                                 <asp:Label runat="server" CssClass="formNumberLabelactive" Text="1" />
-                                <p>Data Pribadi</p>
+                                <p>Konfirmasi Pesanan</p>
                             </asp:Panel>
                             <div class="garisKeras"></div>
                             <asp:Panel runat="server" CssClass="formDaftarNumberLabel">
                                 <asp:Label runat="server" CssClass="formNumberLabel" Text="2" />
-                                <p>Waktu Pengiriman</p>
+                                <p>Pesanan Diproses</p>
                             </asp:Panel>
                             <div class="garisKeras"></div>
                             <asp:Panel runat="server" CssClass="formDaftarNumberLabel">
                                 <asp:Label runat="server" CssClass="formNumberLabel" Text="3" />
-                                <p>Metode Pembayaran</p>
+                                <p>Dalam Pengiriman</p>
+                            </asp:Panel>
+                            <div class="garisKeras"></div>
+                            <asp:Panel runat="server" CssClass="formDaftarNumberLabel">
+                                <asp:Label runat="server" CssClass="formNumberLabel" Text="4" />
+                                <p>Pesanan Selesai</p>
                             </asp:Panel>
                         </div>
+                    </div>
+                    <div class="col-md-12 panelPembelianSub" style="margin-top: 30px">
+                        <p><b>Ringkasan Belanja</b></p>
+                        <hr />
+                        <div class="row">
+                            <p class="col-md-4">Kode Pemesanan</p>
+                            <asp:Label CssClass="col-md-8" runat="server" ID="kodepemesanan" />
+                        </div>
+                        <div class="row">
+                            <p class="col-md-4">Pembeli dan Nomor Telpon</p>
+                            <asp:Label CssClass="col-md-8" runat="server" ID="pengirim" />
+                        </div>
+                        <div class="row">
+                            <p class="col-md-4">Penjual</p>
+                            <asp:Label CssClass="col-md-8" runat="server" ID="penjual" Text="-" />
+                        </div>
+                        <div class="row">
+                            <p class="col-md-4">Tanggal</p>
+                            <asp:Label CssClass="col-md-8" runat="server" ID="tanggalpengiriman" Text="-" />
+                        </div>
+                        <div class="row">
+                            <p class="col-md-4">Alamat Penerima</p>
+                            <asp:Label CssClass="col-md-8" runat="server" ID="alamatpenerima" Text="-" />
+                        </div>
+
                     </div>
                     <div class="col-md-12 tblKeranjangPlus" style="margin-top: 40px">
                         <asp:GridView runat="server" ID="gridObject"
@@ -119,41 +140,71 @@
                                     <HeaderTemplate>
                                         <asp:Label runat="server" Text="Daftar Pesanan" CssClass="fontSubAccount" />
                                     </HeaderTemplate>
+
                                     <HeaderStyle Font-Bold="true" />
                                     <ItemTemplate>
-                                        <div style="display: flex; flex-direction: column">
-                                            <img src="Content/Images/CardProduk.png" alt="" style="width: 50px; height: 50px; margin: 0px auto; border: 1px solid #FFF;">
-                                        </div>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:TemplateField>
-                                    <ItemTemplate>
-                                        <asp:Label ID="lblID" Text='<%#Eval("IDProduk") %>' runat="server" Visible="false" />
-                                        <asp:Label ID="lblHarga" Text='<%#Eval("Total") %>' runat="server" Visible="false" />
-                                        <div style="display: flex; flex-direction: column">
+                                        <div style="display: flex; flex-direction: column; margin-bottom : 20px">
                                             <asp:Label ID="lblNamaProduk" Text='<%#Eval("NamaProduk") %>' runat="server" />
-                                            <div style="display: flex; flex-direction: row">
-                                                <asp:Label ID="lblHargaRP" CssClass="lblHargaListPlus" Text='<%#Eval("HargaRP") %>' runat="server" />
-                                                <asp:Label CssClass="midRow" Text=" / Kg" runat="server" />
-                                            </div>
                                         </div>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField>
+                                    <HeaderTemplate>
+                                        <asp:Label runat="server" Text="Jumlah" CssClass="fontSubAccountKuantitas" />
+                                    </HeaderTemplate>
+
+                                    <HeaderStyle Font-Bold="true" />
                                     <ItemTemplate>
-                                        <div style="display: flex; flex-direction: column; border-left: 1px solid #9B9FA0">
+                                        <div style="display: flex; flex-direction: column;">
                                             <asp:Label ID="lblKuantitas" Text='<%#Eval("Kuantitas") %>' runat="server" />
                                         </div>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField>
                                     <HeaderTemplate>
-                                        <asp:Label runat="server" ID="lblTableCount" CssClass="fontSubAccount" />
+                                        <asp:Label runat="server" Text="Per" CssClass="fontSubAccountKuantitas" />
                                     </HeaderTemplate>
+
+                                    <HeaderStyle Font-Bold="true" />
                                     <ItemTemplate>
-                                        <div style="display: flex; flex-direction: column; border-left: 1px solid #9B9FA0">
-                                            <asp:Label Text="Total" Font-Bold="true" CssClass="midColumn" runat="server" />
-                                            <asp:Label ID="Label2" CssClass="midColumn" Text='<%#Eval("TotalRP") %>' runat="server" />
+                                        <div style="display: flex; flex-direction: column;">
+                                            <asp:Label ID="lblsatuan" Text='<%#Eval("Satuan") %>' runat="server" />
+                                        </div>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <HeaderTemplate>
+                                        <asp:Label runat="server" Text="Harga" CssClass="fontSubAccountKuantitas" />
+                                    </HeaderTemplate>
+
+                                    <HeaderStyle Font-Bold="true" />
+                                    <ItemTemplate>
+                                        <div style="display: flex; flex-direction: column;">
+                                            <asp:Label ID="lblharga" Text='<%#Eval("HargaRp") %>' runat="server" />
+                                        </div>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <HeaderTemplate>
+                                        <asp:Label runat="server" Text="Diskon" CssClass="fontSubAccountKuantitas" />
+                                    </HeaderTemplate>
+
+                                    <HeaderStyle Font-Bold="true" />
+                                    <ItemTemplate>
+                                        <div style="display: flex; flex-direction: column;">
+                                            <asp:Label ID="lbldiskon" Text='<%#Eval("DiskonRp") %>' runat="server" />
+                                        </div>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <HeaderTemplate>
+                                        <asp:Label runat="server" Text="Subtotal" CssClass="fontSubAccountKuantitas" />
+                                    </HeaderTemplate>
+
+                                    <HeaderStyle Font-Bold="true" />
+                                    <ItemTemplate>
+                                        <div style="display: flex; flex-direction: column;">
+                                            <asp:Label ID="lbldiskon" Text='<%#Eval("TotalRp") %>' runat="server" />
                                         </div>
                                     </ItemTemplate>
                                 </asp:TemplateField>
@@ -164,37 +215,206 @@
                         </asp:GridView>
 
                     </div>
-                    <div class="col-md-12 panelPembelianSub" style="margin-top: 30px">
-                        <p><b>Ringkasan Belanja</b></p>
+                    <div class="col-md-12 panelPembelianSub" style="margin-top: 30px; border : black solid thin; border-radius : 10px">
+                        <p class="ringkasantop"><b>Ringkasan Belanja</b></p>
                         <hr />
                         <div class="row">
-                            <p class="col-md-9">Subtotal Produk</p>
+                            <p class="col-md-8 ringkasan">Subtotal Produk</p>
                             <asp:Label CssClass="col-md-3" runat="server" ID="txtHarga" />
                         </div>
                         <div class="row">
-                            <p class="col-md-9">Biaya Kemasan(kardus)</p>
+                            <p class="col-md-8 ringkasan">Biaya Kemasan(kardus)</p>
                             <asp:Label CssClass="col-md-3" runat="server" ID="txtKemasan" Text="-" />
                         </div>
                         <div class="row">
-                            <p class="col-md-9">Biaya Pengiriman</p>
+                            <p class="col-md-8 ringkasan">Biaya Pengiriman</p>
                             <asp:Label CssClass="col-md-3" runat="server" ID="txtPengiriman" Text="-" />
                         </div>
                         <div class="row">
-                            <p class="col-md-9">Diskon</p>
+                            <p class="col-md-8 ringkasan">Diskon</p>
                             <asp:Label CssClass="col-md-3" runat="server" ID="txtDiskon" Text="-" />
                         </div>
                         <hr />
                         <div class="row">
-                            <p class="col-md-9">Total</p>
+                            <p class="col-md-8 ringkasan">Total</p>
                             <asp:Label CssClass="col-md-3" runat="server" ID="txtTotal" Text="-" />
                         </div>
                     </div>
-                    <div class="col-md-12" style="text-align :right; margin-top : 50px; margin-bottom :50px">
-                    
-                                <asp:Button runat="server" class="masukLoginPlus" OnClick="btnNext1_Click" Text="Terima Pesanan" />
+                    <div class="col-md-12" style="text-align: right; margin-top: 50px; margin-bottom: 50px">
+
+                        <asp:Button runat="server" class="masukLoginPlus" OnClick="btnNext1_Click" Text="Terima Pesanan" />
                     </div>
                 </asp:Panel>
+                <asp:Panel ID="panel2" runat="server" Visible ="false">
+                    <div class="col-md-12" style="margin-top: 20px; margin-bottom: 20px">
+                        <img src="AdminContent/labelpemesananproses.png" />
+                    </div>
+                    <div style="display: flex; flex-direction: column">
+                        <div class="form-group" style="display: flex; flex-direction: row; margin: 30px auto">
+                            <asp:Panel runat="server" CssClass="formDaftarNumberLabelactive">
+                                <img src="Content/Images/formchecklist2.png" class="imageDaftarNumberLabel"/>
+                                <p>Konfirmasi Pesanan</p>
+                            </asp:Panel>
+                            <div class="garisKeras"></div>
+                            <asp:Panel runat="server" CssClass="formDaftarNumberLabel">
+                                <asp:Label runat="server" CssClass="formNumberLabel" Text="2" />
+                                <p>Pesanan Diproses</p>
+                            </asp:Panel>
+                            <div class="garisKeras"></div>
+                            <asp:Panel runat="server" CssClass="formDaftarNumberLabel">
+                                <asp:Label runat="server" CssClass="formNumberLabel" Text="3" />
+                                <p>Dalam Pengiriman</p>
+                            </asp:Panel>
+                            <div class="garisKeras"></div>
+                            <asp:Panel runat="server" CssClass="formDaftarNumberLabel">
+                                <asp:Label runat="server" CssClass="formNumberLabel" Text="4" />
+                                <p>Pesanan Selesai</p>
+                            </asp:Panel>
+                        </div>
+                    </div>
+                    <div class="col-md-12 panelPembelianSub" style="margin-top: 30px">
+                        <p><b>Ringkasan Belanja</b></p>
+                        <hr />
+                        <div class="row">
+                            <p class="col-md-4">Kode Pemesanan</p>
+                            <asp:Label CssClass="col-md-8" runat="server" ID="Label1" />
+                        </div>
+                        <div class="row">
+                            <p class="col-md-4">Pembeli dan Nomor Telpon</p>
+                            <asp:Label CssClass="col-md-8" runat="server" ID="Label2" />
+                        </div>
+                        <div class="row">
+                            <p class="col-md-4">Penjual</p>
+                            <asp:Label CssClass="col-md-8" runat="server" ID="Label3" Text="-" />
+                        </div>
+                        <div class="row">
+                            <p class="col-md-4">Tanggal</p>
+                            <asp:Label CssClass="col-md-8" runat="server" ID="Label4" Text="-" />
+                        </div>
+                        <div class="row">
+                            <p class="col-md-4">Alamat Penerima</p>
+                            <asp:Label CssClass="col-md-8" runat="server" ID="Label5" Text="-" />
+                        </div>
 
+                    </div>
+                    <div class="col-md-12 tblKeranjangPlus" style="margin-top: 40px">
+                        <asp:GridView runat="server" ID="GridView1"
+                            AllowPaging="false"
+                            AllowSorting="false"
+                            AutoGenerateColumns="false"
+                            GridLines="None"
+                            CssClass="container-fluid"
+                            RowStyle-CssClass="tblRow ">
+                            <Columns>
+                                <asp:TemplateField>
+                                    <HeaderTemplate>
+                                        <asp:Label runat="server" Text="Daftar Pesanan" CssClass="fontSubAccount" />
+                                    </HeaderTemplate>
+
+                                    <HeaderStyle Font-Bold="true" />
+                                    <ItemTemplate>
+                                        <div style="display: flex; flex-direction: column; margin-bottom : 20px">
+                                            <asp:Label ID="lblNamaProduk" Text='<%#Eval("NamaProduk") %>' runat="server" />
+                                        </div>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <HeaderTemplate>
+                                        <asp:Label runat="server" Text="Jumlah" CssClass="fontSubAccountKuantitas" />
+                                    </HeaderTemplate>
+
+                                    <HeaderStyle Font-Bold="true" />
+                                    <ItemTemplate>
+                                        <div style="display: flex; flex-direction: column;">
+                                            <asp:Label ID="lblKuantitas" Text='<%#Eval("Kuantitas") %>' runat="server" />
+                                        </div>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <HeaderTemplate>
+                                        <asp:Label runat="server" Text="Per" CssClass="fontSubAccountKuantitas" />
+                                    </HeaderTemplate>
+
+                                    <HeaderStyle Font-Bold="true" />
+                                    <ItemTemplate>
+                                        <div style="display: flex; flex-direction: column;">
+                                            <asp:Label ID="lblsatuan" Text='<%#Eval("Satuan") %>' runat="server" />
+                                        </div>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <HeaderTemplate>
+                                        <asp:Label runat="server" Text="Harga" CssClass="fontSubAccountKuantitas" />
+                                    </HeaderTemplate>
+
+                                    <HeaderStyle Font-Bold="true" />
+                                    <ItemTemplate>
+                                        <div style="display: flex; flex-direction: column;">
+                                            <asp:Label ID="lblharga" Text='<%#Eval("HargaRp") %>' runat="server" />
+                                        </div>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <HeaderTemplate>
+                                        <asp:Label runat="server" Text="Diskon" CssClass="fontSubAccountKuantitas" />
+                                    </HeaderTemplate>
+
+                                    <HeaderStyle Font-Bold="true" />
+                                    <ItemTemplate>
+                                        <div style="display: flex; flex-direction: column;">
+                                            <asp:Label ID="lbldiskon" Text='<%#Eval("DiskonRp") %>' runat="server" />
+                                        </div>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <HeaderTemplate>
+                                        <asp:Label runat="server" Text="Subtotal" CssClass="fontSubAccountKuantitas" />
+                                    </HeaderTemplate>
+
+                                    <HeaderStyle Font-Bold="true" />
+                                    <ItemTemplate>
+                                        <div style="display: flex; flex-direction: column;">
+                                            <asp:Label ID="lbldiskon" Text='<%#Eval("TotalRp") %>' runat="server" />
+                                        </div>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                            </Columns>
+                            <EmptyDataTemplate>
+                                Tidak ada data
+                            </EmptyDataTemplate>
+                        </asp:GridView>
+
+                    </div>
+                    <div class="col-md-12 panelPembelianSub" style="margin-top: 30px; border : black solid thin; border-radius : 10px">
+                        <p class="ringkasantop"><b>Ringkasan Belanja</b></p>
+                        <hr />
+                        <div class="row">
+                            <p class="col-md-8 ringkasan">Subtotal Produk</p>
+                            <asp:Label CssClass="col-md-3" runat="server" ID="Label6" />
+                        </div>
+                        <div class="row">
+                            <p class="col-md-8 ringkasan">Biaya Kemasan(kardus)</p>
+                            <asp:Label CssClass="col-md-3" runat="server" ID="Label7" Text="-" />
+                        </div>
+                        <div class="row">
+                            <p class="col-md-8 ringkasan">Biaya Pengiriman</p>
+                            <asp:Label CssClass="col-md-3" runat="server" ID="Label8" Text="-" />
+                        </div>
+                        <div class="row">
+                            <p class="col-md-8 ringkasan">Diskon</p>
+                            <asp:Label CssClass="col-md-3" runat="server" ID="Label9" Text="-" />
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <p class="col-md-8 ringkasan">Total</p>
+                            <asp:Label CssClass="col-md-3" runat="server" ID="Label10" Text="-" />
+                        </div>
+                    </div>
+                    <div class="col-md-12" style="text-align: right; margin-top: 50px; margin-bottom: 50px">
+                        <asp:Button runat="server" class="masukLoginPlus" OnClick="btnubah_Click" Text="Ubah Pesanan" />
+                        <asp:Button runat="server" class="masukLoginPlus" OnClick="btnkirim_Click" Text="Kirim" />
+                    </div>
+                </asp:Panel>
             </asp:Panel>
         </form>
 

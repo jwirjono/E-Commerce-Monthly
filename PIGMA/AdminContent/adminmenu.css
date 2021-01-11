@@ -1,0 +1,199 @@
+﻿.brand {
+    padding-left: 10px;
+}
+
+.navbar-light {
+    height: 80px;
+    padding: .8rem;
+    box-shadow: 0px 0px 10px grey;
+    background: white;
+}
+
+.nav-item {
+    display: block;
+    width: 100%;
+    font-family: Roboto;
+    font-size: 24px;
+    background-color: white;
+    margin-bottom: 10px;
+    text-align : left;
+    padding-left : 0px;
+}
+
+    .nav-item img {
+        opacity: 0.5;
+    }
+
+    .active, .nav-item:hover {
+        border-left: 10px solid #74B816;
+        background-color: #E9FAC8;
+        color: black;
+    }
+
+        .active img {
+            opacity: 1;
+        }
+
+
+.nav-link {
+    font-size: 20px;
+}
+.cardProdukBelanjaPlus {
+    border: 1px #373F41 solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height : 250px;
+}
+
+.btnCardProdukBelanjaPlus {
+    display: flex;
+    flex-direction: column;
+    background-color: #97C200;
+    border: 1px #373F41 solid;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #fff;
+    align-items: center;
+    padding: 20px;
+}
+.btnCardProdukBelanjaPlusSuper {
+    display: flex;
+    flex-direction: column;
+    background-color: #EACB00;
+    border: 1px #373F41 solid;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #fff;
+    align-items: center;
+    padding: 20px;
+}
+.produkcard{
+    display:flex;
+    flex-direction : row;
+
+}
+.produkcardside {
+    display: flex;
+    flex-direction: column;
+    margin-left : 10px;
+    margin-right: 10px;
+}
+.cardProdukview {
+    border: 1px #373F41 solid;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: #74B816;
+    height: 50px;
+    border: 1px #373F41 solid;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    align-items: flex-start;
+    margin-bottom : 100px;
+}
+.viewimg{
+   margin-top : 20px;
+    margin-left: 30px;
+}
+.viewlist{
+    margin-left : 35px;
+    margin-top : 10px;
+}
+.viewlisttext {
+    margin-left: 10px;
+    margin-top: 10px;
+    color:white;
+}
+.pesanancardviewbaru {
+    display :flex;
+    flex-direction : row;
+    margin-bottom : 50px;
+    border: #373F41 solid thin;
+    width: 984px;
+    background-color: #CCCDCE;
+    height: 80px;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.pesanancardviewproses {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    border: #373F41 solid thin;
+    width: 984px;
+    background-color: #EACB00;
+    height: 80px;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.pesanancardviewselesai {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    border: #373F41 solid thin;
+    width: 984px;
+    background-color: #74B816;
+    height: 80px;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.pesanancardprofile {
+    vertical-align : text-bottom;
+
+    width: 250px;
+    margin-top: 40px;
+    padding-left: 30px;
+    
+}
+.pesanancardalamat {
+    border-left: solid thin;
+    border-right: solid thin;
+    height: 250px;
+    width: 450px;
+    margin-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: left;
+}
+.pesanancardtotal {
+    text-align: center;
+    width: 200px;
+    padding-left: 40px;
+    margin-top : 100px;
+}
+.pesanancardbutton {
+    margin-right : 10px;
+    border-radius: 4px;
+    background-color: #373F41;
+    margin-top: 20px;
+    color: white;
+    height : 40px;
+    width : 160px;
+}
+.pesanancardbuttonright {
+    margin-right: 40px;
+    border-radius: 4px;
+    background-color: #373F41;
+    margin-top: 20px;
+    color: white;
+    height: 40px;
+    width: 160px;
+}
+.pesanancardbuttonrightproses {
+    margin-right: 70px;
+    border-radius: 4px;
+    background-color: #373F41;
+    margin-top: 20px;
+    color: white;
+    height: 40px;
+    width: 160px;
+}

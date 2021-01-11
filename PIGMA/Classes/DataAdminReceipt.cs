@@ -24,6 +24,8 @@ namespace PIGMA.Classes
         public class DetailReceipt
         {
             public int IDReceipt { get; set; }
+            public string pembeli { get; set; }
+            public string notelp { get; set; }
             public string Penjual { get; set; }
             public string AlamatPengiriman { get; set; }
             public string WaktuPengiriman { get; set; }
@@ -44,11 +46,13 @@ namespace PIGMA.Classes
             this.ListDetailProduk = new List<DetailProduk>();
             this.ListDetailReceipt = new List<DetailReceipt>();
         }
-        public void SetReceipt(string penjual, string alamat,string tanggal,int harga, int diskon, int kardus, int pengiriman)
+        public void SetReceipt(string pembeli, string notelp,string penjual, string alamat,string tanggal,int harga, int diskon, int kardus, int pengiriman)
         {
             DetailReceipt det = new DetailReceipt();
             Random r = new Random();
             int genRand = r.Next(100000, 999999);
+            det.pembeli = pembeli;
+            det.notelp = notelp;
             det.Penjual = penjual;
             det.IDReceipt = 100 + genRand;
             det.AlamatPengiriman = alamat;
