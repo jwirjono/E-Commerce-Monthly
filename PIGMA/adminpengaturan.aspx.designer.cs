@@ -11,7 +11,25 @@ namespace PIGMA
 {
 
 
-    public partial class admin
+    public partial class adminpengaturan
     {
+
+        /// <summary>
+        /// panelpengaturanakun control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelpengaturanakun;
+
+        /// <summary>
+        /// panelpengaturantoko control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelpengaturantoko;
     }
 }

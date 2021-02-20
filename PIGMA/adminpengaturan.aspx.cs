@@ -13,5 +13,16 @@ namespace PIGMA
         {
 
         }
+        protected void btngantipage1(object sender, EventArgs e)
+        {
+            panelpengaturanakun.Visible = false;
+            panelpengaturantoko.Visible = true;
+        }
+        protected void btngantipage2(object sender, EventArgs e)
+        {
+            panelpengaturantoko.Visible = false;
+            panelpengaturanakun.Visible = true;
+        }
+
     }
 }

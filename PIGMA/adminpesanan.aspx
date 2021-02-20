@@ -86,7 +86,7 @@
 
             </div>
 
-            <div class="row rowsaldo" style="display: flex; flex-direction: row">
+            <div class="row col-md-12" style="display: flex; flex-direction: row">
 
 
                 <input type="search" value="Cari nama pembeli, produk, nomor resi" style="max-width: 600px; height: 50px" />
@@ -151,7 +151,7 @@
                     
                     
                     <div class="col-md-7" style="text-align:right"><button class="pesanancardbutton">Kirim</button>
-                    <button class="pesanancardbuttonrightproses">Lihat Pesanan</button></div>
+                    <button class="pesanancardbuttonrightproses" onclick="gotoubah()">Lihat Pesanan</button></div>
                     
             </div>
                 <hr />
@@ -173,8 +173,7 @@
                     
                     
                     <div class="col-md-8" style="text-align:right"><button class="pesanancardbutton">Selesai</button>
-                        <button class="pesanancardbutton">Barang kembali</button>
-                    <button class="pesanancardbuttonright">Lihat Pesanan</button></div>
+                    <button class="pesanancardbuttonright" onclick="gotokembali()">Lihat Pesanan</button></div>
                     
             </div>
                 <hr />
@@ -199,5 +198,13 @@
         </div>
 
     </div>
+    <script>
+        function gotoubah() {
+            window.location.href = "/ubahproduk.aspx"
+        }
+        function gotokembali() {
+            window.location.href ="/Kembalikan.aspx"
+        }
+    </script>
 </body>
 </html>
