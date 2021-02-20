@@ -16,15 +16,14 @@ namespace PIGMA
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack)
+            if (Session["User"] != null)
             {
-                if (Session["User"] != null)
-                {
-                    navLoginFalsePanel.Visible = false;
-                    navLoginTruePanel.Visible = true;
-                }
-                
+                navLoginFalsePanel.Visible = false;
+                navLoginTruePanel.Visible = true;
+                panelHilang.Visible = false;
+                panelAkun.Visible = true;
             }
+            panelUMB.Visible = false;
             panelFooter.Visible = true;
         }
         protected void SearchEvent(object sender, EventArgs e)
@@ -33,13 +32,25 @@ namespace PIGMA
         }
         protected void btnToLogin_Click(object sender, EventArgs e)
         {
-            panelFooter.Visible = false;
             Response.Redirect("~/Login.aspx");
+        }
+        protected void btnLoginDone_Click(object sender, EventArgs e)
+        {
+            Session["User"] = "ada";
         }
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             holup.Text = txtSearchBar.Value.ToString();
         }
-        
+        protected void btnAccount_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Account.aspx");
+        }
+        protected void btnTB_Click(object sender, EventArgs e)
+        {
+            panelUMB.Visible = true;
+        }
+
+
     }
 }

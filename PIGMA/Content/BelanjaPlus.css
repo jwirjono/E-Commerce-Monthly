@@ -3,6 +3,14 @@
 }
 .topPanelBelanjaPlus{
     margin-bottom:80px;
+    display:flex;
+    flex-direction:column;
+}
+.labelUtama {
+    color: #212121;
+    font-weight: bold;
+    font-size: 28px;
+    margin-top:30px;
 }
 .bottomPanelBelanjaPlus{
 
@@ -53,7 +61,8 @@
 .cardProdukBelanjaPlus {
     border: 1px #373F41 solid;
     border-top-left-radius: 10px;
-    border-top-right-radius : 10px;
+    height: 250px;
+    border-top-right-radius: 10px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -74,7 +83,7 @@
 .btnCardProdukBelanjaPlusSuper {
     display: flex;
     flex-direction: column;
-    background-color: #EACB00;
+    background-color: #97C200;
     border: 1px #373F41 solid;
     border-top: none;
     border-bottom-left-radius: 10px;
@@ -88,4 +97,34 @@
 }
 .minorItemCardProdukBelanjaPlus {
     margin:auto 15px;
+}
+.miniCardBelanjaPlus {
+    flex: 0 0 13%;
+    max-width: 13%;
+    display:flex;
+    flex-direction:column;
+    border-radius:20px;
+    border:1px solid #fff;
+    padding: 5px 0px;
+}
+.miniDividerBelanjaPlus {
+    flex: 0 0 1.5%;
+    max-width: 1.5%;
+}
+.miniCardBelanjaPlus:hover {
+    border: #EFF0F0 1px solid;
+    font-weight:bold;
+}
+.produkKosongBelanjaPlus{
+    height:500px;
+    margin:40px 0px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+}
+.mainName {
+    color: #74B816;
+    font-weight:bold;
+    font-size:18px;
+    margin:auto 10px;
 }

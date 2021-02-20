@@ -33,6 +33,15 @@ namespace PIGMA
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtSearchBar;
 
         /// <summary>
+        /// panelHilang control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl panelHilang;
+
+        /// <summary>
         /// navLoginTruePanel control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace PIGMA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl navLoginTruePanel;
+
+        /// <summary>
+        /// panelAkun control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl panelAkun;
 
         /// <summary>
         /// navLoginFalsePanel control.
@@ -58,6 +76,15 @@ namespace PIGMA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+
+        /// <summary>
+        /// panelUMB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelUMB;
 
         /// <summary>
         /// panelFooter control.

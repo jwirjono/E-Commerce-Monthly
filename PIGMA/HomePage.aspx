@@ -7,19 +7,31 @@
             <div class="col-md-4">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 style="font-size:44px;font-weight:bold;color:#97C200;">Belanja Bulanan di Market Terpercaya</h1>
-                        <a href="Login.aspx">login</a>
+                        <h1 style="font-size:44px;font-weight:bold;color:#373F41;">Belanja Bulanan di Market Terpercaya</h1>
                     </div>
                 </div>
                 <div class="row" style="margin-top:32px;">
                     <div class="col-md-12">
-                        <p>Kebutuhan bulanan anda dapat dilakukan secara online<br />dan sudah terjamin hanya dari market terpercaya di<br />sekitar anda, monthly solusinya!!</p>
+                        <p style="font-size:18px">Kebutuhan bulanan anda dapat dilakukan secara online<br />dan sudah terjamin hanya dari market terpercaya di<br />sekitar anda, monthly solusinya!!</p>
                     </div>
                 </div>
                 <div class="row" style="margin-top:32px;">
                     <div class="col-md-12" id ="search" style="display:flex;flex-direction:row;">
-                        <input runat="server" id="txtSearchBar" type="text" class="Searchbar"  placeholder="Cari Produk">
+                        <input runat="server" id="txtSearchBar" type="text" class="Searchbar"  placeholder="Masukan Alamat">
                         <asp:ImageButton runat="server"  Cssclass="MapButton" ImageUrl="Content/Images/MapButton.png" OnClick="btnMap_Click"/> 
+                    </div>
+                </div>
+                <asp:Panel ID="pnlAlamatKosong" runat="server" Visible="false">
+                    <p style="color:red;margin-top:15px">Alamat Tidak boleh kosong</p>
+                </asp:Panel>
+                <div class="row" style="margin:20px -15px;">
+                    <div class="col-2">
+                        <p style="color:#373F41;font-weight:bold">Pemberitahuan</p>
+                    </div>
+                    <div class="col-1">
+                    </div>
+                    <div class="col-md-9">
+                        <p>Masukan alamat pengiriman terlebih dahulu untuk menampilkan supermarket terdekat</p>
                     </div>
                 </div>
                 
@@ -29,19 +41,20 @@
                 <img class="card-img-topPlus" src="Content/Images/HomePageTopImage.PNG" alt="fas">
             </div>
         </div>
+        <Label style="font-size:24px;font-weight:bold;color:#373F41;margin:30px 0px 10px 0px;" runat="server" id="lbltext1" visible="false">Supermarket Terdekat</Label>
         <div class="row Homepage-Bottom" runat="server" id="panelSupermarketTerdekat" visible="false">
-            <div class="col-md-3">
-                <h3 style="color:ghostwhite">Supermarket Terdekat</h3>
-            </div>
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <div class="Homepage-List row">
-                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Giant.PNG" OnClick="btnGiant_Click"/>
+                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/LotteMart.PNG" OnClick="btnGiant_Click"/>
                     <div class="imgDividePlus"></div>
-                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/GrandLucky.PNG" OnClick="btnGrandLucky_Click" />
+                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Grand.PNG" OnClick="btnGrandLucky_Click" />
                     <div class="imgDividePlus"></div>
-                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Transmart.PNG" OnClick="btnTransmart_Click" />
+                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Ranch.PNG" OnClick="btnTransmart_Click" />
+                    <div class="imgDividePlus"></div>
+                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Ranch.PNG" OnClick="btnRanchMarket_Click"/>
+                    <div class="imgDividePlus"></div>
                     <!--page2-->
-                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/RanchMarket.PNG" OnClick="btnRanchMarket_Click"/>
+                    
 
                 </div>
             </div>

@@ -1,6 +1,90 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Keranjang.aspx.cs" Inherits="PIGMA.WebForm4" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Keranjang.aspx.cs" Inherits="PIGMA.WebForm4"  enableEventValidation="false"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container-fluid KeranjangPlus">
+        <asp:Panel ID="panelCalendar" runat="server" Visible="false">
+                <div class="form-modal-panel" style="height:330px;">
+                    <div style="display:inline-block;width:100%;padding:20px">
+                        <asp:Calendar runat="server" Width="100%"/>
+                        <div class="form-group" style="height: 40px;margin:20px -15px;display:flex;flex-direction:row;">
+                        <div class="col-md-6">
+                            <asp:button runat="server" class="daftarLoginPlus" Text="Batal"/>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" class="masukLoginPlus">Oke</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </asp:Panel>
+        <asp:Panel ID="panelBeliKurang" runat="server" Visible="false">
+                <div class="form-modal-panel" style="height:400px;">
+                    <div style="display:inline-block;width:100%;padding:20px 40px;display:flex;flex-direction:column;">
+                        <img style="width:30%;margin-left:auto;margin-right:auto;"src="Content/Images/popupkeranjang.png" alt="Kosong">
+                        <p style="font-size:20px;font-weight:bold;margin-left:auto;margin-right:auto;">Tambah Lagi Barang Untuk Beli</p>
+                        <p style="font-size:16px;font-weight:200;margin-left:auto;margin-right:auto;">Untuk melanjutkan, total pembelian anda harus lebih dari Rp100.000. Tambah Rp23.000 untuk mencapai jumlah minimun pembelian</p>
+                        <asp:button Cssclass="masukLoginPlus" runat="server" onclick="btnToBelanja_Click" Text="Lanjutkan Belanja"/>
+                    </div>
+                </div>
+        </asp:Panel>
+        <asp:Panel ID="panelHapus" runat="server" Visible="false">
+                <div class="form-modal-panel" style="height:225px;">
+                    <div style="display:inline-block;width:100%;padding:20px 40px;display:flex;flex-direction:column;">
+                        <p style="font-size:20px;font-weight:bold;margin-left:auto;margin-right:auto;">Hapus Barang</p>
+                        <p style="font-size:16px;font-weight:200;margin-left:auto;margin-right:auto;text-align:center;">Barang ini akan dihapus dari keranjangmu, apakah anda yakin ?</p>
+                        <div style="display:flex;flex-direction:row;height:40px;">
+                            <div class="col-md-6">
+                                <asp:button runat="server" class="daftarLoginPlus" Text="Batal" OnClick="DeleteAll_Cancel"/>
+                            </div>
+                            <div class="col-md-6">
+                                <asp:button runat="server" class="masukLoginPlus" Text="Iya" OnClick="DeleteAll_Confirm"/>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+        </asp:Panel>
+        <asp:Panel ID="panelBerulang" runat="server" Visible="false" CssClass="form-modal-panel">
+            <asp:Button runat="server" CssClass="btnClose" Text="X"/>
+                <div style="padding:40px;">
+                    <div style="margin-bottom:40px">
+                        <p style="color:#262628;font-weight:bold;font-size:20px;">Waktu Transaksi Berulang</p>
+                        <hr />
+                    </div>
+                    <div>
+                        <p style="color:#262628;font-weight:200;font-size:18px;margin-top:-7px">Diulang Setiap</p>
+                       <p style="color:#262628;font-size:16px;margin-top:-7px">Kapan waktu pengulangan dilakukan</p>
+                    </div>
+                    <div>
+                        <asp:RadioButtonList runat="server" ID="rbFrekuensiTB" RepeatDirection="horizontal" Width="80%">
+                            <asp:ListItem Text="Hari  " Value="h"></asp:ListItem>
+                            <asp:ListItem Text="Minggu" Value="h"></asp:ListItem>
+                            <asp:ListItem Text="Bulan " Value="h"></asp:ListItem>
+                        </asp:RadioButtonList>
+                    </div>
+                    <div style="width:100%;display:flex;flex-direction:row;margin-bottom:40px">
+                        <input type="number" id="numberHari" name="points" step="1" class="btnNmb" value="1">
+                        <div class="btnDivide"></div>
+                        <input type="number" id="numberMinggu" name="points" step="1" class="btnNmb" value="1">
+                        <div class="btnDivide"></div>
+                        <input type="number" id="numberBulan" name="points" step="1" class="btnNmb" value="1">
+                    </div>
+                    <div>
+                        <p style="color:#262628;font-weight:bold;font-size:20px;">Frequensi Diulang</p>
+                        <p style="color:#262628;font-weight:200;font-size:18px;margin-top:-7px">Banyaknya transaksi diulang berapa kali</p>
+                    </div>
+                    <div>
+                        <input type="number" id="numberFrek" name="points" step="1" class="btnNmb" value="1">
+                    </div>
+                    <div class="form-group" style="height: 40px;margin:20px -15px;display:flex;flex-direction:row;">
+                        <div class="col-md-6">
+                            <asp:button runat="server" class="daftarLoginPlus" Text="Batal"/>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" class="masukLoginPlus">Oke</button>
+                        </div>
+                    </div>
+                </div>
+        </asp:Panel>
         <div class ="row keranjangHeader" style="display:flex;flex-direction:column;">
             <asp:Label runat="server" ID="lblMainHeader" CssClass="labelHeader" Text="Keranjang Belanja"/>
             <asp:Label runat="server" ID="lblsupa" CssClass="labelSubHeader" visible="false"/>
@@ -29,7 +113,7 @@
                                     <asp:CheckBox ID="chkAll" OnCheckedChanged="chkAll_CheckedChanged" AutoPostBack="true" runat="server" Checked="true"/>
                                 </HeaderTemplate>
                                 <ItemTemplate>
-                                    <asp:CheckBox ID="chkStats" runat="server" Checked="true" OnCheckedChanged="chkRef_Click"/>
+                                    <asp:CheckBox ID="chkStats" runat="server" CausesValidation="true" Checked="true" OnCheckedChanged="chkRef_Click"/>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField >
@@ -64,6 +148,9 @@
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField>
+                                <HeaderTemplate>
+                                    <asp:Button runat="server" Text="Hapus Semua" CssClass="buttonMerah" OnClick="DeleteAll_Click"/>
+                                </HeaderTemplate>
                                 <ItemTemplate>
                                     <div style="display:flex;flex-direction:column;border-left:1px solid #9B9FA0">
                                             <asp:Label Text="Total" Font-Bold="true" CssClass="midColumn" runat="server" />
@@ -131,17 +218,17 @@
                                 <div class="form-group" style="display:flex;flex-direction:row;">
                                     <div style="display:flex;flex-direction:column">
                                         <asp:label runat="server" CssClass="form-controlPlus" style="font-size:24px;color:#373F41;"><b>Nama Penerima</b></asp:label>
-                                        <asp:TextBox runat="server" ID="TextBox1" CssClass="form-controlPlus" Text="Ricardo..."/>
+                                        <asp:TextBox runat="server" ID="TextBox1" CssClass="form-controlPlus" Text="sophi nuraeni"/>
                                     </div>
                                     <div style="display:flex;flex-direction:column">
                                         <asp:label runat="server" CssClass="form-controlPlus" style="font-size:24px;color:#373F41;"><b>Nomor Telepon</b></asp:label>
-                                        <asp:TextBox runat="server" ID="TextBox2" CssClass="form-controlPlus" Text="081xxxx"/>
+                                        <asp:TextBox runat="server" ID="TextBox2" CssClass="form-controlPlus" Text="081223679574"/>
                                     </div>
                                 </div>
                                 <div class="form-group" style="display:flex;flex-direction:row;">
                                     <div style="display:flex;flex-direction:column">
                                         <asp:label runat="server" CssClass="form-controlPlus" style="font-size:24px;color:#373F41;"><b>Alamat Penerima</b></asp:label>
-                                        <asp:TextBox runat="server" ID="txtAlamat" CssClass="form-controlPlus" Text="jl.xxxx" Width="500px"/>
+                                        <asp:TextBox  Height="100px" TextMode="MultiLine" runat="server" ID="txtAlamat" CssClass="form-controlPlus" Text="Jl. Kebon Sirih Barat I No.10F, RT.6/RW.2, Kb. Sirih, Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10340, Indonesia" Width="500px"/>
                                     </div>
                                 </div>
                             </div>
@@ -219,7 +306,9 @@
                                 <div class="form-group" style="display:flex;flex-direction:row;">
                                     <div style="display:flex;flex-direction:column">
                                         <asp:label runat="server" CssClass="form-controlPlus" style="font-size:24px;color:#373F41;"><b>Pengiriman</b></asp:label>
-                                        <asp:TextBox runat="server" ID="TextBox4" CssClass="form-controlPlus" Text="Tanggal"/>
+                                        <div class="col-md-12" style="display:flex;flex-direction:row">
+                                            <p style="margin-right:20px;color:#229BD8;">Pilih Tanggal</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group" style="display:flex;flex-direction:row;">
@@ -232,7 +321,10 @@
                                                 <asp:ListItem Value="False" Text="Tidak" />
                                             </asp:RadioButtonList>
                                         </div>
-                                        <asp:TextBox runat="server" ID="TextBox5" CssClass="form-controlPlus" Text="Tanggal"/>
+                                        <div class="col-md-12" style="display:flex;flex-direction:row">
+                                            <p style="margin-right:20px;color:#229BD8;">Atur Jadwal Transaksi Berulang</p>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -308,15 +400,15 @@
                                     <asp:label runat="server" CssClass="form-controlPlus" style="font-size:24px;color:#373F41;"><b>Metode Pembayaran</b></asp:label>
                                     <asp:label runat="server" CssClass="form-controlPlus" style="font-size:12px;color:#373F41;">Pilih metode pembayaran anda</asp:label>
                                 </div>
-                                <div class="form-group" style="display:flex;flex-direction:row;">
-                                    <asp:RadioButtonList runat="server" ID="RadioButtonList2" RepeatDirection="Horizontal" Width="200">
-                                       <asp:ListItem Value="True" Text="Pembayaran Tunai"/>
+                                <div class="form-group" style="display:flex;flex-direction:row;padding-left:15px">
+                                    <asp:RadioButtonList runat="server" ID="RadioButtonList2" CssClass="col-md-12" RepeatDirection="Horizontal" Width="200">
+                                       <asp:ListItem Value="True" Text="Pembayaran Tunai" Selected="True"/>
                                     </asp:RadioButtonList>
                                 </div>
                                 <div class="form-group" style="display:flex;flex-direction:row;">
                                     <div style="display:flex;flex-direction:column">
                                         <asp:label runat="server" CssClass="form-controlPlus" style="font-size:24px;color:#373F41;"><b>Pembayaran Tunai</b></asp:label>
-                                        <asp:label runat="server" CssClass="form-controlPlus" style="font-size:24px;color:#373F41;">Pembayaran dilakukan saat barang sampai di alamat, anda akan memberikan uang tunai kepada kurir sesuai total harga pembelian.</asp:label>
+                                        <asp:label runat="server" CssClass="form-controlPlus" style="font-size:16px;color:#373F41;">Pembayaran dilakukan saat barang sampai di alamat, anda akan memberikan uang tunai kepada kurir sesuai total harga pembelian.</asp:label>
                                     </div>
                                 </div>
                             </div>

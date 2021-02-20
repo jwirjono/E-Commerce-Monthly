@@ -41,5 +41,14 @@ namespace PIGMA
         {
             Response.Redirect("~/HomePage.aspx");
         }
+        protected void btnLupa_Click(object sender, EventArgs e)
+        {
+            gambarLupa.Visible = true;
+            gambarLogin.Visible = false;
+            labelMainForm.Text = "Lupa Password";
+            panelFormLogin.Visible = false;
+            panelLupaPassword.Visible = true;
+        }
+        
     }
 }

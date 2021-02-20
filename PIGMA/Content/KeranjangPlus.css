@@ -76,3 +76,40 @@
     text-align:center;
     font-size:20px;
 }
+.form-modal-panel {
+    position: absolute;
+    top: 20%;
+    left: 37%;
+    display: block;
+    background-color: white;
+    box-shadow: 10px 10px 5px #888888;
+    border: 1px solid #888;
+    width: 25%;
+    height: 520px;
+    z-index: 1;
+}
+.btnNmb {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+.btnDivide {
+    flex: 0 0 5%;
+    max-width: 5%;
+}
+.masukLoginPlusPlus {
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    margin-top:20px;
+    color: #FFF;
+    font-weight: 500;
+    background-color: #97C200;
+    border: 1px solid #97C200;
+}
+.buttonMerah {
+    color: #CF212A;
+    font-weight:bold;
+    border:none;
+    background-color:none;
+    right:200px;
+}

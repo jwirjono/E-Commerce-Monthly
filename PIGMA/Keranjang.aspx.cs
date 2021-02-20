@@ -14,31 +14,68 @@ namespace PIGMA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            
+            if (IsPostBack)
             {
                 chkAllprop.Value = "1";
-                if (Session["Keranjang"] !=null)
+            }
+            if (Session["Keranjang"] !=null)
+            {
+                DataBelanja datab = new DataBelanja();
+                datab.ListDetailProduk = (List<DetailProduk>)Session["Keranjang"];
+                if (datab.ListDetailProduk.Count != 0)
                 {
-                    DataBelanja datab = new DataBelanja();
-                    datab.ListDetailProduk = (List<DetailProduk>)Session["Keranjang"];
-                    if (datab.ListDetailProduk.Count != 0)
+                    panelKeranjangKosong.Visible = false;
+                    panelKeranjangBelanja.Visible = true;
+                    gridObject.DataSource = datab.ListDetailProduk;
+                    gridObject.DataBind();
+                    int count = 0;
+                    foreach (GridViewRow gvRow in gridObject.Rows)
                     {
-                        panelKeranjangKosong.Visible = false;
-                        panelKeranjangBelanja.Visible = true;
-                        gridObject.DataSource = datab.ListDetailProduk;
-                        gridObject.DataBind();
-                        int count = 0;
-                        foreach (GridViewRow gvRow in gridObject.Rows)
+                        CheckBox cb = (CheckBox)gvRow.FindControl("chkStats");
+                        Label lblharga = (Label)gvRow.FindControl("lblTotal");
+                        if (cb.Checked)
                         {
-                            Label lblharga = (Label)gvRow.FindControl("lblTotal");
                             count = count + int.Parse(lblharga.Text);
                         }
-                        totalharga1.Text = count.ToString();
                     }
+                    totalharga1.Text = count.ToString();
                 }
             }
-            
+        }
+        protected void DeleteAll_Click(object sender, EventArgs e)
+        {
+            panelHapus.Visible = true;
+        }
+        protected void DeleteAll_Confirm(object sender, EventArgs e)
+        {
+            Session["Keranjang"] = null;
+            panelKeranjangKosong.Visible = true;
+            panelKeranjangBelanja.Visible = false;
+            panelHapus.Visible = false;
+        }
+        protected void DeleteAll_Cancel(object sender, EventArgs e)
+        {
+            panelHapus.Visible = false;
+        }
 
+        protected void btn_minusClick(object sender, EventArgs e)
+        {
+            
+        }
+        protected void btn_plusClick(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            GridViewRow rowIndex = (GridViewRow)btn.NamingContainer;
+            Label id = (Label)rowIndex.FindControl("lblID");
+            /* here you will get ID, which is is set as PK geerally in table*/
+            DataBelanja datab = new DataBelanja();
+            datab.ListDetailProduk = (List<DetailProduk>)Session["Keranjang"];
+            datab.Increase(int.Parse(id.Text));
+        }
+        protected void btnToBelanja_Click(object sender, EventArgs e)
+        {
+            panelBeliKurang.Visible=false;
         }
         protected void btn_mulaibelanja(object sender, EventArgs e)
         {
@@ -103,18 +140,26 @@ namespace PIGMA
                         count = count + int.Parse(lblharga.Text);
                     }
                 }
-                txtTotal1.Text = count.ToString();
-                txtTotal1max.Text = count.ToString();
-                txtTotal2.Text = count.ToString();
-                txtTotal2max.Text = count.ToString();
-                txtTotal3.Text = count.ToString();
-                txtTotal3max.Text = count.ToString();
-                Session["Pembayaran"] = keranjang;
-                panelKeranjangBelanja.Visible = false;
-                panelPembelianBelanja.Visible = true;
-                lblMainHeader.Text = "Pembelian";
-                lblsupa.Text = Session["Supermarket"].ToString();
-                lblsupa.Visible = true;
+                if(count < 100000)
+                {
+                    panelBeliKurang.Visible = true;
+                }
+                else
+                {
+                    txtTotal1.Text = count.ToString();
+                    txtTotal1max.Text = count.ToString();
+                    txtTotal2.Text = count.ToString();
+                    txtTotal2max.Text = count.ToString();
+                    txtTotal3.Text = count.ToString();
+                    txtTotal3max.Text = count.ToString();
+                    Session["Pembayaran"] = keranjang;
+                    panelKeranjangBelanja.Visible = false;
+                    panelPembelianBelanja.Visible = true;
+                    lblMainHeader.Text = "Pembelian";
+                    lblsupa.Text = Session["Supermarket"].ToString();
+                    lblsupa.Visible = true;
+                }
+                
                 
             }
         }
