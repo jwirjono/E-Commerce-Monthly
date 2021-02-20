@@ -8,7 +8,7 @@ using PIGMA.Classes;
 
 namespace PIGMA
 {
-    public partial class ubahproduk : System.Web.UI.Page
+    public partial class kembalikanprodukpage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,8 +27,5 @@ namespace PIGMA
             gridObject.DataBind();
 
         }
-        
-        
-
     }
 }

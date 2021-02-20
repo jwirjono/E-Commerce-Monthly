@@ -11,7 +11,7 @@ namespace PIGMA
 {
 
 
-    public partial class ubahproduk
+    public partial class kembalikanprodukpage
     {
 
         /// <summary>

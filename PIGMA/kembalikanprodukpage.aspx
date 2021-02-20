@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="adminproduk.aspx.cs" Inherits="PIGMA.adminproduk" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="kembalikanprodukpage.aspx.cs" Inherits="PIGMA.kembalikanprodukpage" %>
 
 <!DOCTYPE html>
 
@@ -11,6 +11,12 @@
     <link href="~/AdminContent/admin.css" rel="stylesheet" />
     <link href="~/AdminContent/adminmenu.css" rel="stylesheet" />
     <link href="~/AdminContent/adminslider.css" rel="stylesheet" />
+    <link href="~/Content/AccountPlus.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/HomePlus.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/BelanjaPlus.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/KeranjangPlus.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Additional.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/FormPlus.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -34,16 +40,16 @@
                                 <span class="button-text">Beranda</span>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="adminpesanan.aspx">
                                 <img style="padding-left: 10px; padding-bottom: 5px;" src="content/images/Penjualan.png">
-                                <span class="button-text">Pesanan</span>
+                                <span class="button-text nyala">Pesanan</span>
                             </a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item ">
                             <a class="nav-link" href="adminproduk.aspx">
                                 <img style="padding-left: 10px; padding-bottom: 5px;" src="content/images/Box.png">
-                                <span class="button-text nyala">Produk</span>
+                                <span class="button-text ">Produk</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -66,18 +72,14 @@
         <div class="col-md-8" style="background-color: #FCFCFC; padding-top: 40px; margin-bottom: 100px">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>Daftar Pesanan
-                <br />
-                        <span style="font-size: 18px">Atur dan kelola produk jualanmu</span>
+                    <h2>Kembalikan Produk
+                
                     </h2>
-                </div>
-                <div class="col-md-6">
-                    <button style="height: 60px; width: 200px; margin-left: 100px; margin-top: 30px; background-color: #74B816; color: white; border-radius: 8px; border: solid thin" onclick="tambah()">Tambah Produk</button>
                 </div>
             </div>
             <hr />
             <div class="row col-md-12">
-                <div class="col-md-6">
+                <div class="col-md-12">
 
                     <div class="sb-example-1">
                         <div class="search">
@@ -89,16 +91,6 @@
                         </div>
                     </div>
 
-                </div>
-                <div class="col-md-6">
-                    <select name="kategori" id="kategori" style="height: 40px; border: solid thin; border-radius: 10px; width: 150px; background-color: white; color: black; margin-top: 10px;">
-                        <option value="kategori ">Kategori</option>
-                        <option value="harga">Harga</option>
-                    </select>
-                    <select name="status" id="status" style="height: 40px; border: solid thin; border-radius: 10px; width: 150px; background-color: white; color: black; margin-top: 10px;">
-                        <option value="habis">Habis</option>
-                        <option value="aktif">Aktif</option>
-                    </select>
                 </div>
             </div>
 
@@ -115,60 +107,42 @@
                         <Columns>
                             <asp:TemplateField>
                                 <HeaderTemplate>
-                                    <asp:Label runat="server" Text="Info Produk" CssClass="fontSubAccount" Style="font-size: 22px; font-weight: bold;" />
+                                    <asp:Label runat="server" Text='<%#"Info Produk ( 6" +  Eval("totalproduk") + " produk)"%> ' CssClass="fontSubAccount" Style="font-size: 22px; font-weight: bold;" />
                                 </HeaderTemplate>
 
                                 <HeaderStyle Font-Bold="true" />
                                 <ItemTemplate>
-                                    <div style="display: flex; flex-direction: column; margin-bottom: 20px; margin-top: 20px; width: 150px">
+                                    <div style="display: flex; flex-direction: row; margin-bottom: 20px; margin-top: 20px; width: 150px">
                                         <img src='<%#Eval("linkgambar") %>' />
-                                    </div>
-                                </ItemTemplate>
-                            </asp:TemplateField>
-                            <asp:TemplateField>
-                                <HeaderTemplate>
-                                    <div style="display: flex; flex-direction: row">
-                                        <img src="AdminContent/logoviewhitam.png" alt="" style="width: 20px; margin-right: 3px; margin-left: 5px">
-                                        <img src="AdminContent/upsidedown.png" alt="" style="width: 20px; margin-right: 10px;">
-                                        <img src="AdminContent/logokeranjanghitam.png" alt="" style="width: 20px; margin-right: 3px;" />
-                                        <img src="AdminContent/upsidedown.png" alt="" style="width: 20px; margin-right: 3px;">
-                                    </div>
-                                </HeaderTemplate>
 
-                                <HeaderStyle Font-Bold="true" />
-                                <ItemTemplate>
-                                    <div style="display: flex; flex-direction: column; margin-bottom: 20px; margin-right: 20px; width: 100px; margin-top: 20px;">
                                         <asp:Label ID="lblNamaProduk" Text='<%#Eval("NamaProduk") %>' runat="server" Style="font-size: 18px; font-weight: bold; margin-bottom: 5px" />
-                                        <div style="display: flex; flex-direction: row">
-                                            <img src="AdminContent/logoviewhijau.png" alt="" style="width: 30px; margin-right: 3px;">
-                                            <asp:Label ID="lblviewcontent" Text='<%#Eval("TotalView")%>' runat="server" Style="margin-right: 6px;" />
-                                            <img src="AdminContent/logokeranjanghijau.png" alt="" style="width: 30px; margin-right: 3px;" />
-                                            <asp:Label ID="lblbeli" Text='<%#Eval("TotalBeli")%>' runat="server" />
-
-                                        </div>
-
-
 
 
                                     </div>
+
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField>
                                 <HeaderTemplate>
-                                    <div style="width: 100px">
-                                        <asp:Label runat="server" Text="Kategori" CssClass="fontSubAccountKuantitas" Style="font-size: 22px; font-weight: bold;" />
-                                    </div>
+                                    <asp:Label runat="server" Text="Jumlah" CssClass="fontSubAccount" Style="font-size: 22px; font-weight: bold;" />
 
                                 </HeaderTemplate>
 
                                 <HeaderStyle Font-Bold="true" />
                                 <ItemTemplate>
-                                    <div style="display: flex; flex-direction: column;">
-                                        <asp:Label ID="lblsatuan" Text='<%#Eval("Kategori") %>' runat="server" Style="font-size: 18px; font-weight: bold;" />
-                                        <a href="">Ubah</a>
+
+                                    <div id="tabeljumlah" style="display: flex; flex-direction: row;">
+                                        <button class="minorbtnCardProdukBelanjaPlus" onclick="btnMinus1_Click()" style="border: none; background-color: white;">
+                                            <img src="AdminContent/buttonminus.png" />
+                                        </button>
+                                        <label id="lblItemCard1" runat="server" style="margin-left: 20px; margin-right: 5px">1</label>
+                                        <button class="minorbtnCardProdukBelanjaPlus" onclick="btnTambahb1_Click" style="border: none; background-color: white">
+                                            <img src="AdminContent/buttonplus.png" />
+                                        </button>
                                     </div>
                                 </ItemTemplate>
                             </asp:TemplateField>
+
                             <asp:TemplateField>
                                 <HeaderTemplate>
                                     <asp:Label runat="server" Text="Harga" CssClass="fontSubAccountKuantitas" />
@@ -178,7 +152,7 @@
                                 <ItemTemplate>
                                     <div style="display: flex; flex-direction: row;">
                                         <label style="color: white; background-color: #74B816; width: 40px; height: 40px; border: gray solid thin; border-right: none; border-top-left-radius: 6px; border-bottom-left-radius: 6px;">Rp</label>
-                                        <asp:Label ID="lblharga" Text='<%#Eval("Harga") %>' runat="server" Style="border: gray solid thin; height: 40px; width: 80px; border-left: none; border-top-right-radius: 6px; border-bottom-right-radius: 6px;" />
+                                        <asp:Label ID="lblharga" Text='<%# " " +Eval("Harga") %>' runat="server" Style="border: gray solid thin; height: 40px; width: 80px; border-left: none; border-top-right-radius: 6px; border-bottom-right-radius: 6px;" />
                                     </div>
                                 </ItemTemplate>
                             </asp:TemplateField>
@@ -191,27 +165,13 @@
                                 <ItemTemplate>
                                     <label class="switch">
 
-                                        <input type="checkbox" id="checkboxlbl">
+                                        <input type="checkbox" id="checkboxlbl" onclick="checkaktif(this, 'lblharga', 'tabeljumlah')">
                                         <span class="slider round"></span>
 
                                     </label>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField>
-                                <HeaderTemplate>
-                                    <asp:Label runat="server" Text="Aktif" CssClass="fontSubAccountKuantitas" Style="margin-right: 20px; width: 100px" />
-                                </HeaderTemplate>
 
-                                <HeaderStyle Font-Bold="true" />
-                                <ItemTemplate>
-                                    <label class="switch">
-
-                                        <input type="checkbox" id="checkboxlbl">
-                                        <span class="slider round"></span>
-
-                                    </label>
-                                </ItemTemplate>
-                            </asp:TemplateField>
                             <asp:TemplateField>
                                 <HeaderTemplate>
                                     <asp:Label runat="server" Text="" CssClass="fontSubAccountKuantitas" Style="margin-right: 20px; width: 100px" />
@@ -219,7 +179,8 @@
 
                                 <HeaderStyle Font-Bold="true" />
                                 <ItemTemplate>
-                                    <a style="color: #74B816" href=""><b>Edit</b></a>
+                                    <button style="color: #74B816; background-color:white;border:none" onclick="showDialog() "><b>Kembalikan Produk</b></button>
+                                    <p id="kembalikanproduk"></p>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>
@@ -231,21 +192,81 @@
                 </div>
             </form>
 
-            <div class="col-md-12" style="text-align: right; margin-top:100px">
+            <div class="col-md-12" style="text-align: right; margin-top: 100px">
                 <a href="#" class="previous">&laquo; Previous</a>
                 <a href="#" class="next">Next &raquo;</a>
 
             </div>
-
+            <div id="white-background">
+            </div>
+            <div id="dlgbox">
+                <div id="dlg-body" style="display: flex; flex-direction: row; padding-left:10px">
+                    <div>
+                        <label style="font-size:32px"><b>Form Pengembalian Produk</b></label>
+                        <hr style="width: 100%; text-align: left; margin-left: 50px; margin-right: 50px; border-width: 1.5px;">
+                        <label>Nama Kurir</label>
+                        <br />
+                        <input type="text" style="border-radius:10px"/>
+                        <br />
+                        <label>Nama Customer</label>
+                        <br />
+                        <input type="text" style="border-radius:10px"/>
+                        <br />
+                        <label>No Telepon Customer</label>
+                        <input type="text" style="border-radius:10px"/>
+                        <br />
+                        <button onclick="dlgCancel()" style="width:150px;height:50px; margin-top:30px; margin-bottom:10px; margin-left:70px;background-color:white; color:#74B816;border-color:#74B816"><b>Batal</b></button>
+                    <button onclick="dlgOK()"style="width:150px;height:50px; margin-top:30px; margin-bottom:10px; margin-left:20px; background-color:#74B816; border-color:#74B816; color:white"><b>Simpan</b></button>
+                    </div>
+                </div>
+            </div>
 
 
 
         </div>
     </div>
     <script>
-        function tambah() {
-            window.location.href = "/tambahproduk.aspx";
+        function btnMinusb1_Click() {
+            var hitung = int.Parse(lblItemCardb1.Text);
+            var itemcard = document.getElementById('lblItemCard1');
+            hitung = hitung - 1;
+            itemcard.Text = count.ToString();
+
+        }
+        function btnTambahb1_Click() {
+            var hitung = int.Parse(lblItemCardb1.Text);
+            var itemcard = document.getElementById('lblItemCard1');
+            hitung = hitung + 1;
+            itemcard.Text = count.ToString();
+        }
+        function checkaktif(chk, label1, label2) {
+            document.getElementById(label1).innerHTML = chk.checked ? disa : "Tidak Aktif";
+        }
+
+
+
+        function dlgCancel() {
+            document.getElementsByTagName("H1")[0].innerHTML = "You clicked Cancel.";
+        }
+
+        function dlgOK() {
+            document.getElementsByTagName("H1")[0].innerHTML = "You clicked OK.";
+        }
+
+
+
+        function showDialog() {
+            var whitebg = document.getElementById("white-background");
+            var dlg = document.getElementById("dlgbox");
+            whitebg.style.display = "block";
+            dlg.style.display = "block";
+
+            var winWidth = window.innerWidth;
+
+            dlg.style.left = (winWidth / 2) - 480 / 2 + "px";
+            dlg.style.top = "150px";
         }
     </script>
 </body>
+
 </html>

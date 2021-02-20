@@ -15,8 +15,12 @@ namespace PIGMA
 
             DataProduk datab = new DataProduk();
             datab.DataBelanjaSet(40721, "Beef Bulgogi", "Makanan", 53500, "AdminContent/Beef Bulgogi.png", 20, 20);
-            datab.DataBelanjaSet(40721, "Beef Bulgogi", "Makanan", 53500, "AdminContent/Beef Bulgogi.png", 30, 30);
-            datab.DataBelanjaSet(40721, "Beef Bulgogi", "Makanan", 53500, "AdminContent/Beef Bulgogi.png", 40, 20);
+            datab.DataBelanjaSet(40722, "Salmon Teriyaki", "Makanan", 63500, "AdminContent/Salmon Teriyaki.png", 30, 30);
+            datab.DataBelanjaSet(40723, "Yakiniku Shortplate", "Makanan", 55500, "AdminContent/Yakiniku Shortplate.png", 40, 20);
+            datab.DataBelanjaSet(40724, "Daging Cincang", "Makanan", 30500, "AdminContent/Beef Bulgogi.png", 40, 20);
+            datab.DataBelanjaSet(40724, "Daging Rendang", "Makanan", 40500, "AdminContent/Beef Bulgogi.png", 40, 20);
+            datab.DataBelanjaSet(40724, "Daging Giling", "Makanan", 20500, "AdminContent/Beef Bulgogi.png", 40, 20);
+
             gridObject.DataSource = datab.ListDetailProduk;
             gridObject.DataBind();
 
@@ -25,40 +29,6 @@ namespace PIGMA
         {
 
         }
-        protected void btnComplete_Click(object sender, EventArgs e)
-        {
-            DataProduk datab = new DataProduk();
-            foreach (GridViewRow gvrow in gridObject.Rows)
-            {
-                CheckBox cb = (CheckBox)gvrow.FindControl("chkStats");
-                if (cb.Checked == true)
-                {
-                    Label lblid = (Label)gvrow.FindControl("lblID");
-                    Label lblnama = (Label)gvrow.FindControl("lblNamaProduk");
-                    Label lblkuantitas = (Label)gvrow.FindControl("lblKuantitas");
-                    Label lblharga = (Label)gvrow.FindControl("lblHarga");
-                    datab.DataBelanjaSet(40721, "Beef Bulgogi", "Makanan", 53500, "AdminContent / Beef Bulgogi.png", 40, 30);
-                }
-            }
-
-            if (datab.ListDetailProduk.Count == 0)
-            {
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Harap Memilih Produk di Keranjang')", true);
-            }
-            else
-            {
-                int count = 0;
-                foreach (GridViewRow gvRow in gridObject.Rows)
-                {
-                    Label lblharga = (Label)gvRow.FindControl("lblTotal");
-                    CheckBox cb = (CheckBox)gvRow.FindControl("chkStats");
-                    if (cb.Checked)
-                    {
-                        count = count + int.Parse(lblharga.Text);
-                    }
-                }
-
-            }
-        }
+        
     }
 }

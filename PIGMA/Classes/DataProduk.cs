@@ -16,6 +16,7 @@ namespace PIGMA.Classes
             public int TotalView { get; set; }
             public int TotalBeli { get; set; }
             public int Harga { get; set; }
+            public int totalproduk { get; set; }
         }
         public List<DetailProduk> ListDetailProduk { get; set; }
 
@@ -25,7 +26,7 @@ namespace PIGMA.Classes
         }
         public void DataBelanjaSet(int id, string nama, string kategori, int harga, string linkgambar, int totalview, int totalbeli)
         {
-
+            
             DetailProduk det = new DetailProduk();
             det.IDProduk = id;
             det.NamaProduk = nama;
@@ -34,8 +35,9 @@ namespace PIGMA.Classes
             det.LinkGambar = linkgambar;
             det.TotalView = totalview;
             det.TotalBeli = totalbeli;
+            int hitung =  + 1;
             ListDetailProduk.Add(det);
-
+            det.totalproduk = hitung;
         }
     }
 }
