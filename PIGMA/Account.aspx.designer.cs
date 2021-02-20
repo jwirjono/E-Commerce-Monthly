@@ -15,6 +15,69 @@ namespace PIGMA
     {
 
         /// <summary>
+        /// panelHapus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelHapus;
+
+        /// <summary>
+        /// panelBerulang control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelBerulang;
+
+        /// <summary>
+        /// rbFrekuensiTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rbFrekuensiTB;
+
+        /// <summary>
+        /// numberHari control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl numberHari;
+
+        /// <summary>
+        /// numberMinggu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl numberMinggu;
+
+        /// <summary>
+        /// numberBulan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl numberBulan;
+
+        /// <summary>
+        /// numberFrek control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl numberFrek;
+
+        /// <summary>
         /// panelPesanan control.
         /// </summary>
         /// <remarks>
@@ -22,6 +85,15 @@ namespace PIGMA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel panelPesanan;
+
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
         /// detailReceipt control.
@@ -60,6 +132,15 @@ namespace PIGMA
         protected global::System.Web.UI.WebControls.Label lblPengiriman;
 
         /// <summary>
+        /// btnxx0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnxx0;
+
+        /// <summary>
         /// lblWaktu control.
         /// </summary>
         /// <remarks>
@@ -69,6 +150,15 @@ namespace PIGMA
         protected global::System.Web.UI.WebControls.Label lblWaktu;
 
         /// <summary>
+        /// btnxx1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnxx1;
+
+        /// <summary>
         /// lblMetode control.
         /// </summary>
         /// <remarks>
@@ -76,6 +166,15 @@ namespace PIGMA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMetode;
+
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
         /// gridObject control.
@@ -130,5 +229,14 @@ namespace PIGMA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label txtTotal;
+
+        /// <summary>
+        /// panelTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelTB;
     }
 }

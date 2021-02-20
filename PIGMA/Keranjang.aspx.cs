@@ -15,33 +15,67 @@ namespace PIGMA
         protected void Page_Load(object sender, EventArgs e)
         {
             
-            if (IsPostBack)
+            if (!IsPostBack)
             {
                 chkAllprop.Value = "1";
-            }
-            if (Session["Keranjang"] !=null)
-            {
-                DataBelanja datab = new DataBelanja();
-                datab.ListDetailProduk = (List<DetailProduk>)Session["Keranjang"];
-                if (datab.ListDetailProduk.Count != 0)
+
+                if (Session["Keranjang"] != null)
                 {
-                    panelKeranjangKosong.Visible = false;
-                    panelKeranjangBelanja.Visible = true;
-                    gridObject.DataSource = datab.ListDetailProduk;
-                    gridObject.DataBind();
-                    int count = 0;
-                    foreach (GridViewRow gvRow in gridObject.Rows)
+                    DataBelanja datab = new DataBelanja();
+                    datab.ListDetailProduk = (List<DetailProduk>)Session["Keranjang"];
+                    if (datab.ListDetailProduk.Count != 0)
                     {
-                        CheckBox cb = (CheckBox)gvRow.FindControl("chkStats");
-                        Label lblharga = (Label)gvRow.FindControl("lblTotal");
-                        if (cb.Checked)
+                        panelKeranjangKosong.Visible = false;
+                        panelKeranjangBelanja.Visible = true;
+                        gridObject.DataSource = datab.ListDetailProduk;
+                        gridObject.DataBind();
+                        int count = 0;
+                        foreach (GridViewRow gvRow in gridObject.Rows)
                         {
-                            count = count + int.Parse(lblharga.Text);
+                            CheckBox cb = (CheckBox)gvRow.FindControl("chkStats");
+                            Label lblharga = (Label)gvRow.FindControl("lblTotal");
+                            if (cb.Checked)
+                            {
+                                count = count + int.Parse(lblharga.Text);
+                            }
                         }
+                        totalharga1.Text = count.ToString();
+                        alamat1.Text = Session["Alamat"].ToString();
+                        alamat2.Text = Session["Alamat"].ToString();
                     }
-                    totalharga1.Text = count.ToString();
                 }
             }
+            
+        }
+        
+        protected void Freq_Confirm(object sender, EventArgs e)
+        {
+            panelBerulang.Visible = false;
+            if(rbFrekuensiTB.SelectedValue == "h")
+            {
+                string a = numberHari.Value.ToString() + " Hari";
+                string b = numberFrek.Value.ToString() + " Kali";
+                pilihTransaksi.Text = "Dikirim Setiap " + a + ",diulang sebanyak " + b;
+                pilihTransaksi.Visible = true;
+            }
+            else if(rbFrekuensiTB.SelectedValue == "m")
+            {
+                string a = numberMinggu.Value.ToString() + " Minggu";
+                string b = numberFrek.Value.ToString() + " Kali";
+                pilihTransaksi.Text = "Dikirim Setiap " + a + ",diulang sebanyak " + b;
+                pilihTransaksi.Visible = true;
+            }
+            else if(rbFrekuensiTB.SelectedValue == "b")
+            {
+                string a = numberBulan.Value.ToString() + " Bulan";
+                string b = numberFrek.Value.ToString() + " Kali";
+                pilihTransaksi.Text = "Dikirim Setiap " + a + ",diulang sebanyak " + b;
+                pilihTransaksi.Visible = true;
+            }
+        }
+        protected void Freq_Cancel(object sender, EventArgs e)
+        {
+            panelBerulang.Visible = false;
         }
         protected void DeleteAll_Click(object sender, EventArgs e)
         {
@@ -76,6 +110,7 @@ namespace PIGMA
         protected void btnToBelanja_Click(object sender, EventArgs e)
         {
             panelBeliKurang.Visible=false;
+            Response.Redirect("Belanja.aspx");
         }
         protected void btn_mulaibelanja(object sender, EventArgs e)
         {
@@ -183,12 +218,23 @@ namespace PIGMA
         {
             panel1.Visible = false;
             panel2.Visible = true;
+            panelKeranjangBelanja.Visible = false;
         }
         protected void btnNext2_Click(object sender, EventArgs e)
         {
             panel2.Visible = false;
             panel3.Visible = true;
+            panelKeranjangBelanja.Visible = false;
         }
+        protected void btnNextClose(object sender, EventArgs e)
+        {
+            panelKonfirm.Visible = false;
+        }
+        protected void btnNextOpen(object sender, EventArgs e)
+        {
+            panelKonfirm.Visible = true;
+        }
+        
         protected void btnNext3_Click(object sender, EventArgs e)
         {
             DataBelanja datab = new DataBelanja();
@@ -206,11 +252,33 @@ namespace PIGMA
                     datanew.DataBelanjaSet(int.Parse(lblid.Text), lblnama.Text, int.Parse(lblkuantitas.Text), int.Parse(lblharga.Text));
                 }
             }
-            datanew.SetReceipt(txtAlamat.Text, int.Parse(txtTotal3max.Text));
+            datanew.SetReceipt(alamat2.Text, int.Parse(txtTotal3max.Text));
             Session["ProdukFinal"] = datanew.ListDetailProduk;
             Session["Receipt"] = datanew.ListDetailReceipt;
             Response.Redirect("Account.aspx");
         }
+        protected void btnCalendar_Open(object sender, EventArgs e)
+        {
+            panelCalendar.Visible = true;
+            
+        }
+        protected void btnCalendar_Close(object sender, EventArgs e)
+        {
+            panelCalendar.Visible = false;
+        }
+        protected void btnCalendar_Complete(object sender, EventArgs e)
+        {
+            panelCalendar.Visible = false;
+            pilihTanggal.Visible = true;
+            pilihTanggal.Text = literalyCalendar.SelectedDate.ToString("dd-MM-yyyy");
+        }
+
+        protected void btnBerulang_Open(object sender, EventArgs e)
+        {
+            panelBerulang.Visible = true;
+        }
 
     }
+    
+    
 }

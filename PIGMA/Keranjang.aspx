@@ -4,13 +4,13 @@
         <asp:Panel ID="panelCalendar" runat="server" Visible="false">
                 <div class="form-modal-panel" style="height:330px;">
                     <div style="display:inline-block;width:100%;padding:20px">
-                        <asp:Calendar runat="server" Width="100%"/>
+                        <asp:Calendar runat="server" Width="100%" ID="literalyCalendar"/>
                         <div class="form-group" style="height: 40px;margin:20px -15px;display:flex;flex-direction:row;">
                         <div class="col-md-6">
-                            <asp:button runat="server" class="daftarLoginPlus" Text="Batal"/>
+                            <asp:button runat="server" class="daftarLoginPlus" Text="Batal" OnClick="btnCalendar_Close"/>
                         </div>
                         <div class="col-md-6">
-                            <button type="submit" class="masukLoginPlus">Oke</button>
+                            <asp:button runat="server" class="masukLoginPlus" Text="Oke" OnClick="btnCalendar_Complete"/>
                         </div>
                     </div>
                     </div>
@@ -43,6 +43,23 @@
                     </div>
                 </div>
         </asp:Panel>
+        <asp:Panel ID="panelKonfirm" runat="server" Visible="false">
+                <div class="form-modal-panel" style="height:225px;">
+                    <div style="display:inline-block;width:100%;padding:20px 40px;display:flex;flex-direction:column;">
+                        <p style="font-size:20px;font-weight:bold;margin-left:auto;margin-right:auto;">Transaksi Berhasil</p>
+                        <p style="font-size:16px;font-weight:200;margin-left:auto;margin-right:auto;text-align:center;">Transaksi anda berhasil dilakukan, apakah anda ingin melihat transaksi ini ?</p>
+                        <div style="display:flex;flex-direction:row;height:40px;">
+                            <div class="col-md-6">
+                                <asp:button runat="server" class="daftarLoginPlus" Text="Kembali" OnClick="btnNextClose"/>
+                            </div>
+                            <div class="col-md-6">
+                                <asp:button runat="server" class="masukLoginPlus" Text="Lihat Transaksi" OnClick="btnNext3_Click"/>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+        </asp:Panel>
         <asp:Panel ID="panelBerulang" runat="server" Visible="false" CssClass="form-modal-panel">
             <asp:Button runat="server" CssClass="btnClose" Text="X"/>
                 <div style="padding:40px;">
@@ -57,31 +74,31 @@
                     <div>
                         <asp:RadioButtonList runat="server" ID="rbFrekuensiTB" RepeatDirection="horizontal" Width="80%">
                             <asp:ListItem Text="Hari  " Value="h"></asp:ListItem>
-                            <asp:ListItem Text="Minggu" Value="h"></asp:ListItem>
-                            <asp:ListItem Text="Bulan " Value="h"></asp:ListItem>
+                            <asp:ListItem Text="Minggu" Value="m"></asp:ListItem>
+                            <asp:ListItem Text="Bulan " Value="b"></asp:ListItem>
                         </asp:RadioButtonList>
                     </div>
                     <div style="width:100%;display:flex;flex-direction:row;margin-bottom:40px">
-                        <input type="number" id="numberHari" name="points" step="1" class="btnNmb" value="1">
+                        <input type="number" id="numberHari" name="points" step="1" class="btnNmb" value="1" runat="server">
                         <div class="btnDivide"></div>
-                        <input type="number" id="numberMinggu" name="points" step="1" class="btnNmb" value="1">
+                        <input type="number" id="numberMinggu" name="points" step="1" class="btnNmb" value="1" runat="server">
                         <div class="btnDivide"></div>
-                        <input type="number" id="numberBulan" name="points" step="1" class="btnNmb" value="1">
+                        <input type="number" id="numberBulan" name="points" step="1" class="btnNmb" value="1" runat="server">
                     </div>
                     <div>
                         <p style="color:#262628;font-weight:bold;font-size:20px;">Frequensi Diulang</p>
                         <p style="color:#262628;font-weight:200;font-size:18px;margin-top:-7px">Banyaknya transaksi diulang berapa kali</p>
                     </div>
                     <div>
-                        <input type="number" id="numberFrek" name="points" step="1" class="btnNmb" value="1">
+                        <input type="number" id="numberFrek" name="points" step="1" class="btnNmb" value="1" runat="server">
                     </div>
                     <div class="form-group" style="height: 40px;margin:20px -15px;display:flex;flex-direction:row;">
                         <div class="col-md-6">
-                            <asp:button runat="server" class="daftarLoginPlus" Text="Batal"/>
-                        </div>
-                        <div class="col-md-6">
-                            <button type="submit" class="masukLoginPlus">Oke</button>
-                        </div>
+                                <asp:button runat="server" class="daftarLoginPlus" Text="Batal" OnClick="Freq_Cancel"/>
+                            </div>
+                            <div class="col-md-6">
+                                <asp:button runat="server" class="masukLoginPlus" Text="Oke" OnClick="Freq_Confirm"/>
+                            </div>
                     </div>
                 </div>
         </asp:Panel>
@@ -97,7 +114,7 @@
                 <asp:Button style="font-size:18px;width:40%;padding:10px 0px;margin-left:auto;margin-right:auto;" runat="server" CssClass="btn grnBtn" OnClick="btn_mulaibelanja" Text="Mulai Belanja"/>
             </asp:Panel>
             <asp:Panel runat="server" CssClass="container-fluid row" ID="panelKeranjangBelanja" Visible="false">
-                <div class="col-md-9 tblKeranjangPlus">
+                <div class="col-md-8 tblKeranjangPlus">
                     <asp:HiddenField Value="1" runat="server" ID="chkAllprop" />
                     <asp:GridView runat="server" ID="gridObject"
                         AllowPaging="false"
@@ -149,7 +166,9 @@
                             </asp:TemplateField>
                             <asp:TemplateField>
                                 <HeaderTemplate>
-                                    <asp:Button runat="server" Text="Hapus Semua" CssClass="buttonMerah" OnClick="DeleteAll_Click"/>
+                                    <div style="display:flex;flex-direction:column;">
+                                        <asp:Button runat="server" Text="Hapus Semua" CssClass="buttonMerah" OnClick="DeleteAll_Click"/>
+                                    </div>
                                 </HeaderTemplate>
                                 <ItemTemplate>
                                     <div style="display:flex;flex-direction:column;border-left:1px solid #9B9FA0">
@@ -165,13 +184,14 @@
                         </EmptyDataTemplate>
                     </asp:GridView>
                 </div>
+                <div class="col-md-1"></div>
                 <div class="col-md-3" style="display:flex;flex-direction:column">
                     <div style="display:flex;flex-direction:row;">
-                        <p>Alamat Penerima</p>
-                        <a>Ubah</a>
+                        <p style="font-weight:bold;flex: 0 0 80%;max-width: 80%;">Alamat Penerima</p>
+                        <a style="color:#74B816;flex: 0 0 20%;max-width: 20%;">Ubah</a>
                     </div>
-                    <p>jl. Kebon Sirih Barat 1 No.10F</p>
-                    <div class="ringkasanBelanja">
+                    <asp:Label ID="alamat1" runat="server" />
+                    <div class="ringkasanBelanja" style="margin:15px 0px">
                         <p class="col-md-12">Ringkasan Belanja</p>
                         <hr />
                         <div style="display:flex;flex-direction:row">
@@ -228,16 +248,15 @@
                                 <div class="form-group" style="display:flex;flex-direction:row;">
                                     <div style="display:flex;flex-direction:column">
                                         <asp:label runat="server" CssClass="form-controlPlus" style="font-size:24px;color:#373F41;"><b>Alamat Penerima</b></asp:label>
-                                        <asp:TextBox  Height="100px" TextMode="MultiLine" runat="server" ID="txtAlamat" CssClass="form-controlPlus" Text="Jl. Kebon Sirih Barat I No.10F, RT.6/RW.2, Kb. Sirih, Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10340, Indonesia" Width="500px"/>
+                                        <asp:Label ID="alamat2" runat="server" CssClass="form-controlPlus" />
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-1" style="flex: 0 0 3%;max-width: 3%;"></div>
                         <div class="col-md-4 panelPembelianSub" style="flex: 0 0 32%;max-width: 32%;">
-                            <p><b>Ringkasan Belanja</b></p>
+                            <p style="margin-left:-15px;"><b>Ringkasan Belanja</b></p>
                             <hr />
-                            <p>Subtotal</p>
                             <div class="row">
                                 <p class="col-md-8">Subtotal</p>
                                 <asp:Label runat="server" ID="txtTotal1" />
@@ -307,7 +326,8 @@
                                     <div style="display:flex;flex-direction:column">
                                         <asp:label runat="server" CssClass="form-controlPlus" style="font-size:24px;color:#373F41;"><b>Pengiriman</b></asp:label>
                                         <div class="col-md-12" style="display:flex;flex-direction:row">
-                                            <p style="margin-right:20px;color:#229BD8;">Pilih Tanggal</p>
+                                            <asp:Button runat="server" CssClass="btnBiru" OnClick="btnCalendar_Open" Text="Pilih Tanggal"/>
+                                            <asp:Label runat="server" CssClass="lblAlamat" Visible="false" ID="pilihTanggal"/>
                                         </div>
                                     </div>
                                 </div>
@@ -315,14 +335,15 @@
                                     <div style="display:flex;flex-direction:column">
                                         <asp:label runat="server" CssClass="form-controlPlus" style="font-size:24px;color:#373F41;"><b>Transaksi Ulang</b></asp:label>
                                         <asp:label runat="server" CssClass="form-controlPlus" style="font-size:12px;color:#373F41;">Ayo jadwalkan transaksi ini untuk pengiriman berikutnya</asp:label>
-                                        <div class="col-md-12">
+                                        <div class="col-md-12" style="margin-left:15px">
                                             <asp:RadioButtonList runat="server" ID="rbStatus" RepeatDirection="Horizontal" Width="200">
                                                 <asp:ListItem Value="True" Text="Iya"/>
                                                 <asp:ListItem Value="False" Text="Tidak" />
                                             </asp:RadioButtonList>
                                         </div>
                                         <div class="col-md-12" style="display:flex;flex-direction:row">
-                                            <p style="margin-right:20px;color:#229BD8;">Atur Jadwal Transaksi Berulang</p>
+                                            <asp:Button runat="server" CssClass="btnBiru" OnClick="btnBerulang_Open" Text="Atur Jadwal Transaksi Berulang"/>
+                                            <asp:Label runat="server" CssClass="lblAlamat" Visible="false" ID="pilihTransaksi"/>
                                         </div>
                                         
                                     </div>
@@ -331,9 +352,8 @@
                         </div>
                         <div class="col-md-1" style="flex: 0 0 3%;max-width: 3%;"></div>
                         <div class="col-md-4 panelPembelianSub" style="flex: 0 0 32%;max-width: 32%;">
-                            <p><b>Ringkasan Belanja</b></p>
+                            <p style="margin-left:-15px;"><b>Ringkasan Belanja</b></p>
                             <hr />
-                            <p>Subtotal</p>
                             <div class="row">
                                 <p class="col-md-8">Subtotal</p>
                                 <asp:Label runat="server" ID="txtTotal2" />
@@ -415,9 +435,8 @@
                         </div>
                         <div class="col-md-1" style="flex: 0 0 3%;max-width: 3%;"></div>
                         <div class="col-md-4 panelPembelianSub" style="flex: 0 0 32%;max-width: 32%;">
-                            <p><b>Ringkasan Belanja</b></p>
+                            <p style="margin-left:-15px;"><b>Ringkasan Belanja</b></p>
                             <hr />
-                            <p>Subtotal</p>
                             <div class="row">
                                 <p class="col-md-8">Subtotal</p>
                                 <asp:Label runat="server" ID="txtTotal3" />
@@ -440,7 +459,7 @@
                                 <asp:Label runat="server" ID="txtTotal3max" />
                             </div>
                             <div class="row" style="height:60px">
-                                <asp:button runat="server" class="masukLoginPlus col-md-12"  Text="Setuju dan Bayar"/>
+                                <asp:button runat="server" class="masukLoginPlus col-md-12"  Text="Setuju dan Bayar" OnClick="btnNextOpen"/>
                             </div>
                         </div>
                     </div>
@@ -450,7 +469,7 @@
                                 <asp:button runat="server" class="sebelumnyaLoginPlus"  Text="Sebelumnya" OnClick="btnBack3_Click"/>
                             </div>
                             <div class="col-md-6">
-                                <asp:button runat="server" class="masukLoginPlus"  Text="Selanjutnya" OnClick="btnNext3_Click"/>
+                                <asp:button runat="server" class="masukLoginPlus"  Text="Selanjutnya" Visible="false"/>
                             </div>
                         </div>
                     </div>

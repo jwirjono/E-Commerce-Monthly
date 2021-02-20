@@ -30,8 +30,8 @@
             </div>
             <div runat="server" id="panelHilang" class="col-md-2"></div>
             <div id="navLoginTruePanel" class="col-md-4" runat="server" style="display:flex;flex-direction:row;" visible="false">
-                <a runat="server" class="navItem" href="Account.aspx">Keranjang</a>
-                <a runat="server" class="navItem" href="Keranjang.aspx">Pesanan</a>
+                <a runat="server" class="navItem" href="Keranjang.aspx">Keranjang</a>
+                <a runat="server" class="navItem" href="Account.aspx">Pesanan</a>
                 <asp:button runat="server" class="navItem" Text="Transaksi Berulang" OnClick="btnTB_Click"/>
                 <div style="width:1px;height:40px;border:1px solid #fff;" class="navItem"></div>
             </div>
@@ -72,10 +72,10 @@
                         <p style="color:#FFF;font-size:38px;font-weight:bold">MONTHLY</p>
                         <p style="color:#D9DBE1;font-size:14px;">© Copyright 2020 Monthly. All rights reserved</p>
                     </div>
-                    <div class="col-md-5" style="margin-left:15px;border-left:1px white solid;height:175px;">
+                    <div class="col-md-5" style="padding-left:25px;border-left:1px white solid;height:175px;">
                         <p style="color:#74B816;font-size:24px;font-weight:bold;">Segera daftarkan supermarket anda menjadi partner monthly</p>
                         <p style="color:#fff;">Jadilah partner monthly dan mulai berjualan secara online</p>
-                        <button type="button" class="btn btn-light" style="color:#FFF;border-radius:10px;border:#74B816 1px solid;background-color:#74B816"><a href="~/admin.aspx"></a>Daftar Supermarket</button>
+                        <a href="admin.aspx" class="btn btn-light" style="color:#FFF;border-radius:10px;border:#74B816 1px solid;background-color:#74B816">Daftar Supermarket</a>
                     </div>
                 </div>
             </asp:Panel>

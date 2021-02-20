@@ -61,7 +61,7 @@
     flex-direction: row;
 }
 .panelPembelianSub {
-    padding: 25px;
+    padding: 25px 40px;
     border: 1px solid #9B9FA0;
     border-radius: 15px;
 }
@@ -110,6 +110,20 @@
     color: #CF212A;
     font-weight:bold;
     border:none;
-    background-color:none;
+    background-color:#FFF;
     right:200px;
+    text-align:right;
+}
+
+.btnBiru {
+    margin-right: 20px;
+    color: #229BD8;
+    margin-left:15px;
+    background-color:#fff;
+    border:none;
+}
+.lblAlamat {
+    margin: 0px 20px;
+    background-color: #f4f5f4;
+    border-radius:10px;
 }

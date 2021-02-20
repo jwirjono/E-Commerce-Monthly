@@ -124,7 +124,7 @@
                     <div class="col-md-8" style="text-align:right"><button class="pesanancardbutton">Terima Pesanan</button>
                     <button class="pesanancardbuttonright">Lihat Pesanan</button></div>
                     
-            </div>
+                </div>
                 <hr />
                 <div class="col-md-11"style="border: solid thin; margin-top: 40px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom: none; display:flex;flex-direction :row">
                     <div class="pesanancardprofile"><img src="AdminContent/Mask Group.png"/> <label ><b>sophinuraeni</b><br />63 Produk</label></div>

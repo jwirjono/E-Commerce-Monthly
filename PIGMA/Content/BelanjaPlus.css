@@ -61,7 +61,7 @@
 .cardProdukBelanjaPlus {
     border: 1px #373F41 solid;
     border-top-left-radius: 10px;
-    height: 250px;
+    height: 275px;
     border-top-right-radius: 10px;
     display: flex;
     flex-direction: column;

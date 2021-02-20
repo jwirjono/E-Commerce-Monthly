@@ -166,10 +166,10 @@ namespace PIGMA
             if (Session["Supermarket"].ToString() == "Lotte Mart")
             {
                 DataBelanja data = new DataBelanja();
-                data.DataBelanjaSet(10111, "Apel Merah XiongNu", int.Parse(lblItemCard1.Text), 30000);
-                data.DataBelanjaSet(10112, "Nangka Mazandran", int.Parse(lblItemCard2.Text), 25000);
-                data.DataBelanjaSet(10113, "Jeruk Mandarin", int.Parse(lblItemCard3.Text), 35000);
-                data.DataBelanjaSet(10114, "Manggis Surabaya", int.Parse(lblItemCard4.Text), 50000);
+                data.DataBelanjaSet(10111, "Shabu Shabu", int.Parse(lblItemCard1.Text), 30000);
+                data.DataBelanjaSet(10112, "Beef Yakiniku", int.Parse(lblItemCard2.Text), 25000);
+                data.DataBelanjaSet(10113, "Beef Bulgogi", int.Parse(lblItemCard3.Text), 35000);
+                data.DataBelanjaSet(10114, "Salmon Fillet", int.Parse(lblItemCard4.Text), 50000);
                 Session["Keranjang"] = data.ListDetailProduk;
                 Response.Redirect("Keranjang.aspx");
             }

@@ -24,6 +24,15 @@ namespace PIGMA
         protected global::System.Web.UI.WebControls.Panel panelCalendar;
 
         /// <summary>
+        /// literalyCalendar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar literalyCalendar;
+
+        /// <summary>
         /// panelBeliKurang control.
         /// </summary>
         /// <remarks>
@@ -42,6 +51,15 @@ namespace PIGMA
         protected global::System.Web.UI.WebControls.Panel panelHapus;
 
         /// <summary>
+        /// panelKonfirm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelKonfirm;
+
+        /// <summary>
         /// panelBerulang control.
         /// </summary>
         /// <remarks>
@@ -58,6 +76,42 @@ namespace PIGMA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList rbFrekuensiTB;
+
+        /// <summary>
+        /// numberHari control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl numberHari;
+
+        /// <summary>
+        /// numberMinggu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl numberMinggu;
+
+        /// <summary>
+        /// numberBulan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl numberBulan;
+
+        /// <summary>
+        /// numberFrek control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl numberFrek;
 
         /// <summary>
         /// lblMainHeader control.
@@ -114,6 +168,15 @@ namespace PIGMA
         protected global::System.Web.UI.WebControls.GridView gridObject;
 
         /// <summary>
+        /// alamat1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label alamat1;
+
+        /// <summary>
         /// totalharga1 control.
         /// </summary>
         /// <remarks>
@@ -159,13 +222,13 @@ namespace PIGMA
         protected global::System.Web.UI.WebControls.TextBox TextBox2;
 
         /// <summary>
-        /// txtAlamat control.
+        /// alamat2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAlamat;
+        protected global::System.Web.UI.WebControls.Label alamat2;
 
         /// <summary>
         /// txtTotal1 control.
@@ -195,6 +258,15 @@ namespace PIGMA
         protected global::System.Web.UI.WebControls.Panel panel2;
 
         /// <summary>
+        /// pilihTanggal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label pilihTanggal;
+
+        /// <summary>
         /// rbStatus control.
         /// </summary>
         /// <remarks>
@@ -202,6 +274,15 @@ namespace PIGMA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList rbStatus;
+
+        /// <summary>
+        /// pilihTransaksi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label pilihTransaksi;
 
         /// <summary>
         /// txtTotal2 control.

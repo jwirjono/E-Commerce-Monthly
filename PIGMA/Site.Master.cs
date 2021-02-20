@@ -37,6 +37,7 @@ namespace PIGMA
         protected void btnLoginDone_Click(object sender, EventArgs e)
         {
             Session["User"] = "ada";
+            panelUMB.Visible = true;
         }
         protected void btnSearch_Click(object sender, EventArgs e)
         {
@@ -45,6 +46,11 @@ namespace PIGMA
         protected void btnAccount_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Account.aspx");
+        }
+        
+        protected void btnClose(object sender, EventArgs e)
+        {
+            panelUMB.Visible = false;
         }
         protected void btnTB_Click(object sender, EventArgs e)
         {

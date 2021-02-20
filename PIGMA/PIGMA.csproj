@@ -154,6 +154,7 @@
     <Content Include="Content\HomePlus.css" />
     <Content Include="Content\Images\AkunPesanan.png" />
     <Content Include="Content\Images\Box.png" />
+    <Content Include="Content\Images\bulgogi.png" />
     <Content Include="Content\Images\ButtonMinusKuning.png" />
     <Content Include="Content\Images\ButtonTambahKuning.png" />
     <Content Include="Content\Images\Carousel1.png" />
@@ -193,6 +194,8 @@
     <Content Include="Content\Images\Ranch.png" />
     <Content Include="Content\Images\RanchMarket.png" />
     <Content Include="Content\Images\Roti.png" />
+    <Content Include="Content\Images\sabu.png" />
+    <Content Include="Content\Images\salmon.png" />
     <Content Include="Content\Images\SearchIcon.png" />
     <Content Include="Content\Images\Snack.png" />
     <Content Include="Content\Images\storehouse.png" />
@@ -205,6 +208,7 @@
     <Content Include="Content\Images\Chart-bar.png" />
     <Content Include="Content\Images\Settings.png" />
     <Content Include="Content\Images\Watermark.PNG" />
+    <Content Include="Content\Images\yaki.png" />
     <Content Include="Content\KeranjangPlus.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
