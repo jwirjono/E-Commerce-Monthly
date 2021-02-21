@@ -135,10 +135,12 @@
                     <label style="margin-top: 10px; margin-left: 145px; height: 40px;">
                         <select style="border-radius: 10px; width: 450px; text-align: center; height: 40px;"
                             id="dijualper">
-                            <option value="1">KG</option>
-                            <option value="2">two</option>
-                            <option value="3">three</option>
-                            <option value="4">four</option>
+                            <option value="1">kg</option>
+                            <option value="2">gram</option>
+                            <option value="3">liter</option>
+                            <option value="4">ml</option>
+                            <option value="5">pcs</option>
+                            <option value="6">ml</option>
                         </select></label><br />
                 </div>
                 <div class="col-md-12">
@@ -147,9 +149,17 @@
                         <select style="border-radius: 10px; width: 450px; text-align: center; height: 40px;"
                             id="kategori">
                             <option value="1">Pilih Kategori</option>
-                            <option value="2">two</option>
-                            <option value="3">three</option>
-                            <option value="4">four</option>
+                            <option value="2">Keperluan Dapur</option>
+                            <option value="3">Daging dan Seafood</option>
+                            <option value="4">Minuman</option>
+                            <option value="5">Makanan Ringan</option>
+                            <option value="6">Produk Beku</option>
+                            <option value="7">Perlengkapan Bayi</option>
+                            <option value="8">Produk Roti</option>
+                            <option value="9">Korean Food</option>
+                            <option value="10">Perlengkapan Hewan</option>
+                            <option value="11">Produk Kesehatan</option>
+                            <option value="12">Produk Kecantikan</option>
                         </select></label><br />
                 </div>
             </div>
