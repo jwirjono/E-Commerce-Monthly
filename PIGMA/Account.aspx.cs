@@ -36,8 +36,13 @@ namespace PIGMA
         
         protected void tb_click(object sender, EventArgs e)
         {
-            btnxx0.Visible = true;
+            btnxx0.Visible = true; 
             btnxx1.Visible = true;
+        }
+        protected void tbPlus_click(object sender, EventArgs e)
+        {
+            detailReceipt.Visible = false;
+            panelTB.Visible = true;
         }
         protected void btnBerulang_Open(object sender, EventArgs e)
         {

@@ -11,7 +11,6 @@ namespace PIGMA
 {
     public partial class WebForm2 : System.Web.UI.Page
     {
-        private string ab;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -65,6 +64,8 @@ namespace PIGMA
         #region btn prod
         protected void btnProdAll_Click(object sender, EventArgs e)
         {
+            lblHistory.Visible = true;
+            pnlHistory.Visible = true;
             if (supaID.Value == "Lotte Mart")
             {
                 panelProdukKosong.Visible = false;
@@ -81,9 +82,13 @@ namespace PIGMA
             panelCardProdukGiant.Visible = false;
             panelCardProdukGrandLucky.Visible = false;
             panelProdukKosong.Visible = true;
+            lblHistory.Visible = false;
+            pnlHistory.Visible = false;
         }
         protected void btnProd2_Click(object sender, EventArgs e)
         {
+            lblHistory.Visible = false;
+            pnlHistory.Visible = false;
             if (supaID.Value == "Lotte Mart")
             {
                 panelProdukKosong.Visible = false;
@@ -97,69 +102,77 @@ namespace PIGMA
         }
         protected void btnProd3_Click(object sender, EventArgs e)
         {
+            lblHistory.Visible = false;
+            pnlHistory.Visible = false;
             panelCardProdukGiant.Visible = false;
             panelCardProdukGrandLucky.Visible = false;
             panelProdukKosong.Visible = true;
         }
         protected void btnProd4_Click(object sender, EventArgs e)
         {
+            lblHistory.Visible = false;
+            pnlHistory.Visible = false;
             panelCardProdukGiant.Visible = false;
             panelCardProdukGrandLucky.Visible = false;
             panelProdukKosong.Visible = true;
         }
         protected void btnProd5_Click(object sender, EventArgs e)
         {
+            lblHistory.Visible = false;
+            pnlHistory.Visible = false;
             panelCardProdukGiant.Visible = false;
             panelCardProdukGrandLucky.Visible = false;
             panelProdukKosong.Visible = true;
         }
         protected void btnProd6_Click(object sender, EventArgs e)
         {
+            lblHistory.Visible = false;
+            pnlHistory.Visible = false;
             panelCardProdukGiant.Visible = false;
             panelCardProdukGrandLucky.Visible = false;
             panelProdukKosong.Visible = true;
         }
         protected void btnProd7_Click(object sender, EventArgs e)
         {
+            lblHistory.Visible = false;
+            pnlHistory.Visible = false;
             panelCardProdukGiant.Visible = false;
             panelCardProdukGrandLucky.Visible = false;
             panelProdukKosong.Visible = true;
         }
         protected void btnProd8_Click(object sender, EventArgs e)
         {
+            lblHistory.Visible = false;
+            pnlHistory.Visible = false;
             panelCardProdukGiant.Visible = false;
             panelCardProdukGrandLucky.Visible = false;
             panelProdukKosong.Visible = true;
         }
         protected void btnProd9_Click(object sender, EventArgs e)
         {
+            lblHistory.Visible = false;
+            pnlHistory.Visible = false;
             panelCardProdukGiant.Visible = false;
             panelCardProdukGrandLucky.Visible = false;
             panelProdukKosong.Visible = true;
         }
         protected void btnProd10_Click(object sender, EventArgs e)
         {
+            lblHistory.Visible = false;
+            pnlHistory.Visible = false;
             panelCardProdukGiant.Visible = false;
             panelCardProdukGrandLucky.Visible = false;
             panelProdukKosong.Visible = true;
         }
         protected void btnProd11_Click(object sender, EventArgs e)
         {
+            lblHistory.Visible = false;
+            pnlHistory.Visible = false;
             panelCardProdukGiant.Visible = false;
             panelCardProdukGrandLucky.Visible = false;
             panelProdukKosong.Visible = true;
         }
         #endregion
-
-
-
-
-
-
-
-
-
-
 
         protected void btnComplete_Click(object sender, EventArgs e)
         {

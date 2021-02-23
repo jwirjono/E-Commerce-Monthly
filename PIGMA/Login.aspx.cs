@@ -11,7 +11,17 @@ namespace PIGMA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if(Session["Daftar"] != null)
+            {
+                if(Session["Daftar"].ToString() == "ada")
+                {
+                    gambarLogin.Visible = false;
+                    gambarDaftar.Visible = true;
+                    panelFormLogin.Visible = false;
+                    labelMainForm.Text = "Daftar";
+                    panelDaftarLogin.Visible = true;
+                }
+            }
         }
         
         protected void btnDaftar_Click(object sender, EventArgs e)
@@ -30,6 +40,19 @@ namespace PIGMA
         }
         protected void btnKirimUlang_Click(object sender, EventArgs e)
         {
+        }
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            if(pnlUsername.Value == "admin@admin.com" && pnlPassword.Value == "admin")
+            {
+                Response.Redirect("~/admin.aspx");
+            }
+            else if(pnlUsername.Value == "sosis@sonice.com" && pnlPassword.Value == "smash")
+            {
+                Session["User"] = "ada";
+                Session["IsLogin"] = "ada";
+                Response.Redirect("~/HomePage.aspx");
+            }
         }
         protected void btnVerifikasi_Click(object sender, EventArgs e)
         {
