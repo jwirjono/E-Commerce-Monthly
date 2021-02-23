@@ -179,7 +179,6 @@
     <Content Include="Content\Images\Beranda.png" />
     <Content Include="Content\Images\HomePageTopImage.png" />
     <Content Include="Content\Images\Penjualan.png" />
-    <Content Include="Content\Images\Keperluan Dapur.png" />
     <Content Include="Content\Images\KeranjangKosong.png" />
     <Content Include="Content\Images\Korean Food.png" />
     <Content Include="Content\Images\Location.png" />
@@ -241,6 +240,7 @@
     <Content Include="tambahproduk.aspx" />
     <Content Include="ubahproduk.aspx" />
     <Content Include="PesananReceipt.aspx" />
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <None Include="Properties\PublishProfiles\FTPMonthlySkripsi.pubxml" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
