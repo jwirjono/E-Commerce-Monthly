@@ -66,7 +66,7 @@
         <div class="col-md-8" style="background-color: #FCFCFC; padding-top: 40px; margin-bottom: 100px">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>Daftar Pesanan
+                    <h2>Daftar Produk
                 <br />
                         <span style="font-size: 18px">Atur dan kelola produk jualanmu</span>
                     </h2>

@@ -14,13 +14,12 @@
                 <form>
                     <div class="form-group form-groupPlus">
                     <label class="form-labelPlus" for="exampleInputEmail1">Email</label>
-                    <input type="email" class="form-controlPlus " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="alamat@email.com">
+                    <input type="email" class="form-controlPlus" runat="server" id="pnlUsername" aria-describedby="emailHelp" placeholder="alamat@email.com">
                     </div>
                     <div class="form-group form-groupPlus" >
                     <label class="form-labelPlus" for="exampleInputPassword1">Password</label>
-                    <input type="password" class=" form-controlPlus" id="exampleInputPassword1" placeholder="Masukan password">
+                    <input type="password" class=" form-controlPlus" runat="server" id="pnlPassword" placeholder="Masukan password">
                     </div>
-                    <p style="color:red;margin-top:15px">Alamat Tidak boleh kosong</p>
                     <div class="form-group row" style="padding:2px 20px;">
                         <div class="col-md-2">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -35,7 +34,7 @@
                             <asp:button runat="server" class="daftarLoginPlus" OnClick="btnDaftar_Click" Text="DAFTAR"/>
                         </div>
                         <div class="col-md-6">
-                            <button type="submit" class="masukLoginPlus">MASUK</button>
+                            <asp:button runat="server" OnClick="btnLogin_Click" Cssclass="masukLoginPlus" Text="MASUK"/>
                         </div>
                     </div>
             </form>

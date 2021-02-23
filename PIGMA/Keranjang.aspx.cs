@@ -145,6 +145,12 @@ namespace PIGMA
         }
         protected void btnComplete_Click(object sender, EventArgs e)
         {
+            if(Session["IsLogin"] == null)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Harap Login Terlebih Dahulu')", true);
+                Response.Redirect("~/Login.aspx");
+            }
+
             DataBelanja keranjang = new DataBelanja();
             foreach (GridViewRow gvrow in gridObject.Rows)
             {

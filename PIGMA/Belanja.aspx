@@ -77,8 +77,8 @@
                 </a>
                 <div class="miniDividerBelanjaPlus"></div>
             </div>
-            <asp:Label runat="server" Text="Produk Pernah Dibeli" CssClass="labelUtama" />
-            <asp:Panel runat="server" class="cardlistProdukBelanjaPlus row">
+            <asp:Label runat="server" Text="Produk Pernah Dibeli" CssClass="labelUtama" ID="lblHistory"/>
+            <asp:Panel runat="server" class="cardlistProdukBelanjaPlus row" ID="pnlHistory">
                     <asp:Panel class="cardFullProdukBelanjaPlus" runat="server" id="panel5">
                         <div class="cardProdukBelanjaPlus">
                         <a>-50%</a>

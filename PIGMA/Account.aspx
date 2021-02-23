@@ -287,13 +287,14 @@
                 <div class="col-md-6"></div>
                 <div class="col-md-6" style="display:flex;flex-direction:row">
                     <div class="col-md-6">
-                        <asp:button runat="server" class="masukLoginPlus" Text="Transaksi Berulang" OnClick="tb_click"/>
+                        <asp:button runat="server" class="masukLoginPlus" Text="Transaksi Berulang" OnClick="tbPlus_click"/>
                     </div>
                     <div class="col-md-6">
                         <asp:button runat="server" class="daftarLoginPlus2" Text="Batalkan Pesanan" OnClick="tb_click"/>
                     </div>
                 </div>
             </div>
+            <!--
             <div class="col-md-12" style="display:flex;flex-direction:row;margin:10px;height:45px;">
                 <div class="col-md-6"></div>
                 <div class="col-md-6" style="display:flex;flex-direction:row">
@@ -305,9 +306,9 @@
                     </div>
                 </div>
             </div>
-            
+            -->
         </asp:panel>
-        <asp:Panel runat="server" id="panelTB" CssClass="col-md-8 container sidebarAccount" >
+        <asp:Panel runat="server" id="panelTB" CssClass="col-md-8 container sidebarAccount" visible="false">
             <div class="row">
                 <p class="fontMainAccount">Daftar Transaksi Berulang</p>
             </div>
