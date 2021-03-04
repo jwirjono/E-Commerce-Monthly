@@ -78,6 +78,24 @@ namespace PIGMA
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword pnlPassword;
 
         /// <summary>
+        /// pnlValidasiUser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pnlValidasiUser;
+
+        /// <summary>
+        /// pnlValidasiPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pnlValidasiPass;
+
+        /// <summary>
         /// panelLupaPassword control.
         /// </summary>
         /// <remarks>
@@ -94,6 +112,15 @@ namespace PIGMA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel panelDaftarLogin;
+
+        /// <summary>
+        /// inputDaftarID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl inputDaftarID;
 
         /// <summary>
         /// panelVerifikasiLogin control.
@@ -121,5 +148,14 @@ namespace PIGMA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel panelPasswordLogin;
+
+        /// <summary>
+        /// inputDaftarPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword inputDaftarPassword;
     }
 }

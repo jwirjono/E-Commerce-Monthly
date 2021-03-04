@@ -16,7 +16,10 @@
                     </div>
                 </div>
                 <div class="row" style="margin-top:32px;">
-                    <div class="col-md-12" id ="search" style="display:flex;flex-direction:row;">
+                    <div class="col-md-3"  style="display:flex;flex-direction:row;">
+                        <input runat="server" id="txtKodePos" type="text" class="Searchbar"  placeholder="Kode Pos">
+                    </div>
+                    <div class="col-md-9" id ="search" style="display:flex;flex-direction:row;">
                         <input runat="server" id="txtSearchBar" type="text" class="Searchbar"  placeholder="Masukan Alamat">
                         <asp:ImageButton runat="server"  Cssclass="MapButton" ImageUrl="Content/Images/MapButton.png" OnClick="btnMap_Click"/> 
                     </div>

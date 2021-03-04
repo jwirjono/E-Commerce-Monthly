@@ -70,7 +70,8 @@
                 <div class="row">
                     <div class="col-md-6">
                         <p style="color:#FFF;font-size:38px;font-weight:bold">MONTHLY</p>
-                        <p style="color:#D9DBE1;font-size:14px;">© Copyright 2020 Monthly. All rights reserved</p>
+                        <a class="btnSyarat">Syarat dan Ketentuan</a>
+                        <p style="color:#D9DBE1;font-size:14px;margin:20px 0px;">© Copyright 2020 Monthly. All rights reserved</p>
                     </div>
                     <div class="col-md-5" style="padding-left:25px;border-left:1px white solid;height:175px;">
                         <p style="color:#74B816;font-size:24px;font-weight:bold;">Segera daftarkan supermarket anda menjadi partner monthly</p>
