@@ -29,6 +29,8 @@
                         <div class="col-md-3"><asp:button runat="server" CssClass="btnLupa" OnClick="btnLupa_Click" Text="Lupa Password?"/></div>
                         
                     </div>
+                    <p runat="server" id="pnlValidasiUser" style="color:red" visible="false">Username Tidak Terdaftar</p>
+                    <p runat="server" id="pnlValidasiPass" style="color:red" visible="false">Password Salah</p>
                     <div class="row form-group daftarmasuk">
                         <div class="col-md-6">
                             <asp:button runat="server" class="daftarLoginPlus" OnClick="btnDaftar_Click" Text="DAFTAR"/>
@@ -79,7 +81,7 @@
                     </div>
                     <div class="form-group form-groupPlus">
                     <label class="form-labelPlus" for="exampleInputEmail1">Nomor Ponsel atau Email</label>
-                    <input type="email" class="form-controlPlus " id="inputDaftarID" aria-describedby="emailHelp" placeholder="alamat@email.com">
+                    <input type="email" class="form-controlPlus " id="inputDaftarID" aria-describedby="emailHelp" placeholder="alamat@email.com" runat="server">
                     </div>
                     <div class="row form-group daftarmasuk">
                     </div>
@@ -200,7 +202,7 @@
 
                     <div class="form-group form-groupPlus">
                     <label class="form-labelPlus" for="exampleInputEmail1">Password</label>
-                    <input type="password" class="form-controlPlus " id="inputDaftarPassword" aria-describedby="emailHelp" placeholder="Masukan Password">
+                    <input type="password" class="form-controlPlus " id="inputDaftarPassword" aria-describedby="emailHelp" placeholder="Masukan Password" runat="server">
                     </div>
                     <div class="form-group form-groupPlus">
                     <label class="form-labelPlus" for="exampleInputEmail1">Konfirmasi Password</label>

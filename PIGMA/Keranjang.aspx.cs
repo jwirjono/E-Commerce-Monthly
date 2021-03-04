@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -246,6 +247,25 @@ namespace PIGMA
             DataBelanja datab = new DataBelanja();
             DataBelanja datanew = new DataBelanja();
             datab.ListDetailProduk = (List<DetailProduk>)Session["Keranjang"];
+            using (SqlConnection conn = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=Monthly;Integrated Security=True"))
+            {
+
+                //retrieve the SQL Server instance version
+                string query = string.Format(@"  insert into [Monthly].[dbo].[Transaction] select
+                max(trans_id)+1,getdate(),1,1,1,'{0}',0,'Tunai','Diproses' from [Monthly].[dbo].[Transaction];", txtTotal3.Text);
+                //create the SqlCommand object
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                //open connection
+                conn.Open();
+
+                //execute the SQL Command (UPDATE)
+                cmd.ExecuteNonQuery();
+
+                //close connection
+                conn.Close();
+
+            }
             foreach (GridViewRow gvRow in gridObject.Rows)
             {
                 CheckBox cb = (CheckBox)gvRow.FindControl("chkStats");
@@ -256,9 +276,29 @@ namespace PIGMA
                 if (cb.Checked)
                 {
                     datanew.DataBelanjaSet(int.Parse(lblid.Text), lblnama.Text, int.Parse(lblkuantitas.Text), int.Parse(lblharga.Text));
+                    using (SqlConnection conn = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=Monthly;Integrated Security=True"))
+                    {
+
+                        //retrieve the SQL Server instance version
+                        string query = string.Format(@"  insert into [Monthly].[dbo].[PurchaseGoods] select
+                        max(trans_id),{0},{1},{2} from [Monthly].[dbo].[Transaction];", lblid.Text,lblkuantitas.Text,lblharga.Text);
+                        //create the SqlCommand object
+                        SqlCommand cmd = new SqlCommand(query, conn);
+
+                        //open connection
+                        conn.Open();
+
+                        //execute the SQL Command (UPDATE)
+                        cmd.ExecuteNonQuery();
+
+                        //close connection
+                        conn.Close();
+
+                    }
                 }
             }
             datanew.SetReceipt(alamat2.Text, int.Parse(txtTotal3max.Text));
+            
             Session["ProdukFinal"] = datanew.ListDetailProduk;
             Session["Receipt"] = datanew.ListDetailReceipt;
             Response.Redirect("Account.aspx");

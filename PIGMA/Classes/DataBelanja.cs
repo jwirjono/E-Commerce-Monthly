@@ -46,8 +46,10 @@ namespace PIGMA.Classes
             det.Total = harga;
             det.TotalRP = "Rp. " + harga.ToString();
             ListDetailReceipt.Add(det);
-
         }
+
+        
+
         public void Increase(int id)
         {
             foreach(DetailProduk item in ListDetailProduk)

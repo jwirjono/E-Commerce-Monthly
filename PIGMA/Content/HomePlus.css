@@ -63,6 +63,15 @@ a:hover {
     border-radius: 15px;
     color: #FFF;
 }
+.btnSyarat {
+    color: #D9DBE1;
+    font-size: 14px;
+    
+}
+.btnSyarat:hover{
+    color:#97C200;
+}
+
 
 .navItem {
     margin: auto 12.5px;
