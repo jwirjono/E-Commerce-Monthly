@@ -22,6 +22,7 @@ namespace PIGMA
                 if (Session["User"].ToString() == "ada")
                 {
                     Session["User"] = "done";
+                    lblname.Text = Session["User_Name"].ToString();
                     panelUMB.Visible = true;
                 }
                 else
@@ -40,6 +41,10 @@ namespace PIGMA
         {
 
         }
+        protected void btnTerm_Click(object sender,EventArgs e)
+        {
+            Response.Redirect("~/Term.aspx");
+        }
         protected void btnToLogin_Click(object sender, EventArgs e)
         {
             Session["Daftar"] = "ada";
@@ -54,8 +59,9 @@ namespace PIGMA
         {
             holup.Text = txtSearchBar.Value.ToString();
         }
-        protected void btnAccount_Click(object sender, EventArgs e)
+        protected void btnPesanan_Click(object sender, EventArgs e)
         {
+            Session["DaftarPesanan"] = "true";
             Response.Redirect("~/Account.aspx");
         }
         

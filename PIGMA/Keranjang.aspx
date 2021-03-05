@@ -140,7 +140,6 @@
                                 <HeaderStyle Font-Bold="true" />
                                 <ItemTemplate>
                                     <div style="display:flex;flex-direction:column">
-                                        <img src="Content/Images/CardProduk.png" alt="" style="width:50px;height:50px;margin:0px auto;border:1px solid #FFF;">
                                     </div>
                                 </ItemTemplate>
                             </asp:TemplateField>

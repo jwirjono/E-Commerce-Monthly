@@ -75,6 +75,7 @@ namespace PIGMA
                             {
                                 Session["User"] = "ada";
                                 Session["IsLogin"] = "ada";
+                                Session["User_Name"] = pnlUsername.Value;
                                 Response.Redirect("~/HomePage.aspx");
                             }
                             else
@@ -125,7 +126,7 @@ namespace PIGMA
 
                 //retrieve the SQL Server instance version
                 string query = string.Format(@"INSERT INTO Customer select
-  max(customer_id)+1,'','{0}',000000,'{1}',1,'' from Customer", inputDaftarID.Value,inputDaftarPassword.Value);
+                 max(customer_id)+1,'','{0}',000000,'{1}',1,'' from Customer", inputDaftarID.Value,inputDaftarPassword.Value);
                 //create the SqlCommand object
                 SqlCommand cmd = new SqlCommand(query, conn);
 

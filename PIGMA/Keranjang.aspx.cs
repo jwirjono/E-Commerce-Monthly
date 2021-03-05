@@ -252,7 +252,7 @@ namespace PIGMA
 
                 //retrieve the SQL Server instance version
                 string query = string.Format(@"  insert into [Monthly].[dbo].[Transaction] select
-                max(trans_id)+1,getdate(),1,1,1,'{0}',0,'Tunai','Diproses' from [Monthly].[dbo].[Transaction];", txtTotal3.Text);
+                max(trans_id)+1,getdate(),1,1001,1,'{0}',0,'Tunai','Diproses' from [Monthly].[dbo].[Transaction];", txtTotal3.Text);
                 //create the SqlCommand object
                 SqlCommand cmd = new SqlCommand(query, conn);
 
