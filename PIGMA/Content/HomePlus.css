@@ -66,7 +66,9 @@ a:hover {
 .btnSyarat {
     color: #D9DBE1;
     font-size: 14px;
-    
+    text-decoration: none;
+    border: none;
+    background-color: #373f41;
 }
 .btnSyarat:hover{
     color:#97C200;

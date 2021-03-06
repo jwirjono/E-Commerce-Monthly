@@ -48,13 +48,11 @@
         <div class="row Homepage-Bottom" runat="server" id="panelSupermarketTerdekat" visible="false">
             <div class="col-md-12">
                 <div class="Homepage-List row">
-                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/LotteMart.PNG" OnClick="btnGiant_Click"/>
+                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/LotteMart.PNG" OnClick="btnGiant_Click" ID="mapLotte"/>
                     <div class="imgDividePlus"></div>
-                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Grand.PNG" OnClick="btnGrandLucky_Click" />
+                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Grand.PNG" OnClick="btnGrandLucky_Click" ID="mapGrand"/>
                     <div class="imgDividePlus"></div>
-                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Ranch.PNG" OnClick="btnTransmart_Click" />
-                    <div class="imgDividePlus"></div>
-                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Ranch.PNG" OnClick="btnRanchMarket_Click"/>
+                    <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Ranch.PNG" OnClick="btnTransmart_Click" ID="mapRanch"/>
                     <div class="imgDividePlus"></div>
                     <!--page2-->
                     

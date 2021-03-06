@@ -163,6 +163,73 @@
                 </div>
             </div>
         </asp:Panel>
+        <asp:Panel runat="server" ID="daftarReceipt" CssClass="col-md-8 container sidebarAccount" Visible="false">
+            <asp:GridView ID="GridView1" runat="server"
+                ShowHeaderWhenEmpty="True" AutoGenerateColumns="false" BackColor="White"
+                BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3"
+                ShowFooter="True" OnRowCommand="GridView1_RowCommand" HorizontalAlign="Justify">
+                <Columns>
+                    <asp:TemplateField >
+                        <HeaderTemplate>
+                                    <asp:Label runat="server" Text="ID Receipt"/>
+                                </HeaderTemplate>
+                                <ItemTemplate>
+                                        <div style="display:flex;flex-direction:column">
+                                            <asp:Label ID="lblID" Text='<%#Eval("IDReceipt") %>' runat="server" />
+                                        </div>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                    <asp:TemplateField >
+                        <HeaderTemplate>
+                                    <asp:Label runat="server" Text="Tanggal pengiriman"/>
+                                </HeaderTemplate>
+                                <ItemTemplate>
+                                        <div style="display:flex;flex-direction:column">
+                                            <asp:Label ID="lblWaktu" Text='<%#Eval("WaktuPengiriman") %>' runat="server" />
+                                        </div>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                    <asp:TemplateField >
+                        <HeaderTemplate>
+                                    <asp:Label runat="server" Text="Total"/>
+                                </HeaderTemplate>
+                                <ItemTemplate>
+                                        <div style="display:flex;flex-direction:column">
+                                            <asp:Label ID="lblTotRp" Text='<%#Eval("TotalRP") %>' runat="server" />
+                                        </div>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                    <asp:TemplateField >
+                        <HeaderTemplate>
+                                    <asp:Label runat="server" Text="Status"/>
+                                </HeaderTemplate>
+                                <ItemTemplate>
+                                        <div style="display:flex;flex-direction:column">
+                                            <asp:Label ID="lblStat" Text='<%#Eval("Status") %>' runat="server" />
+                                        </div>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:Button ID="btnCetak" runat="server" Text="Lihat"
+                                CommandArgument='<%# Eval("IDReceipt") %>'
+                                CommandName="Lihat" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    
+                </Columns>
+                <EmptyDataTemplate>No Record Available</EmptyDataTemplate>
+                <FooterStyle BackColor="White" ForeColor="#000066" />
+                <HeaderStyle BackColor="DarkGreen" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Center" />
+                <RowStyle ForeColor="#000066" />
+                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#00547E" />
+            </asp:GridView>
+        </asp:Panel>
         <asp:panel runat="server" id="detailReceipt" CssClass="col-md-8 container sidebarAccount" Visible="false">
             <div class="row">
                 <div class="col-md-3" style="margin:auto 0px;">
@@ -215,7 +282,6 @@
                                 <HeaderStyle Font-Bold="true" />
                                 <ItemTemplate>
                                     <div style="display:flex;flex-direction:column">
-                                        <img src="Content/Images/CardProduk.png" alt="" style="width:50px;height:50px;margin:0px auto;border:1px solid #FFF;">
                                     </div>
                                 </ItemTemplate>
                             </asp:TemplateField>

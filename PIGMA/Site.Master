@@ -31,14 +31,14 @@
             <div runat="server" id="panelHilang" class="col-md-2"></div>
             <div id="navLoginTruePanel" class="col-md-4" runat="server" style="display:flex;flex-direction:row;" visible="false">
                 <a runat="server" class="navItem" href="Keranjang.aspx">Keranjang</a>
-                <a runat="server" class="navItem" href="Account.aspx">Pesanan</a>
+                <asp:Button runat="server" OnClick="btnPesanan_Click" ID="btnPesanan" Text="Pesanan" CssClass="navItem"/>
                 <asp:button runat="server" class="navItem" Text="Transaksi Berulang" OnClick="btnTB_Click"/>
                 <div style="width:1px;height:40px;border:1px solid #fff;" class="navItem"></div>
             </div>
             <div id="panelAkun" runat="server" class="col-md-2" visible="false">
                 <div class="navItem" style="display:flex;flex-direction:row;">
-                    <p class="navItem">Sophie Nuraeni</p>
-                    <asp:ImageButton class="navItem" style="width:40px;height:40px;border-radius:20px;" runat="server" ImageUrl="Content/Images/ProfilePicture.png" OnClick="btnAccount_Click"/>
+                    <asp:Label CssClass="navItem" runat="server" id="lblname"/>
+                    <asp:ImageButton class="navItem" style="width:40px;height:40px;border-radius:20px;" runat="server" ImageUrl="Content/Images/ProfilePicture.png" OnClick="btnPesanan_Click"/>
                 </div>
             </div>
             <div id="navLoginFalsePanel" class="col-md-4" runat="server" style="display:flex;flex-direction:row;">
@@ -70,7 +70,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <p style="color:#FFF;font-size:38px;font-weight:bold">MONTHLY</p>
-                        <a class="btnSyarat">Syarat dan Ketentuan</a>
+                        <asp:Button runat="server" CssClass="btnSyarat" OnClick="btnTerm_Click" Text="Syarat dan Ketentuan" />
                         <p style="color:#D9DBE1;font-size:14px;margin:20px 0px;">© Copyright 2020 Monthly. All rights reserved</p>
                     </div>
                     <div class="col-md-5" style="padding-left:25px;border-left:1px white solid;height:175px;">

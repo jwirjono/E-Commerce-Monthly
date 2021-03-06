@@ -70,6 +70,46 @@ namespace PIGMA
             }
             else
             {
+                using (SqlConnection conn = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=Monthly;Integrated Security=True"))
+                {
+
+                    //retrieve the SQL Server instance version
+                    string query = @"  select l.kode_pos,supermarket_name from [Monthly].[dbo].[Supermarket] s 
+                      INNER JOIN [Monthly].[dbo].[Partner] p on s.supermarket_id = p.supermarket_id 
+                      INNER JOIN [Monthly].[dbo].[Location] l on p.location_id = l.location_id";
+
+                    //define the SqlCommand object
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    //open connection
+                    conn.Open();
+
+                    //execute the SQLCommand
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    DataBelanja receipt = new DataBelanja();
+
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            if(txtKodePos.Value.ToString() == dr.GetString(0).Replace(" ",string.Empty))
+                            {
+                                mapGrand.Visible = false;
+                                mapRanch.Visible = false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("No data found.");
+                    }
+                    //close data reader
+                    dr.Close();
+
+                    //close connection
+                    conn.Close();
+                }
                 pnlAlamatKosong.Visible = false;
                 panelSupermarketTerdekat.Visible = true;
                 lbltext1.Visible = true;

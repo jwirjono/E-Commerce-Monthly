@@ -239,6 +239,7 @@
     <Content Include="tambahproduk.aspx" />
     <Content Include="ubahproduk.aspx" />
     <Content Include="PesananReceipt.aspx" />
+    <Content Include="Term.aspx" />
     <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <None Include="Properties\PublishProfiles\FTPMonthlySkripsi.pubxml" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -527,6 +528,13 @@
     </Compile>
     <Compile Include="PesananReceipt.aspx.designer.cs">
       <DependentUpon>PesananReceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Term.aspx.cs">
+      <DependentUpon>Term.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Term.aspx.designer.cs">
+      <DependentUpon>Term.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
