@@ -14,11 +14,6 @@ namespace PIGMA
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            ClientScript.GetPostBackEventReference(this, "");
-
-
-
-
         }
         public void addproduct(object sender, EventArgs e)
         {
@@ -34,7 +29,7 @@ namespace PIGMA
                 var keterangan = deskripsi.Text;
                 var image_link = "AdminContent/Beef Bulgogi.png";
                 var harga = hargasatuan.Text;
-                var gambar = string.Empty;
+
                 var totalBeli = 0;
                 var totalView = 0;
 
@@ -48,7 +43,6 @@ namespace PIGMA
                                 @keterangan,
                                 @image_link,
                                 @harga,
-                                @gambar,
                                 @totalbeli,
                                 @totalview)";
 
@@ -63,9 +57,11 @@ namespace PIGMA
                 cmd.Parameters.AddWithValue("@partnerid", partnerID);
                 cmd.Parameters.AddWithValue("@is_empty", is_empty);
                 cmd.Parameters.AddWithValue("@max_pesan", max_pesan);
-                cmd.Parameters.AddWithValue("@category", "25 May 2017");
-                cmd.Parameters.AddWithValue("@productname", productName);
-                cmd.Parameters.AddWithValue("@category", "25 May 2017");
+                cmd.Parameters.AddWithValue("@keterangan", keterangan);
+                cmd.Parameters.AddWithValue("@image_link", image_link);
+                cmd.Parameters.AddWithValue("@harga", harga);
+                cmd.Parameters.AddWithValue("@totalbeli", totalBeli);
+                cmd.Parameters.AddWithValue("@totalview", totalView);
                 //open connection
                 connection.Open();
 

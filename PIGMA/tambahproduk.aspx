@@ -217,7 +217,7 @@
         <div class="col-md-12" style="text-align: right">
             <button style="margin-top: 50px; margin-bottom: 50px; margin-right: 20px; height: 50px; width: 200px; background-color: #74B816; color: white; border-radius: 10px;">Batal</button>
             <button style="margin-top: 50px; margin-bottom: 50px; margin-right: 20px; height: 50px; width: 200px; background-color: #74B816; color: white; border-radius: 10px;">Simpan & Tambah Baru</button>
-            <button style="margin-top: 50px; margin-bottom: 50px; height: 50px; width: 200px; background-color: #74B816; color: white; border-radius: 10px;">Simpan</button>
+            <asp:button runat="server" style="margin-top: 50px; margin-bottom: 50px; height: 50px; width: 200px; background-color: #74B816; color: white; border-radius: 10px;" Text="Simpan" OnClientClick="addproduct"/>
         </div>
 
              
