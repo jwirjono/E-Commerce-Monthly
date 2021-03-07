@@ -15,7 +15,7 @@
 - Pengguna setuju produk dapat diubah oleh partner jika stok kurang dengan syarat partner akan mengkonfirmasi perubahan terkait melalui telepon yang terdaftar.<br />
 - Pengguna setuju jika sudah mengkonfirmasi pesanan maka transaksi tidak dapat dibatalkan, jika dibatalkan akan terkena denda 50% dari total pesanan yang akan ditagih ke alamat pengguna.
 </p>
-    <p><b>Untuk Customer (Pembeli)</b></p>
+    <p><b>Untuk Partner (Penjual)</b></p>
     <p>- Partner setuju untuk memberikan informasi yang benar terkait nama supermarket, produk, alamat dan no telepon<br />
 - Partner dapat mengubah harga sewaktu waktu<br />
 - Partner berhak merubah pesanan pengguna dengan syarat mengkonfirmasikan terlebih dahulu kepada pengguna<br />
