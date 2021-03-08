@@ -151,7 +151,7 @@
                     
                     
                     <div class="col-md-7" style="text-align:right"><button class="pesanancardbutton">Kirim</button>
-                    <button class="pesanancardbuttonrightproses" onclick="gotoubah()">Lihat Pesanan</button></div>
+                    <button class="pesanancardbuttonrightproses" onclick="lihatpesanan()">Lihat Pesanan</button></div>
                     
             </div>
                 <hr />
@@ -199,6 +199,9 @@
 
     </div>
     <script>
+        function lihatpesanan() {
+            window.location.href = "/pesananreceipt.aspx"
+        }
         function gotoubah() {
             window.location.href = "/ubahproduk.aspx"
         }
