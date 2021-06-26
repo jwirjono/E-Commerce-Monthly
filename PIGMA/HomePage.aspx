@@ -52,8 +52,9 @@
                     <div class="imgDividePlus"></div>
                     <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Grand.PNG" OnClick="btnGrandLucky_Click" ID="mapGrand"/>
                     <div class="imgDividePlus"></div>
+                    <!--
                     <asp:ImageButton CssClass="imgHomePlus" runat="server" ImageUrl="Content/Images/Ranch.PNG" OnClick="btnTransmart_Click" ID="mapRanch"/>
-                    <div class="imgDividePlus"></div>
+                    <div class="imgDividePlus"></div> -->
                     <!--page2-->
                     
 
